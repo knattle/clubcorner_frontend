@@ -10,7 +10,7 @@
 <ion-content>
 
     <ion-list>
-        <button ion-item *ngFor="let item of items">
+        <button [navPush]="teamPage" ion-item *ngFor="let item of items">
           {{item.title}}
         </button> 
         <ion-item>

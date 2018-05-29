@@ -1,14 +1,11 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
-import {TeamPage} from '../team/team';
-
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+  selector: 'page-team',
+  templateUrl: 'team.html'
 })
-export class HomePage {
-  teamPage = TeamPage;
+export class TeamPage {
   selectedItem: any;
   icons: string[];
   items: Array<{title: string}>;
