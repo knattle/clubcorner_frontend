@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { ModalController } from 'ionic-angular';
+import { SampleModalPage } from '../sample-modal/sample-modal';
 
 import {TeamPage} from '../team/team';
 
@@ -13,7 +15,13 @@ export class HomePage {
   icons: string[];
   items: Array<{title: string}>;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  openModal() {
+    let myModal = this.modalCtrl.create(SampleModalPage);
+    myModal.present();
+  };
+
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController) {
     // If we navigated to this page, we will have an item available as a nav param
     this.selectedItem = navParams.get('item');
 
@@ -23,6 +31,6 @@ export class HomePage {
       this.items.push({
         title: 'Mannschaft ' + i,
       });
-    }
+    };
   }
 }
