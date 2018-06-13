@@ -23,7 +23,7 @@ export class AdminProvider {
 
   constructor(public http: HttpClient) {
     console.log('Hello AdminProvider Provider');
-    console.log(env.api)
+    //console.log(env.api)
   }
 
   //------------------------------------------
