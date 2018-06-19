@@ -14,7 +14,6 @@ import { PlayerListModalPage } from '../pages/modals/player-list-modal/player-li
 import { CreateGameModalPage } from '../pages/modals/create-game-modal/create-game-modal';
 import { CreateTeamModalPage } from '../pages/modals/create-team-modal/create-team-modal';
 import { CreateTrainingModalPage } from '../pages//modals/create-training-modal/create-training-modal';
-import { DeleteTeamModalPage } from '../pages/modals/delete-team-modal/delete-team-modal';
 
 import { LoginProvider } from '../providers/login/login';
 import { TrainerProvider } from '../providers/trainer/trainer';
@@ -32,8 +31,7 @@ import { SpielerProvider } from '../providers/spieler/spieler';
     PlayerListModalPage,
     CreateGameModalPage,
     CreateTeamModalPage,
-    CreateTrainingModalPage,
-    DeleteTeamModalPage
+    CreateTrainingModalPage
     
   ],
   imports: [
@@ -50,8 +48,7 @@ import { SpielerProvider } from '../providers/spieler/spieler';
     PlayerListModalPage,
     CreateGameModalPage,
     CreateTeamModalPage,
-    CreateTrainingModalPage,
-    DeleteTeamModalPage
+    CreateTrainingModalPage
   ],
   providers: [
     StatusBar,

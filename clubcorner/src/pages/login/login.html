@@ -10,7 +10,8 @@
           <ion-label fixed>Password</ion-label>
           <ion-input type="password"></ion-input>
         </ion-item>
-        <button [navPush]="homePage" ion-item>
+        <!--<button [navPush]="homePage" ion-item>Login        </button> -->
+        <button (click)="openPage()" ion-item>
           Login
         </button> 
       </ion-list>

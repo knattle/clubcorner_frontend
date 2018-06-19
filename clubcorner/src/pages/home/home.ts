@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { ModalController } from 'ionic-angular';
+import { AlertController } from 'ionic-angular';
 
 import { PlayerInviteModalPage } from '../modals/player-invite-modal/player-invite-modal';
 import { PlayerListModalPage } from '../modals/player-list-modal/player-list-modal';
 import { CreateGameModalPage } from '../modals/create-game-modal/create-game-modal';
 import { CreateTeamModalPage } from '../modals/create-team-modal/create-team-modal';
 import { CreateTrainingModalPage } from '../modals/create-training-modal/create-training-modal';
-import { DeleteTeamModalPage } from '../modals/delete-team-modal/delete-team-modal';
 
 import {TeamPage} from '../team/team';
 
@@ -46,12 +46,30 @@ export class HomePage {
     myModal.present();
   };
 
-  openDeleteTeamModal() {
-    let myModal = this.modalCtrl.create(DeleteTeamModalPage);
-    myModal.present();
-  };
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController) {
+  showConfirm() {
+    const confirm = this.alertCtrl.create({
+      title: 'Manschaft auflösen',
+      message: 'Sind sie sich sicher, dass sie die Mannschaft auflösen wollen?',
+      buttons: [
+        {
+          text: 'Ablehnen',
+          handler: () => {
+            console.log('Disagree clicked');
+          }
+        },
+        {
+          text: 'Zustimmen',
+          handler: () => {
+            console.log('Agree clicked');
+          }
+        }
+      ]
+    });
+    confirm.present();
+  }
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController, public alertCtrl: AlertController) {
     // If we navigated to this page, we will have an item available as a nav param
     this.selectedItem = navParams.get('item');
 
