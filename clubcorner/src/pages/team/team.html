@@ -3,7 +3,7 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Mannschaft 1</ion-title>
+    <ion-title>{{selectedItem.name}}</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -12,7 +12,7 @@
     <ion-list>
 
 
-        <ion-card *ngFor="let item of items">
+        <ion-card *ngFor="let termin of alleTermine">
           <img src="../../assets/imgs/training.jpg"/>
           <div class="myOverlay">
           <div class="card-title">Training</div>
@@ -45,7 +45,7 @@
         <button ion-button round small color="light">Spielerliste</button>
         <button ion-button round small color="light">Training planen</button>
         <button ion-button round small color="light">Spiel anlegen</button>
-        <button ion-button round small color="light">Mannschaft auflösen</button>
+        <button ion-button round small color="light" (click)="deleteTeam()">Mannschaft auflösen</button>
       </ion-fab-list>
     </ion-fab> 
 

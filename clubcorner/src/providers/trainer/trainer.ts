@@ -56,6 +56,11 @@ export class Services {
     return this.http.get(`https://virtserver.swaggerhub.com/TimMaa/Savood/1.0/trainer/${id}`, this.options);
   }
 
+
+  getPlayerInTeam(id:number) {
+    return this.http.get('${env.api}/person/${id}', this.options);
+  }
+
   //------------------------------------------
   //------------------------------------------
   // Code generieren
@@ -93,8 +98,8 @@ export class Services {
     return this.http.delete('${env.api}/game/${id}', this.options);
   }
 
-  getTermin(id:number, termin:Termin) {
-    return this.http.get('${env.api}/termin/${id}', this.options);
+  getTermin(id:number) {
+    return this.http.get(`https://virtserver.swaggerhub.com/TimMaa/Savood/1.0/termin/${id}`, this.options);
   }
 
 
@@ -124,7 +129,7 @@ export class Services {
     return this.http.delete('${env.api}/${teamid}/${id}', this.options);
   }
 
-  getPerson(id:number, person:Person) {
+  getPerson(id:number) {
     return this.http.get('${env.api}/person/${id}', this.options);
   }
   

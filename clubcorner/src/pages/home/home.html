@@ -10,8 +10,8 @@
 <ion-content>
 
     <ion-list *ngIf="allteams">  
-        <button [navPush]="teamPage" ion-item *ngFor="let item of allteams">
-          {{item.name}}
+        <button [navPush]="teamPage" [navParams]="{team:team}" ion-item *ngFor="let team of allteams">
+          {{team.name}}
         </button> 
         <ion-item>
             <ion-input type="text" placeholder="Beitrittscode eingeben"></ion-input>

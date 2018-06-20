@@ -11,7 +11,7 @@ import { CreateTrainingModalPage } from '../modals/create-training-modal/create-
 
 import {TeamPage} from '../team/team';
 import {Services} from '../../providers/trainer/trainer';
-import {Team} from '../../Schema/team.schema'
+import {Team} from '../../Schema/team.schema';
 
 @Component({
   selector: 'page-home',
@@ -24,6 +24,7 @@ export class HomePage {
   items: Array<{title: string}>;
 
   allteams: Team[];
+
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController, public alertCtrl: AlertController, private _teamProv: Services) {
     // If we navigated to this page, we will have an item available as a nav param
@@ -80,7 +81,9 @@ export class HomePage {
   }
 
 
-
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+//Anzeigen der zugehörigen Teams eines Spielers/Trainers
   getAllTeams(){
     //get posted Teams
     //let tempTeam: Person = {teamManager: this._teamProv.activeUser.userID};
@@ -92,5 +95,8 @@ export class HomePage {
       error => console.log(error)
     )
   }
+
+
+
 
 }
