@@ -1,6 +1,8 @@
-export interface Admin {
-  id: number;
-  firstname: string;
-  lastname: string;
-  email: string;
+export interface Termin {
+    id: number;
+    ort: string;
+    uhrzeit: string;
+    datum: string;
+    wiederholend: boolean;
+    gegner: string;
 }

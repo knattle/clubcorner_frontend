@@ -17,7 +17,6 @@ import { CreateTrainingModalPage } from '../pages//modals/create-training-modal/
 
 import { LoginProvider } from '../providers/login/login';
 import { TrainerProvider } from '../providers/trainer/trainer';
-import { AdminProvider } from '../providers/admin/admin';
 import { ProfileProvider } from '../providers/profile/profile';
 import { SpielerProvider } from '../providers/spieler/spieler';
 
@@ -56,7 +55,6 @@ import { SpielerProvider } from '../providers/spieler/spieler';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     LoginProvider,
     TrainerProvider,
-    AdminProvider,
     ProfileProvider,
     SpielerProvider
   ]
