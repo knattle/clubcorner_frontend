@@ -1,0 +1,12 @@
+create-game-modal {
+padding: 0px;
+};
+body > ion-app > ion-modal > div > create-game-modal > ion-content > div.scroll-content > ion-list > ion-item.item.item-block.item-md.item-datetime{
+    padding: 0px;
+};
+body > ion-app > ion-modal > div > create-game-modal > ion-content > div.scroll-content > ion-list > ion-item:nth-child(2) > div.item-inner > div > ion-input > input{
+    text-align: end;
+};
+body > ion-app > ion-modal > div > create-game-modal > ion-content > div.scroll-content > ion-list > ion-item:nth-child(1) > div.item-inner > div > ion-input > input{
+    text-align: end;
+}

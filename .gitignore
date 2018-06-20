@@ -19,6 +19,10 @@ lib-cov
 # Coverage directory used by tools like istanbul
 coverage
 
+clubcorner/www
+
+clubcorner/.sourcemaps
+
 # nyc test coverage
 .nyc_output
 
@@ -27,6 +31,9 @@ coverage
 
 # Bower dependency directory (https://bower.io/)
 bower_components
+
+.idea/
+clubcorner/.idea/
 
 # node-waf configuration
 .lock-wscript

@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Mannschaft 1</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content  class="card-background-page">
+
+    <ion-list>
+
+
+        <ion-card *ngFor="let item of items">
+          <img src="../../assets/imgs/training.jpg"/>
+          <div class="myOverlay">
+          <div class="card-title">Training</div>
+          <div class="card-subtitle">Dienstag 25.05.2018 16:00 Uhr</div>
+          
+             
+          
+          <div class="card-button">
+            <button ion-button icon-left color="secondary" outline>
+                <ion-icon name="checkmark-circle"></ion-icon>
+                Zusagen
+              </button>
+              <button ion-button icon-left color="danger" outline>
+                  <ion-icon name="close-circle"></ion-icon>
+                  Absagen
+                </button>
+          </div>
+        </div>
+        </ion-card>
+      </ion-list>
+
+      
+
+
+
+  <ion-fab left bottom>
+      <button ion-fab color="secondary"><ion-icon name="arrow-dropup"></ion-icon></button>
+      <ion-fab-list side="top">
+        <button ion-fab round small color="light">Spieler einladen</button>
+        <button ion-button round small color="light">Spielerliste</button>
+        <button ion-button round small color="light">Training planen</button>
+        <button ion-button round small color="light">Spiel anlegen</button>
+        <button ion-button round small color="light">Mannschaft auflösen</button>
+      </ion-fab-list>
+    </ion-fab> 
+
+
+</ion-content>

@@ -4,16 +4,34 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+import { TeamPage } from '../pages/team/team';
+import { LoginPage } from '../pages/login/login';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { PlayerInviteModalPage } from '../pages/modals/player-invite-modal/player-invite-modal';
+import { PlayerListModalPage } from '../pages/modals/player-list-modal/player-list-modal';
+import { CreateGameModalPage } from '../pages/modals/create-game-modal/create-game-modal';
+import { CreateTeamModalPage } from '../pages/modals/create-team-modal/create-team-modal';
+import { CreateTrainingModalPage } from '../pages//modals/create-training-modal/create-training-modal';
+
+import { LoginProvider } from '../providers/login/login';
+import { TrainerProvider } from '../providers/trainer/trainer';
+import { ProfileProvider } from '../providers/profile/profile';
+import { SpielerProvider } from '../providers/spieler/spieler';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    ListPage
+    TeamPage,
+    LoginPage,
+    PlayerInviteModalPage,
+    PlayerListModalPage,
+    CreateGameModalPage,
+    CreateTeamModalPage,
+    CreateTrainingModalPage
+    
   ],
   imports: [
     BrowserModule,
@@ -23,12 +41,22 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage
+    TeamPage,
+    LoginPage,
+    PlayerInviteModalPage,
+    PlayerListModalPage,
+    CreateGameModalPage,
+    CreateTeamModalPage,
+    CreateTrainingModalPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    LoginProvider,
+    TrainerProvider,
+    ProfileProvider,
+    SpielerProvider
   ]
 })
 export class AppModule {}
