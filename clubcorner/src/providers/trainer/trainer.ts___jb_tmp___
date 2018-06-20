@@ -4,6 +4,7 @@ import env from '../../environment';
 import {Observable} from "rxjs/Observable";
 import {Team} from "../../Schema/team.schema";
 import {Termin} from "../../Schema/termin.schema";
+import {TrainingSchema} from "../../Schema/training.schema";
 import {Person} from "../../Schema/person.schema";
 
 /*
@@ -13,7 +14,7 @@ import {Person} from "../../Schema/person.schema";
   and Angular DI.
 */
 @Injectable()
-export class Services {
+export class TrainerProvider {
 
   options = {
     headers: new HttpHeaders({
@@ -52,8 +53,8 @@ export class Services {
     return this.http.delete('${env.api}/team/${id}', this.options);
   }
 
-  getTeam(id:number) {
-    return this.http.get(`https://virtserver.swaggerhub.com/TimMaa/Savood/1.0/trainer/${id}`, this.options);
+  getTeam(id:number, team:Team) {
+    return this.http.get('${env.api}/trainer/${id}', this.options);
   }
 
   //------------------------------------------
@@ -106,26 +107,26 @@ export class Services {
 
   createPerson(person:Person) {
     if (person) {
-      return this.http.post('${env.api}/person', person, this.options);
+      return this.http.post('${env.api}/game', person, this.options);
     } else {
       return Observable.throw('No information given');
     }
   }
 
   updatePerson(id:number, person:Person) {
-    if (person) {
-      return this.http.put('${env.api}/person/${id}', person, this.options);
+    if (termin) {
+      return this.http.put('${env.api}/game/${id}', person, this.options);
     } else {
       return Observable.throw('No information given');
     }
   }
 
-  deletePersonFromTeam(id:number, teamid: number) {
-    return this.http.delete('${env.api}/${teamid}/${id}', this.options);
+  deleteTermin(id:number) {
+    return this.http.delete('${env.api}/game/${id}', this.options);
   }
 
-  getPerson(id:number, person:Person) {
-    return this.http.get('${env.api}/person/${id}', this.options);
+  getTermin(id:number, termin:Termin) {
+    return this.http.get('${env.api}/termin/${id}', this.options);
   }
   
   

@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
-import {HttpClientModule} from '@angular/common/http';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -17,7 +16,9 @@ import { CreateTeamModalPage } from '../pages/modals/create-team-modal/create-te
 import { CreateTrainingModalPage } from '../pages//modals/create-training-modal/create-training-modal';
 
 import { LoginProvider } from '../providers/login/login';
-import { Services } from '../providers/trainer/trainer';
+import { TrainerProvider } from '../providers/trainer/trainer';
+import { ProfileProvider } from '../providers/profile/profile';
+import { SpielerProvider } from '../providers/spieler/spieler';
 
 @NgModule({
   declarations: [
@@ -34,8 +35,7 @@ import { Services } from '../providers/trainer/trainer';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp),    
-    HttpClientModule
+    IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -54,7 +54,9 @@ import { Services } from '../providers/trainer/trainer';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     LoginProvider,
-    Services
+    TrainerProvider,
+    ProfileProvider,
+    SpielerProvider
   ]
 })
 export class AppModule {}

@@ -10,6 +10,8 @@ import { CreateTeamModalPage } from '../modals/create-team-modal/create-team-mod
 import { CreateTrainingModalPage } from '../modals/create-training-modal/create-training-modal';
 
 import {TeamPage} from '../team/team';
+import {Services} from '../../providers/trainer/trainer';
+import {Team} from '../../Schema/team.schema'
 
 @Component({
   selector: 'page-home',
@@ -20,6 +22,14 @@ export class HomePage {
   selectedItem: any;
   icons: string[];
   items: Array<{title: string}>;
+
+  allteams: Team[];
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController, public alertCtrl: AlertController, private _teamProv: Services) {
+    // If we navigated to this page, we will have an item available as a nav param
+    this.selectedItem = navParams.get('item');
+    this.getAllTeams();
+  }
 
   openPlayerInviteModal() {
     let myModal = this.modalCtrl.create(PlayerInviteModalPage);
@@ -69,16 +79,18 @@ export class HomePage {
     confirm.present();
   }
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController, public alertCtrl: AlertController) {
-    // If we navigated to this page, we will have an item available as a nav param
-    this.selectedItem = navParams.get('item');
 
 
-    this.items = [];
-    for (let i = 1; i < 5; i++) {
-      this.items.push({
-        title: 'Mannschaft ' + i,
-      });
-    };
+  getAllTeams(){
+    //get posted Teams
+    //let tempTeam: Person = {teamManager: this._teamProv.activeUser.userID};
+    this._teamProv.getTeam(/*ActiveUserID*/ 1).subscribe(
+      (data) => {
+        console.log(data);
+        this.allteams = data as Team[];
+      }, 
+      error => console.log(error)
+    )
   }
+
 }
