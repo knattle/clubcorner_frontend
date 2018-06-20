@@ -47,7 +47,7 @@ export class HomePage {
   };
 
 
-  showConfirm() {
+  showConfirmDeleteTeam() {
     const confirm = this.alertCtrl.create({
       title: 'Manschaft auflösen',
       message: 'Sind sie sich sicher, dass sie die Mannschaft auflösen wollen?',
@@ -60,6 +60,28 @@ export class HomePage {
         },
         {
           text: 'Zustimmen',
+          handler: () => {
+            console.log('Agree clicked');
+          }
+        }
+      ]
+    });
+    confirm.present();
+  }
+
+  showConfirmInvitePlayer() {
+    const confirm = this.alertCtrl.create({
+      title: 'Spieler einladen',
+      message: 'Der Invite Code für die Manschaft lautet: 38615053',
+      buttons: [
+        {
+          text: 'Abbrechen',
+          handler: () => {
+            console.log('Disagree clicked');
+          }
+        },
+        {
+          text: 'Teilen',
           handler: () => {
             console.log('Agree clicked');
           }
