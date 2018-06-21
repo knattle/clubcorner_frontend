@@ -5,11 +5,13 @@ import { NavController, NavParams } from 'ionic-angular';
 import {TeamPage} from '../team/team';
 import {Services} from '../../providers/trainer/trainer';
 import {Team} from '../../Schema/team.schema';
+import {Person} from '../../Schema/person.schema';
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
+
 export class HomePage {
   teamPage = TeamPage;
   selectedItem: any;
@@ -17,7 +19,8 @@ export class HomePage {
   items: Array<{title: string}>;
 
   allteams: Team[];
-
+  person: Person;
+  jwtTokenPlatzhalter: number = 1;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private _teamProv: Services) {
     // If we navigated to this page, we will have an item available as a nav param
@@ -39,6 +42,20 @@ export class HomePage {
         console.log(data);
         this.allteams = data as Team[];
       }, 
+      error => console.log(error)
+    )
+  }
+
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+//Anzeigen des eigenen Profils
+
+  getProfile(){
+    this._teamProv.getPerson(this.jwtTokenPlatzhalter).subscribe(
+      (data:Person) => {
+        console.log(data);
+        this.person = data;
+      },
       error => console.log(error)
     )
   }
