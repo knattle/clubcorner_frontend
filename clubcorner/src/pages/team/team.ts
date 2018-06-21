@@ -32,12 +32,12 @@ export class TeamPage {
   }
 
   openPlayerInviteModal() {
-    let myModal = this.modalCtrl.create(PlayerInviteModalPage);
+    let myModal = this.modalCtrl.create(PlayerInviteModalPage/*, {id: this.selectedItem.id}*/);
     myModal.present();
   };
   
   openPlayerListModal() {
-    let myModal = this.modalCtrl.create(PlayerListModalPage);
+    let myModal = this.modalCtrl.create(PlayerListModalPage/*, {id: this.selectedItem.id}*/);
     myModal.present();
   };
 
@@ -51,10 +51,10 @@ export class TeamPage {
     myModal.present();
   };
 
-  openCreateTrainingModal() {
+  /*openCreateTrainingModal() {
     let myModal = this.modalCtrl.create(CreateTrainingModalPage);
     myModal.present();
-  };
+  };*/
 
 
   showConfirm() {
@@ -72,6 +72,7 @@ export class TeamPage {
           text: 'Zustimmen',
           handler: () => {
             console.log('Agree clicked');
+            this.deleteTeam();
           }
         }
       ]

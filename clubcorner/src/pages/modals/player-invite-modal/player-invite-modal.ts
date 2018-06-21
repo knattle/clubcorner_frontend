@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ViewController } from 'ionic-angular';
+import {Services} from '../../../providers/trainer/trainer';
+import {Person} from '../../../Schema/person.schema';
 
 /**
  * Generated class for the SampleModalPage page.
@@ -14,9 +16,27 @@ import { ViewController } from 'ionic-angular';
   templateUrl: 'player-invite-modal.html'
 })
 export class PlayerInviteModalPage {
-  constructor(public viewCtrl: ViewController) {}
+
+  teamId: number;
+  code: string;
+  constructor(public viewCtrl: ViewController, private _teamProv: Services, private params: NavParams) {
+    this.teamId = params.get("id");
+  }
 
   closeModal() {
     this.viewCtrl.dismiss();
   }
+
+  getCode(){    
+    this._teamProv.getCode(this.teamId).subscribe(
+      (data:string) => {
+        console.log(data);
+        this.code = data;
+      },
+      error => console.log(error)
+    )
+  }
+
 }
+
+

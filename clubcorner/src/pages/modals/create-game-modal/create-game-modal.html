@@ -20,6 +20,10 @@
 
 <ion-content>
   <ion-list inset>
+    <ion-item>
+      <ion-label>Spiel</ion-label>
+      <ion-toggle value="roadGame" checked="false" [(ngModel)]="uebergabe.spiel"></ion-toggle>
+    </ion-item>
 
     <ion-item>
       <ion-label>Gegener</ion-label>
@@ -45,5 +49,5 @@
       
   
   </ion-list>
-  <button ion-button color="dark">Anlegen</button>
+  <button ion-button color="dark" (click)="createOneTermin()">Anlegen</button>
 </ion-content>
