@@ -1,7 +1,9 @@
 export interface Team {
   id: number;
-  jugend: string;
-  mannschaft: string;
-  liga: string;
+  teamManager: string;
+  name: string;
   code: string;
+  grad: string;
+  jugend: string;
+  saison: string;
 }

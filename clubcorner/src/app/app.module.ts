@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import {HttpClientModule} from '@angular/common/http';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -16,10 +17,7 @@ import { CreateTeamModalPage } from '../pages/modals/create-team-modal/create-te
 import { CreateTrainingModalPage } from '../pages//modals/create-training-modal/create-training-modal';
 
 import { LoginProvider } from '../providers/login/login';
-import { TrainerProvider } from '../providers/trainer/trainer';
-import { AdminProvider } from '../providers/admin/admin';
-import { ProfileProvider } from '../providers/profile/profile';
-import { SpielerProvider } from '../providers/spieler/spieler';
+import { Services } from '../providers/trainer/trainer';
 
 @NgModule({
   declarations: [
@@ -36,7 +34,8 @@ import { SpielerProvider } from '../providers/spieler/spieler';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp),    
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -55,10 +54,7 @@ import { SpielerProvider } from '../providers/spieler/spieler';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     LoginProvider,
-    TrainerProvider,
-    AdminProvider,
-    ProfileProvider,
-    SpielerProvider
+    Services
   ]
 })
 export class AppModule {}

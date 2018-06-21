@@ -10,6 +10,8 @@ import { CreateTeamModalPage } from '../modals/create-team-modal/create-team-mod
 import { CreateTrainingModalPage } from '../modals/create-training-modal/create-training-modal';
 
 import {TeamPage} from '../team/team';
+import {Services} from '../../providers/trainer/trainer';
+import {Team} from '../../Schema/team.schema';
 
 @Component({
   selector: 'page-home',
@@ -21,86 +23,36 @@ export class HomePage {
   icons: string[];
   items: Array<{title: string}>;
 
-  openPlayerInviteModal() {
-    let myModal = this.modalCtrl.create(PlayerInviteModalPage);
-    myModal.present();
-  };
-  
-  openPlayerListModal() {
-    let myModal = this.modalCtrl.create(PlayerListModalPage);
-    myModal.present();
-  };
-
-  openCreateGameModal() {
-    let myModal = this.modalCtrl.create(CreateGameModalPage);
-    myModal.present();
-  };
-
-  openCreateTeamModal() {
-    let myModal = this.modalCtrl.create(CreateTeamModalPage);
-    myModal.present();
-  };
-
-  openCreateTrainingModal() {
-    let myModal = this.modalCtrl.create(CreateTrainingModalPage);
-    myModal.present();
-  };
+  allteams: Team[];
 
 
-  showConfirmDeleteTeam() {
-    const confirm = this.alertCtrl.create({
-      title: 'Manschaft auflösen',
-      message: 'Sind sie sich sicher, dass sie die Mannschaft auflösen wollen?',
-      buttons: [
-        {
-          text: 'Ablehnen',
-          handler: () => {
-            console.log('Disagree clicked');
-          }
-        },
-        {
-          text: 'Zustimmen',
-          handler: () => {
-            console.log('Agree clicked');
-          }
-        }
-      ]
-    });
-    confirm.present();
-  }
-
-  showConfirmInvitePlayer() {
-    const confirm = this.alertCtrl.create({
-      title: 'Spieler einladen',
-      message: 'Der Invite Code für die Manschaft lautet: 38615053',
-      buttons: [
-        {
-          text: 'Abbrechen',
-          handler: () => {
-            console.log('Disagree clicked');
-          }
-        },
-        {
-          text: 'Teilen',
-          handler: () => {
-            console.log('Agree clicked');
-          }
-        }
-      ]
-    });
-    confirm.present();
-  }
-
-  constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController, public alertCtrl: AlertController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private _teamProv: Services) {
     // If we navigated to this page, we will have an item available as a nav param
     this.selectedItem = navParams.get('item');
-
-
-    this.items = [];
-    for (let i = 1; i < 5; i++) {
-      this.items.push({
-        title: 'Mannschaft ' + i,
-      });
-    };
+    this.getAllTeams();
   }
+
+
+
+
+//-----------------------------------------------------------------
+//-----------------------------------------------------------------
+//Anzeigen der zugehörigen Teams eines Spielers/Trainers
+  getAllTeams(){
+    //get posted Teams
+    //let tempTeam: Person = {teamManager: this._teamProv.activeUser.userID};
+    this._teamProv.getTeam(/*ActiveUserID*/ 1).subscribe(
+      (data) => {
+        console.log(data);
+        this.allteams = data as Team[];
+      }, 
+      error => console.log(error)
+    )
+  }
+
+
+
+
+
+
 }

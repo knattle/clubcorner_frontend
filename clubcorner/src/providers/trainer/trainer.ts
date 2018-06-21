@@ -3,8 +3,8 @@ import { Injectable } from '@angular/core';
 import env from '../../environment';
 import {Observable} from "rxjs/Observable";
 import {Team} from "../../Schema/team.schema";
-import {GameSchema} from "../../Schema/game.schema";
-import {TrainingSchema} from "../../Schema/training.schema";
+import {Termin} from "../../Schema/termin.schema";
+import {Person} from "../../Schema/person.schema";
 
 /*
   Generated class for the TrainerProvider provider.
@@ -13,7 +13,7 @@ import {TrainingSchema} from "../../Schema/training.schema";
   and Angular DI.
 */
 @Injectable()
-export class TrainerProvider {
+export class Services {
 
   options = {
     headers: new HttpHeaders({
@@ -22,7 +22,7 @@ export class TrainerProvider {
     })
   };
 
-  constructor(public http: HttpClient) {
+  constructor(public http:HttpClient) {
     console.log('Hello TrainerProvider Provider');
   }
 
@@ -32,28 +32,33 @@ export class TrainerProvider {
   //------------------------------------------
   //------------------------------------------
 
-  createTeam(team: Team){
-    if(team){
+  createTeam(team:Team) {
+    if (team) {
       return this.http.post('${env.api}/team', team, this.options);
     } else {
       return Observable.throw('No information given');
     }
   }
 
-  updateTeam(id:number, team: Team){
-    if(team){
+  updateTeam(id:number, team:Team) {
+    if (team) {
       return this.http.put('${env.api}/team/${id}', team, this.options);
     } else {
       return Observable.throw('No information given');
     }
   }
 
-  deleteTeam(id:number){
+  deleteTeam(id:number) {
     return this.http.delete('${env.api}/team/${id}', this.options);
   }
 
-  getTeam(id: number, team: Team){
-    return this.http.get('${env.api}/trainer/${id}', this.options);
+  getTeam(id:number) {
+    return this.http.get(`https://virtserver.swaggerhub.com/TimMaa/Savood/1.0/trainer/${id}`, this.options);
+  }
+
+
+  getPlayerInTeam(id:number) {
+    return this.http.get('${env.api}/person/${id}', this.options);
   }
 
   //------------------------------------------
@@ -62,61 +67,71 @@ export class TrainerProvider {
   //------------------------------------------
   //------------------------------------------
 
-  generateCode(id:number, code: number){
+  generateCode(id:number, code:number) {
     return this.http.post('${env.api}/team/${id}', code, this.options)
   }
 
 
   //------------------------------------------
   //------------------------------------------
-  // Spiel erstellen
+  // Termin erstellen
   //------------------------------------------
   //------------------------------------------
 
-  createGame(game: GameSchema){
-    if(game){
-      return this.http.post('${env.api}/game', game, this.options);
+  createTermin(termin:Termin) {
+    if (termin) {
+      return this.http.post('${env.api}/game', termin, this.options);
     } else {
       return Observable.throw('No information given');
     }
   }
 
-  updateGame(id:number, game: GameSchema){
-    if(game){
-      return this.http.put('${env.api}/game/${id}', game, this.options);
+  updateTermin(id:number, termin:Termin) {
+    if (termin) {
+      return this.http.put('${env.api}/game/${id}', termin, this.options);
     } else {
       return Observable.throw('No information given');
     }
   }
 
-  deleteGame(id:number){
+  deleteTermin(id:number) {
     return this.http.delete('${env.api}/game/${id}', this.options);
   }
 
+  getTermin(id:number) {
+    return this.http.get(`https://virtserver.swaggerhub.com/TimMaa/Savood/1.0/termin/${id}`, this.options);
+  }
+
 
   //------------------------------------------
   //------------------------------------------
-  // Training erstellen
+  // Person erstellen
   //------------------------------------------
   //------------------------------------------
 
-  createTraining(training: TrainingSchema){
-    if(training){
-      return this.http.post('${env.api}/training', training, this.options);
+  createPerson(person:Person) {
+    if (person) {
+      return this.http.post('${env.api}/person', person, this.options);
     } else {
       return Observable.throw('No information given');
     }
   }
 
-  updateTraining(id:number, training: TrainingSchema){
-    if(training){
-      return this.http.put('${env.api}/training/${id}', training, this.options);
+  updatePerson(id:number, person:Person) {
+    if (person) {
+      return this.http.put('${env.api}/person/${id}', person, this.options);
     } else {
       return Observable.throw('No information given');
     }
   }
 
-  deleteTraining(id:number){
-    return this.http.delete('${env.api}/training/${id}', this.options);
+  deletePersonFromTeam(id:number, teamid: number) {
+    return this.http.delete('${env.api}/${teamid}/${id}', this.options);
   }
+
+  getPerson(id:number) {
+    return this.http.get('${env.api}/person/${id}', this.options);
+  }
+  
+  
 }
