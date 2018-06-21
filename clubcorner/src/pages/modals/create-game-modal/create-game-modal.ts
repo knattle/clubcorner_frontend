@@ -36,12 +36,5 @@ export class CreateGameModalPage {
     uhrzeit: null
   }
 
- /* createGameModalPage(){    
-    this._teamProv.createTermin(this.uebergabe).subscribe(
-      (data) => {
-        console.log(data);
-      },
-      error => console.log(error)
-    )
-  }*/
+
 }
