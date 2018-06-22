@@ -53,7 +53,7 @@ export class Services {
   }
 
   getTeam(id:number) {
-    return this.http.get(`https://virtserver.swaggerhub.com/TimMaa/Savood/1.0/trainer/${id}`, this.options);
+    return this.http.get(`https://virtserver.swaggerhub.com/schustern/handballverein/1.0/trainer/${id}`, this.options);
   }
 
 
@@ -99,7 +99,7 @@ export class Services {
   }
 
   getTermin(id:number) {
-    return this.http.get(`https://virtserver.swaggerhub.com/TimMaa/Savood/1.0/termin/${id}`, this.options);
+    return this.http.get(`https://virtserver.swaggerhub.com/schustern/handballverein/1.0/termin/${id}`, this.options);
   }
 
 

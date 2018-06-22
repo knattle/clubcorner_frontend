@@ -27,8 +27,8 @@ export class TeamPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController, public alertCtrl: AlertController, private _teamProv: Services) {
     // If we navigated to this page, we will have an item available as a nav param
-    //this.selectedItem = navParams.get('team');
-    //this.getAllTermine();
+    this.selectedItem = navParams.get('team');
+    this.getAllTermine();
   }
 
   openPlayerInviteModal() {
