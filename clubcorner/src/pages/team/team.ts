@@ -7,7 +7,6 @@ import {Person} from '../../Schema/person.schema';
 import { PlayerInviteModalPage } from '../modals/player-invite-modal/player-invite-modal';
 import { PlayerListModalPage } from '../modals/player-list-modal/player-list-modal';
 import { CreateGameModalPage } from '../modals/create-game-modal/create-game-modal';
-import { CreateTeamModalPage } from '../modals/create-team-modal/create-team-modal';
 import { CreateTrainingModalPage } from '../modals/create-training-modal/create-training-modal';
 import { ModalController } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
@@ -43,11 +42,6 @@ export class TeamPage {
 
   openCreateGameModal() {
     let myModal = this.modalCtrl.create(CreateGameModalPage);
-    myModal.present();
-  };
-
-  openCreateTeamModal() {
-    let myModal = this.modalCtrl.create(CreateTeamModalPage);
     myModal.present();
   };
 
