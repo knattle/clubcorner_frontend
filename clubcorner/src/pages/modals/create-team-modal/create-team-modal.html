@@ -32,16 +32,129 @@
         </ion-segment>
       </div>
       
-      <div [ngSwitch]="pet">                  <ion-select [(ngModel)]="year2" interface="popover">
-             on-option>1989</ion-option>
-                            <ion-select [(ngModel)]="year2" interface="popover">
+      <div [ngSwitch]="pet">
+        <div *ngSwitchCase="'H'">
+            <ion-list>
+                <ion-item>
+                  <ion-label>Altersstufe</ion-label>
+                  <ion-select [(ngModel)]="jugend" interface="popover">
+                    <ion-option value="H">Herren</ion-option>
+                    <ion-option value="A">A-Junioren</ion-option>
+                    <ion-option value="B">B-Junioren</ion-option>
+                    <ion-option value="C">C-Junioren</ion-option>
+                    <ion-option value="D">D-Junioren</ion-option>
+                    <ion-option value="E">E-Junioren</ion-option>
+                    <ion-option value="F">F-Junioren</ion-option>
+                    <ion-option value="M">Minis</ion-option>
+                    <ion-option value="S">Senioren</ion-option>
+                  </ion-select>
+                </ion-item>
+          
+                <ion-item>
+                  <ion-label>Spielzeit</ion-label>
+                  <ion-select [(ngModel)]="year" interface="popover">
                     <ion-option>1989</ion-option>
                     <ion-option>1990</ion-option>
-                    <ion-option>1991<          <ion-option>1990</ion-option>
-            <i
-        on-item>
-          
-        ion-select [(ngModel)]="year" interface="popover">
-                              <ion-label>Spielzeit</ion-label>
-     interface="popover">
+                    <ion-option>1991</ion-option>
+                    <ion-option>1992</ion-option>
+                    <ion-option>1993</ion-option>
+                    <ion-option>1994</ion-option>
+                    <ion-option>1995</ion-option>
+                    <ion-option>1996</ion-option>
+                    <ion-option>1997</ion-option>
+                    <ion-option>1998</ion-option>
+                    <ion-option>1999</ion-option>
+                  </ion-select>
+                  <ion-select [(ngModel)]="year2" interface="popover">
                     <ion-option>1989</ion-option>
+                    <ion-option>1990</ion-option>
+                    <ion-option>1991</ion-option>
+                    <ion-option>1992</ion-option>
+                    <ion-option>1993</ion-option>
+                    <ion-option>1994</ion-option>
+                    <ion-option>1995</ion-option>
+                    <ion-option>1996</ion-option>
+                    <ion-option>1997</ion-option>
+                    <ion-option>1998</ion-option>
+                    <ion-option>1999</ion-option>
+                  </ion-select>
+                </ion-item>
+            
+              </ion-list>
+            <ion-list  radio-group>
+                <ion-item>
+                  <ion-label>1. Mannschaft</ion-label>
+                  <ion-radio checked="true" value="go"></ion-radio>
+                </ion-item>
+              
+                <ion-item>
+                  <ion-label>2.Mannschaft</ion-label>
+                  <ion-radio value="rust"></ion-radio>
+                </ion-item>
+              
+                <ion-item>
+                  <ion-label>3. Mannschaft</ion-label>
+                  <ion-radio value="python"></ion-radio>
+                </ion-item>
+        </ion-list>
+        <button ion-button full padding>Anlegen</button>
+        </div>
+        
+      
+        <div *ngSwitchCase="'F'">
+            <ion-list>
+                <ion-item>
+                  <ion-label>Altersstufe</ion-label>
+                  <ion-select [(ngModel)]="jugend" interface="popover">
+                    <ion-option value="H">Frauen</ion-option>
+                    <ion-option value="A">A-Juniorinnen</ion-option>
+                    <ion-option value="B">B-Juniorinnen</ion-option>
+                    <ion-option value="C">C-Juniorinnen</ion-option>
+                    <ion-option value="D">D-Juniorinnen</ion-option>
+                    <ion-option value="E">E-Juniorinnen</ion-option>
+                    <ion-option value="F">F-Juniorinnen</ion-option>
+                    <ion-option value="M">Minis</ion-option>
+                    <ion-option value="S">Seniorinnen</ion-option>
+                  </ion-select>
+                </ion-item>
+          
+                <ion-item>
+                  <ion-label>Spielzeit</ion-label>
+                  <ion-select [(ngModel)]="year" interface="popover">
+                    <ion-option>1989</ion-option>
+                    <ion-option>1990</ion-option>
+                    <ion-option>1991</ion-option>
+                    <ion-option>1992</ion-option>
+                    <ion-option>1993</ion-option>
+                    <ion-option>1994/95</ion-option>
+                    <ion-option>1995</ion-option>
+                    <ion-option>1996</ion-option>
+                    <ion-option>1997</ion-option>
+                    <ion-option>1998</ion-option>
+                    <ion-option>1999</ion-option>
+                  </ion-select>
+                  
+                </ion-item>
+            
+              </ion-list>
+            <ion-list  radio-group>
+                <ion-item>
+                  <ion-label>1. Mannschaft</ion-label>
+                  <ion-radio checked="true" value="go"></ion-radio>
+                </ion-item>
+              
+                <ion-item>
+                  <ion-label>2.Mannschaft</ion-label>
+                  <ion-radio value="rust"></ion-radio>
+                </ion-item>
+              
+                <ion-item>
+                  <ion-label>3. Mannschaft</ion-label>
+                  <ion-radio value="python"></ion-radio>
+                </ion-item>
+        </ion-list>
+        <button ion-button full padding>Anlegen</button>
+        </div>
+      </div>
+    
+</ion-content>

@@ -30,10 +30,10 @@ export class TeamPage {
     this.getAllTermine();
   }
 
-  openPlayerInviteModal() {
-    let myModal = this.modalCtrl.create(PlayerInviteModalPage/*, {id: this.selectedItem.id}*/);
+  /*openPlayerInviteModal() {
+    let myModal = this.modalCtrl.create(PlayerInviteModalPage, {id: this.selectedItem.id});
     myModal.present();
-  };
+};*/
   
   openPlayerListModal() {
     let myModal = this.modalCtrl.create(PlayerListModalPage/*, {id: this.selectedItem.id}*/);
@@ -51,7 +51,30 @@ export class TeamPage {
   };
 
 
-  showConfirm() {
+  openPlayerInviteModal() {
+    const confirm = this.alertCtrl.create({
+      title: 'Spieler Einladen',
+      message: 'sie können spieler einladen mit dem folgenden Code: 39620472',
+      buttons: [
+        {
+          text: 'Ablehnen',
+          handler: () => {
+            console.log('Disagree clicked');
+          }
+        },
+        {
+          text: 'Zustimmen',
+          handler: () => {
+            console.log('Agree clicked');
+            this.deleteTeam();
+          }
+        }
+      ]
+    });
+    confirm.present();
+  }
+
+  openDeleteTeamModal() {
     const confirm = this.alertCtrl.create({
       title: 'Manschaft auflösen',
       message: 'Sind sie sich sicher, dass sie die Mannschaft auflösen wollen?',
