@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>createTeamModal</ion-title>
+    <ion-title>Mannschaft anlegen</ion-title>
     <ion-buttons start>
       <button ion-button (click)="closeModal()">
         <span ion-text color="primary">Abbrechen</span>
@@ -20,4 +20,28 @@
 
 <ion-content padding>
 
-</ion-content>
+
+    <div padding>
+        <ion-segment [(ngModel)]="pet">
+          <ion-segment-button value="H">
+           Herren
+          </ion-segment-button>
+          <ion-segment-button value="F">
+           Mädchen
+          </ion-segment-button>
+        </ion-segment>
+      </div>
+      
+      <div [ngSwitch]="pet">                  <ion-select [(ngModel)]="year2" interface="popover">
+             on-option>1989</ion-option>
+                            <ion-select [(ngModel)]="year2" interface="popover">
+                    <ion-option>1989</ion-option>
+                    <ion-option>1990</ion-option>
+                    <ion-option>1991<          <ion-option>1990</ion-option>
+            <i
+        on-item>
+          
+        ion-select [(ngModel)]="year" interface="popover">
+                              <ion-label>Spielzeit</ion-label>
+     interface="popover">
+                    <ion-option>1989</ion-option>

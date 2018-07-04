@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { ModalController } from 'ionic-angular';
 
 
 import {TeamPage} from '../team/team';
 import {Services} from '../../providers/trainer/trainer';
 import {Team} from '../../Schema/team.schema';
 import {Person} from '../../Schema/person.schema';
+import { CreateTeamModalPage } from '../modals/create-team-modal/create-team-modal';
 
 @Component({
   selector: 'page-home',
@@ -22,11 +24,16 @@ export class HomePage {
   person: Person;
   jwtTokenPlatzhalter: number = 1;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private _teamProv: Services) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private _teamProv: Services, public modalCtrl: ModalController) {
     // If we navigated to this page, we will have an item available as a nav param
     this.selectedItem = navParams.get('item');
     this.getAllTeams();
   }
+
+  openCreateTeamModal() {
+    let myModal = this.modalCtrl.create(CreateTeamModalPage);
+    myModal.present();
+  };
 
 
 

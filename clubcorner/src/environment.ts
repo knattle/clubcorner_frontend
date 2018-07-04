@@ -1,4 +1,4 @@
 
 export const env= {
-    api: "https://virtserver.swaggerhub.com/TimMaa/Savood/1.0"
+    api: "https://virtserver.swaggerhub.com/schustern/handballverein/1.0"
 }

@@ -7,7 +7,6 @@ import {Person} from '../../Schema/person.schema';
 import { PlayerInviteModalPage } from '../modals/player-invite-modal/player-invite-modal';
 import { PlayerListModalPage } from '../modals/player-list-modal/player-list-modal';
 import { CreateGameModalPage } from '../modals/create-game-modal/create-game-modal';
-import { CreateTeamModalPage } from '../modals/create-team-modal/create-team-modal';
 import { CreateTrainingModalPage } from '../modals/create-training-modal/create-training-modal';
 import { ModalController } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
@@ -27,8 +26,8 @@ export class TeamPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController, public alertCtrl: AlertController, private _teamProv: Services) {
     // If we navigated to this page, we will have an item available as a nav param
-    //this.selectedItem = navParams.get('team');
-    //this.getAllTermine();
+    this.selectedItem = navParams.get('team');
+    this.getAllTermine();
   }
 
   openPlayerInviteModal() {
@@ -46,15 +45,10 @@ export class TeamPage {
     myModal.present();
   };
 
-  openCreateTeamModal() {
-    let myModal = this.modalCtrl.create(CreateTeamModalPage);
-    myModal.present();
-  };
-
-  /*openCreateTrainingModal() {
+  openCreateTrainingModal() {
     let myModal = this.modalCtrl.create(CreateTrainingModalPage);
     myModal.present();
-  };*/
+  };
 
 
   showConfirm() {
