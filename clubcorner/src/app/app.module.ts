@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import {HttpClientModule} from '@angular/common/http';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -14,11 +15,10 @@ import { PlayerListModalPage } from '../pages/modals/player-list-modal/player-li
 import { CreateGameModalPage } from '../pages/modals/create-game-modal/create-game-modal';
 import { CreateTeamModalPage } from '../pages/modals/create-team-modal/create-team-modal';
 import { CreateTrainingModalPage } from '../pages//modals/create-training-modal/create-training-modal';
+import { EmailComposer} from "@ionic-native/email-composer";
 
 import { LoginProvider } from '../providers/login/login';
-import { TrainerProvider } from '../providers/trainer/trainer';
-import { ProfileProvider } from '../providers/profile/profile';
-import { SpielerProvider } from '../providers/spieler/spieler';
+import { Services } from '../providers/trainer/trainer';
 
 @NgModule({
   declarations: [
@@ -31,11 +31,12 @@ import { SpielerProvider } from '../providers/spieler/spieler';
     CreateGameModalPage,
     CreateTeamModalPage,
     CreateTrainingModalPage
-    
+
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -54,9 +55,8 @@ import { SpielerProvider } from '../providers/spieler/spieler';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     LoginProvider,
-    TrainerProvider,
-    ProfileProvider,
-    SpielerProvider
+    Services,
+    EmailComposer
   ]
 })
 export class AppModule {}

@@ -3,7 +3,7 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Mannschaft 1</ion-title>
+    <ion-title>{{selectedItem.name}}</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -12,7 +12,7 @@
     <ion-list>
 
 
-        <ion-card *ngFor="let item of items">
+        <ion-card *ngFor="let termin of alleTermine">
           <img src="../../assets/imgs/training.jpg"/>
           <div class="myOverlay">
           <div class="card-title">Training</div>
@@ -37,15 +37,14 @@
       
 
 
-
-  <ion-fab left bottom>
-      <button ion-fab color="secondary"><ion-icon name="arrow-dropup"></ion-icon></button>
+<ion-fab left bottom>
+      <button ion-fab color="dark"><ion-icon name="arrow-dropup"></ion-icon></button>
       <ion-fab-list side="top">
-        <button ion-fab round small color="light">Spieler einladen</button>
-        <button ion-button round small color="light">Spielerliste</button>
-        <button ion-button round small color="light">Training planen</button>
-        <button ion-button round small color="light">Spiel anlegen</button>
-        <button ion-button round small color="light">Mannschaft auflösen</button>
+        <button ion-button round small color="dark" style="float:left;" (click)="openPlayerInviteModal()">Spieler einladen</button>
+        <button ion-button round small color="dark" style="float:left;" (click)="openPlayerListModal()">Spielerliste</button>
+        
+        <button ion-button round small color="dark" style="float:left;" (click)="openCreateGameModal()">Termin anlegen</button>
+        <button ion-button round small color="dark" style="float:left;" (click)="openDeleteTeamModal()">Mannschaft auflösen</button>
       </ion-fab-list>
     </ion-fab> 
 

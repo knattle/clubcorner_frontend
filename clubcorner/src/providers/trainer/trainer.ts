@@ -4,7 +4,6 @@ import env from '../../environment';
 import {Observable} from "rxjs/Observable";
 import {Team} from "../../Schema/team.schema";
 import {Termin} from "../../Schema/termin.schema";
-import {TrainingSchema} from "../../Schema/training.schema";
 import {Person} from "../../Schema/person.schema";
 
 /*
@@ -14,7 +13,7 @@ import {Person} from "../../Schema/person.schema";
   and Angular DI.
 */
 @Injectable()
-export class TrainerProvider {
+export class Services {
 
   options = {
     headers: new HttpHeaders({
@@ -53,8 +52,13 @@ export class TrainerProvider {
     return this.http.delete('${env.api}/team/${id}', this.options);
   }
 
-  getTeam(id:number, team:Team) {
-    return this.http.get('${env.api}/trainer/${id}', this.options);
+  getTeam(id:number) {
+    return this.http.get(`https://virtserver.swaggerhub.com/schustern/handballverein/1.0/trainer/${id}`, this.options);
+  }
+
+
+  getPlayerInTeam(id:number) {
+    return this.http.get('${env.api}/person/${id}', this.options);
   }
 
   //------------------------------------------
@@ -65,6 +69,9 @@ export class TrainerProvider {
 
   generateCode(id:number, code:number) {
     return this.http.post('${env.api}/team/${id}', code, this.options)
+  }
+  getCode(id:number) {
+    return this.http.get(`https://virtserver.swaggerhub.com/TimMaa/Savood/1.0/team${id}/code`, this.options);
   }
 
 
@@ -94,8 +101,8 @@ export class TrainerProvider {
     return this.http.delete('${env.api}/game/${id}', this.options);
   }
 
-  getTermin(id:number, termin:Termin) {
-    return this.http.get('${env.api}/termin/${id}', this.options);
+  getTermin(id:number) {
+    return this.http.get(`https://virtserver.swaggerhub.com/schustern/handballverein/1.0/termin/${id}`, this.options);
   }
 
 
@@ -121,11 +128,11 @@ export class TrainerProvider {
     }
   }
 
-  deletePerson(id:number) {
-    return this.http.delete('${env.api}/person/${id}', this.options);
+  deletePersonFromTeam(id:number, teamid: number) {
+    return this.http.delete('${env.api}/${teamid}/${id}', this.options);
   }
 
-  getPerson(id:number, person:Person) {
+  getPerson(id:number) {
     return this.http.get('${env.api}/person/${id}', this.options);
   }
   

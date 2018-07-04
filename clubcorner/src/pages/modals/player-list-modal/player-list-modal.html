@@ -19,14 +19,14 @@
 
 
 <ion-content>
-  <ion-list>
-    <ion-item>
+  <ion-list *ngIf="playerList">
+    <ion-item *ngFor="let player of playerList">
       <ion-avatar item-start>
         <img src='../../../assets/imgs/avatar.jpg'>
       </ion-avatar>
-      <h2>Max Mustermann</h2>
+      <h2>{{this.name}}</h2>
       <p><ion-icon name="ma-checkmark-circle"></ion-icon> Verfügbar</p>
-      <button ion-button small clear item-end icon-left color="dark">
+      <button ion-button small clear item-end icon-left color="dark" (click)="deletePlayer(player)">
         <ion-icon name="md-close-circle"></ion-icon>
         Entfernen
       </button>

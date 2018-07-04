@@ -1,12 +1,42 @@
 <ion-menu [content]="content">
   <ion-header>
-    <ion-toolbar>
-      <ion-title>Menu</ion-title>
-    </ion-toolbar>
+
+    <ion-navbar>
+      <ion-title>Profil</ion-title>
+    </ion-navbar>
+
   </ion-header>
 
+
   <ion-content>
-    hhfhshfkshf 
+    <ion-list inset> <!--*ngIf="profile"-->
+
+      <ion-item>
+        <ion-avatar item-start>
+          <img src='../assets/imgs/avatar.jpg'>
+        </ion-avatar>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Vorname</ion-label>
+        <ion-input value="text" [(ngModel)]="profile.firstname"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Name</ion-label>
+        <ion-input type="text" [(ngModel)]="profile.lastname"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Login Name</ion-label>
+        <ion-input value="roadGame" [(ngModel)]="profile.loginName"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Login Passwort</ion-label>
+        <ion-input type="text" [(ngModel)]="profile.loginpw"></ion-input>
+      </ion-item>
+
+    </ion-list>
+    <button ion-button color="dark" (click)="saveUpdateProfile()">Aenderungen speichern</button>
   </ion-content>
 
 </ion-menu>

@@ -5,6 +5,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { TeamPage } from '../pages/team/team';
 import { LoginPage } from '../pages/login/login';
+import {Services} from "../providers/trainer/trainer";
+import {Person} from "../Schema/person.schema";
 @Component({
   templateUrl: 'app.html'
 })
@@ -15,15 +17,52 @@ export class MyApp {
 
   pages: Array<{title: string, component: any}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+
+
+
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, private _teamProv: Services) {
     this.initializeApp();
+    //this.getProfile(this.idNumber);
 
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage },
     ];
 
+
   }
+
+  idNumber: number = 1;
+  //profile: Person;
+  profile: Person = {
+    id: 4,
+    firstname: "vorname",
+    lastname: "nachname",
+    loginName: "testlogin",
+    loginpw: "pw"
+  }
+
+/*  saveUpdateProfile(id: number, profile: Person){
+  this._teamProv.updatePerson(id, profile).subscribe(
+    (data) => {
+     console.log(data);
+    },
+    error => console.log(error)
+    )
+  }*/
+
+/*  getProfile(id: number){
+    this._teamProv.getPerson(id).subscribe(
+      (data:Person) => {
+        console.log(data);
+        this.profile = data;
+      },
+      error => console.log(error)
+    )
+  }*/
+
+
+
 
   initializeApp() {
     this.platform.ready().then(() => {

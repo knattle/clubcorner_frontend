@@ -9,9 +9,9 @@
 
 <ion-content>
 
-    <ion-list>
-        <button [navPush]="teamPage" ion-item *ngFor="let item of items">
-          {{item.title}}
+    <ion-list *ngIf="allteams">  
+        <button [navPush]="teamPage" [navParams]="{team:team}" ion-item *ngFor="let team of allteams">
+          {{team.name}}
         </button> 
         <ion-item>
             <ion-input type="text" placeholder="Beitrittscode eingeben"></ion-input>
@@ -22,26 +22,11 @@
           </ion-item>
       </ion-list>
 
-      
-
-
-
-  <ion-fab left bottom>
-      <button ion-fab color="dark"><ion-icon name="arrow-dropup"></ion-icon></button>
-      <ion-fab-list side="top">
-        <button ion-button round small color="dark" style="float:left;" (click)="openPlayerInviteModal()">Spieler einladen</button>
-        <button ion-button round small color="dark" style="float:left;" (click)="openPlayerListModal()">Spielerliste</button>
-        <button ion-button round small color="dark" style="float:left;" (click)="openCreateTrainingModal()">Training planen</button>
-        <button ion-button round small color="dark" style="float:left;" (click)="openCreateGameModal()">Spiel anlegen</button>
-        <button ion-button round small color="dark" style="float:left;" (click)="showConfirm()">Mannschaft auflösen</button>
-      </ion-fab-list>
-    </ion-fab> 
-
 
 </ion-content>
 <ion-footer>
   <ion-toolbar>
-      <button ion-button item-end icon-left block round small color="secondary">
+      <button ion-button item-end icon-left block round small color="secondary"  (click)="openCreateTeamModal()">
           <ion-icon name="md-add-circle"></ion-icon>
           Mannschaft anlegen
         </button>

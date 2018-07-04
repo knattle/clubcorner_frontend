@@ -1,4 +1,4 @@
 
 export const env= {
-    api: "hallo"
+    api: "https://virtserver.swaggerhub.com/schustern/handballverein/1.0"
 }
