@@ -15,6 +15,7 @@ import { PlayerListModalPage } from '../pages/modals/player-list-modal/player-li
 import { CreateGameModalPage } from '../pages/modals/create-game-modal/create-game-modal';
 import { CreateTeamModalPage } from '../pages/modals/create-team-modal/create-team-modal';
 import { CreateTrainingModalPage } from '../pages//modals/create-training-modal/create-training-modal';
+import { EmailComposer} from "@ionic-native/email-composer";
 
 import { LoginProvider } from '../providers/login/login';
 import { Services } from '../providers/trainer/trainer';
@@ -30,11 +31,11 @@ import { Services } from '../providers/trainer/trainer';
     CreateGameModalPage,
     CreateTeamModalPage,
     CreateTrainingModalPage
-    
+
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp),    
+    IonicModule.forRoot(MyApp),
     HttpClientModule
   ],
   bootstrap: [IonicApp],
@@ -54,7 +55,8 @@ import { Services } from '../providers/trainer/trainer';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     LoginProvider,
-    Services
+    Services,
+    EmailComposer
   ]
 })
 export class AppModule {}

@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ViewController } from 'ionic-angular';
 import {Services} from '../../../providers/trainer/trainer';
 import {Person} from '../../../Schema/person.schema';
+import { EmailComposer } from '@ionic-native/email-composer';
 
 /**
  * Generated class for the SampleModalPage page.
@@ -19,7 +20,7 @@ export class PlayerInviteModalPage {
 
   teamId: number;
   code: string;
-  constructor(public viewCtrl: ViewController, private _teamProv: Services, private params: NavParams) {
+  constructor(public viewCtrl: ViewController, private _teamProv: Services, private params: NavParams, private emailComposer: EmailComposer) {
     this.teamId = params.get("id");
   }
 
@@ -27,7 +28,7 @@ export class PlayerInviteModalPage {
     this.viewCtrl.dismiss();
   }
 
-  getCode(){    
+  getCode(){
     this._teamProv.getCode(this.teamId).subscribe(
       (data:string) => {
         console.log(data);

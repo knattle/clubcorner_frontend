@@ -30,21 +30,21 @@ export class CreateGameModalPage {
   uebergabe: Termin = {
     id: null,
     spiel: null,
-    gegner: null,
     ort: null,
-    wiederholend: null,
+    uhrzeit: null,
     datum: null,
-    uhrzeit: null
+    wiederholend: null,
+    gegner: null
   }
 
-    createOneTermin(){
-    this._teamProv.createTermin(/*ID des zu löschenden Teams*/ this.uebergabe).subscribe(
+/*    createOneTermin(){
+    this._teamProv.createTermin(ID des zu löschenden Teams this.uebergabe).subscribe(
       (data) => {
         console.log(data);
       },
       error => console.log(error)
     )
-  }
+  }*/
 
 
 }
