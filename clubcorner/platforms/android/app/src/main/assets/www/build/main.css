@@ -25678,6 +25678,53 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
+.ion-item {
+  padding: 0px;
+}
+
+page-home ion-fab-list {
+  -webkit-box-align: left !important;
+  -webkit-align-items: left !important;
+  -ms-flex-align: left !important;
+  align-items: flex-start !important;
+}
+
+body > ion-app > ng-component > ion-nav > page-home > ion-content > div.scroll-content > ion-list {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+body > ion-app > ng-component > ion-nav > page-home > ion-content > div.scroll-content > ion-list > ion-item > div.item-inner > div > ion-input > input {
+  margin: 0px;
+}
+
+body > ion-app > ng-component > ion-nav > page-home > ion-content > div.scroll-content > ion-list > button:nth-child(1) {
+  padding-left: 0px;
+}
+
+page-home ion-fab-list {
+  -webkit-box-align: left !important;
+  -webkit-align-items: left !important;
+  -ms-flex-align: left !important;
+  align-items: flex-start !important;
+}
+
+create-game-modal {
+  padding: 0px;
+}
+
+body > ion-app > ion-modal > div > create-game-modal > ion-content > div.scroll-content > ion-list > ion-item.item.item-block.item-md.item-datetime {
+  padding: 0px;
+}
+
+body > ion-app > ion-modal > div > create-game-modal > ion-content > div.scroll-content > ion-list > ion-item:nth-child(2) > div.item-inner > div > ion-input > input {
+  text-align: end;
+}
+
+body > ion-app > ion-modal > div > create-game-modal > ion-content > div.scroll-content > ion-list > ion-item:nth-child(1) > div.item-inner > div > ion-input > input {
+  text-align: end;
+}
+
 page-team .card-background-page ion-card {
   height: 100%;
   position: relative;
@@ -25715,4 +25762,24 @@ page-team .card-background-page .myOverlay {
   z-index: 99;
   bottom: 0px;
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+page-team ion-fab-list {
+  -webkit-box-align: left !important;
+  -webkit-align-items: left !important;
+  -ms-flex-align: left !important;
+  align-items: flex-start !important;
+}
+
+body > ion-app > ng-component > ion-nav > page-team > ion-content > div.scroll-content > ion-list {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+body > ion-app > ng-component > ion-nav > page-team > ion-content > div.scroll-content > ion-list > ion-item > div.item-inner > div > ion-input > input {
+  margin: 0px;
+}
+
+body > ion-app > ng-component > ion-nav > page-team > ion-content > div.scroll-content > ion-list > button:nth-child(1) {
+  padding-left: 0px;
 }
