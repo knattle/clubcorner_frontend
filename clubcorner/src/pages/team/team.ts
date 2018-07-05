@@ -10,6 +10,7 @@ import { CreateGameModalPage } from '../modals/create-game-modal/create-game-mod
 import { CreateTrainingModalPage } from '../modals/create-training-modal/create-training-modal';
 import { ModalController } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
+import { EmailComposer } from '@ionic-native/email-composer';
 
 
 @Component({
@@ -24,7 +25,7 @@ export class TeamPage {
   alleTermine: Termin[];
   alleSpieler: Person[];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController, public alertCtrl: AlertController, private _teamProv: Services) {
+  constructor(public navCtrl: NavController, private emailComposer: EmailComposer, public navParams: NavParams, public modalCtrl: ModalController, public alertCtrl: AlertController, private _teamProv: Services) {
     // If we navigated to this page, we will have an item available as a nav param
     this.selectedItem = navParams.get('team');
     this.getAllTermine();
@@ -34,7 +35,7 @@ export class TeamPage {
     let myModal = this.modalCtrl.create(PlayerInviteModalPage, {id: this.selectedItem.id});
     myModal.present();
 };*/
-  
+
   openPlayerListModal() {
     let myModal = this.modalCtrl.create(PlayerListModalPage/*, {id: this.selectedItem.id}*/);
     myModal.present();
@@ -57,16 +58,16 @@ export class TeamPage {
       message: 'sie können spieler einladen mit dem folgenden Code: 39620472',
       buttons: [
         {
-          text: 'Ablehnen',
+          text: 'Schließen',
           handler: () => {
             console.log('Disagree clicked');
           }
         },
         {
-          text: 'Zustimmen',
+          text: 'Teilen',
           handler: () => {
             console.log('Agree clicked');
-            this.deleteTeam();
+            this.shareCode("123456");
           }
         }
       ]
@@ -110,7 +111,7 @@ export class TeamPage {
     )
   }
 
-  getAllTermine(){
+  getAllTermine() {
     this._teamProv.getTermin(this.selectedItem.id).subscribe(
       (data) => {
         console.log(data);
@@ -119,6 +120,27 @@ export class TeamPage {
       error => console.log(error)
     )
   }
+
+  shareCode(code: string){
+    this.emailComposer.isAvailable().then((available: boolean) =>{
+      if(available){
+
+      }
+    });
+
+    let email = {
+      to: '',
+      cc: '',
+      subject: 'TeamApp: Einladung in eine Mannschaft',
+      body: 'Hallo, du wurdest in eine Mannschat eingeladen. Nutze den folgenden Code um dem Team beizutreten: ' + code,
+      isHtml: true
+    };
+
+    this.emailComposer.open(email);
+  }
+
+
+
 //-------------------------------------------------------------------
 //-------------------------------------------------------------------
 //Aller Spieler einer Mannschaft anzeigen - Runde Button unten links

@@ -5,6 +5,7 @@ import {Observable} from "rxjs/Observable";
 import {Team} from "../../Schema/team.schema";
 import {Termin} from "../../Schema/termin.schema";
 import {Person} from "../../Schema/person.schema";
+import {login} from "../../Schema/login.schema";
 
 /*
   Generated class for the TrainerProvider provider.
@@ -26,13 +27,39 @@ export class Services {
     console.log('Hello TrainerProvider Provider');
   }
 
+
+  //------------------------------------------
+  // Login
+  //------------------------------------------
+  logIn(daten: login): Observable<any> {
+    if (daten) {
+      return this.http.post('${env.api}/team', daten, this.options);
+    } else {
+      return Observable.throw('No information given');
+    }
+  }
+
+
+  //------------------------------------------
+  // SignIp
+  //------------------------------------------
+  signUp(person: Person): Observable<any> {
+    if (person) {
+      return this.http.post('${env.api}/team', person, this.options);
+    } else {
+      return Observable.throw('No information given');
+    }
+  }
+
+
+
   //------------------------------------------
   //------------------------------------------
   // Mannschaft anlegen
   //------------------------------------------
   //------------------------------------------
 
-  createTeam(team:Team) {
+  createTeam(team:Team): Observable<any> {
     if (team) {
       return this.http.post('${env.api}/team', team, this.options);
     } else {
@@ -81,7 +108,7 @@ export class Services {
   //------------------------------------------
   //------------------------------------------
 
-  createTermin(termin:Termin) {
+  createTermin(termin:Termin): Observable<any> {
     if (termin) {
       return this.http.post('${env.api}/game', termin, this.options);
     } else {
@@ -112,7 +139,7 @@ export class Services {
   //------------------------------------------
   //------------------------------------------
 
-  createPerson(person:Person) {
+  createPerson(person:Person): Observable<any> {
     if (person) {
       return this.http.post('${env.api}/person', person, this.options);
     } else {
@@ -135,6 +162,6 @@ export class Services {
   getPerson(id:number) {
     return this.http.get('${env.api}/person/${id}', this.options);
   }
-  
-  
+
+
 }

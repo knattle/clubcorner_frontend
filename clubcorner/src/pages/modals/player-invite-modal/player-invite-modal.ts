@@ -38,6 +38,24 @@ export class PlayerInviteModalPage {
     )
   }
 
+  shareCode(){
+    this.emailComposer.isAvailable().then((available: boolean) =>{
+      if(available){
+
+      }
+    });
+
+    let email = {
+      to: '',
+      cc: '',
+      subject: 'Clubcorner: Einladung in eine Mannschaft',
+      body: 'Hallo, du wurdest in eine Mannschat eingeladen. Nutze den folgenden Code um dem Team beizutreten: ' + this.code,
+      isHtml: true
+    };
+
+    this.emailComposer.open(email);
+  }
+
 }
 
 

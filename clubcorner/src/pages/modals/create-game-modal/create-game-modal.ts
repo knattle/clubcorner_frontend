@@ -37,14 +37,14 @@ export class CreateGameModalPage {
     gegner: null
   }
 
-/*    createOneTermin(){
-    this._teamProv.createTermin(ID des zu löschenden Teams this.uebergabe).subscribe(
+   createOneTermin(){
+    this._teamProv.createTermin(/*ID des zu löschenden Teams*/ this.uebergabe).subscribe(
       (data) => {
         console.log(data);
       },
       error => console.log(error)
     )
-  }*/
+  }
 
 
 }
