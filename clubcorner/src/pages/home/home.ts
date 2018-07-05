@@ -23,11 +23,13 @@ export class HomePage {
   allteams: Team[];
   person: Person;
   jwtTokenPlatzhalter: number = 1;
+  code: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private _teamProv: Services, public modalCtrl: ModalController) {
     // If we navigated to this page, we will have an item available as a nav param
     this.selectedItem = navParams.get('item');
     this.getAllTeams();
+    this.getProfile();
   }
 
   openCreateTeamModal() {
@@ -48,7 +50,7 @@ export class HomePage {
       (data) => {
         console.log(data);
         this.allteams = data as Team[];
-      }, 
+      },
       error => console.log(error)
     )
   }
@@ -67,7 +69,14 @@ export class HomePage {
     )
   }
 
-
+  einschreiben(){
+    this._teamProv.einschreiben(this.person, this.code).subscribe(
+      (data) => {
+        console.log(data);
+      },
+      error => console.log(error)
+    )
+  }
 
 
 

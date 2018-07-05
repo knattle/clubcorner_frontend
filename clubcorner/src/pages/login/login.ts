@@ -16,20 +16,23 @@ export class LoginPage {
   loginForm: any;
   icons: string[];
   items: Array<{title: string}>;
+
   daten: login = {
     loginName: null,
     loginPw: null
-  }
+  };
+
   person: Person = {
     id: null,
     firstname: null,
     lastname: null,
     loginName: null,
     loginpw: null
-  }
+  };
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private _teamProv: Services) {
     // If we navigated to this page, we will have an item available as a nav param
+    console.log("Hello" + this.daten);
     this.selectedItem = navParams.get('item');
     this.loginForm = 'login';
   }
@@ -38,7 +41,7 @@ export class LoginPage {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     this.postLoginData();
-    this.postSignupData();
+    //this.postSignupData();
   }
 
 
@@ -54,13 +57,14 @@ export class LoginPage {
         alert("wrong credentials");
       } else {
         alert("something failure");
+        this.navCtrl.setRoot(HomePage);
       }
     }
     )
   }
 
-  postSignupData(){
-  console.log(this.person)
+  postSignupData() {
+    console.log(this.person)
     this._teamProv.createPerson(this.person).subscribe(
       (data) => {
         console.log(data);

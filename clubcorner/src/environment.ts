@@ -1,4 +1,4 @@
 
-export const env= {
-    api: "https://virtserver.swaggerhub.com/schustern/handballverein/1.0"
+export const env = {
+    api: "http://pachisi456.selfhost.eu:3001/"
 }

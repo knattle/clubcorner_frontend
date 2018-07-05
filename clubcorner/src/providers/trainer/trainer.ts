@@ -33,7 +33,7 @@ export class Services {
   //------------------------------------------
   logIn(daten: login): Observable<any> {
     if (daten) {
-      return this.http.post('${env.api}/team', daten, this.options);
+      return this.http.post(`http://pachisi456.selfhost.eu:3001/login`, daten, this.options);
     } else {
       return Observable.throw('No information given');
     }
@@ -50,7 +50,16 @@ export class Services {
       return Observable.throw('No information given');
     }
   }
-
+  //------------------------------------------
+  // In Team einschreiben
+  //------------------------------------------
+  einschreiben(person: Person, teamId: string): Observable<any> {
+    if (person && teamId) {
+      return this.http.post(`${env.env.api}/${teamId}`, person, this.options);
+    } else {
+      return Observable.throw('No information given');
+    }
+  }
 
 
   //------------------------------------------

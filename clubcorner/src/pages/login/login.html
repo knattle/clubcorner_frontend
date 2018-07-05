@@ -12,7 +12,7 @@
     </ion-segment>
   </div>
 
-  <div [ngSwitch]="loginForm">
+  <div [ngSwitch]="loginForm" *ngIf="daten">
     <ion-list *ngSwitchCase="'login'">
       <ion-item>
         <ion-label fixed>Username</ion-label>
@@ -55,7 +55,7 @@
       </ion-item>
       <ion-item>
         <ion-label color="dark" floating>Password (Wiederholen)</ion-label>
-        <ion-input type="password"></ion-input>
+        <ion-input type="password" ></ion-input>
       </ion-item>
 
     </ion-list>

@@ -9,13 +9,13 @@
 
 <ion-content>
 
-    <ion-list *ngIf="allteams">  
+    <ion-list *ngIf="allteams">
         <button [navPush]="teamPage" [navParams]="{team:team}" ion-item *ngFor="let team of allteams">
           {{team.name}}
-        </button> 
+        </button>
         <ion-item>
-            <ion-input type="text" placeholder="Beitrittscode eingeben"></ion-input>
-            <button ion-button outline item-end icon-left color="dark">
+            <ion-input type="text" placeholder="Beitrittscode eingeben" [(ngModel)]="code"></ion-input>
+            <button ion-button outline item-end icon-left color="dark" (click)="einschreiben()">
               <ion-icon name="md-add-circle"></ion-icon>
               Beitreten
             </button>
