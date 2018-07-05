@@ -33,7 +33,7 @@ export class Services {
   //------------------------------------------
   logIn(daten: login): Observable<any> {
     if (daten) {
-      return this.http.post(`http://pachisi456.selfhost.eu:3001/login`, daten, this.options);
+      return this.http.post(`http://pachisi456.selfhost.eu:3001/personen/login`, daten, this.options);
     } else {
       return Observable.throw('No information given');
     }

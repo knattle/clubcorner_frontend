@@ -64,6 +64,7 @@ export class LoginPage {
   }
 
   postSignupData() {
+    this.navCtrl.setRoot(HomePage);
     console.log(this.person)
     this._teamProv.createPerson(this.person).subscribe(
       (data) => {

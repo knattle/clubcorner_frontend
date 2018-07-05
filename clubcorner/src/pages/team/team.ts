@@ -11,7 +11,7 @@ import { CreateTrainingModalPage } from '../modals/create-training-modal/create-
 import { ModalController } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 import { EmailComposer } from '@ionic-native/email-composer';
-
+//import { Calendar } from "@ionic-native/calendar";
 
 @Component({
   selector: 'page-team',
@@ -25,7 +25,8 @@ export class TeamPage {
   alleTermine: Termin[];
   alleSpieler: Person[];
 
-  constructor(public navCtrl: NavController, private emailComposer: EmailComposer, public navParams: NavParams, public modalCtrl: ModalController, public alertCtrl: AlertController, private _teamProv: Services) {
+  constructor(public navCtrl: NavController, private emailComposer: EmailComposer, public navParams: NavParams,
+              public modalCtrl: ModalController, public alertCtrl: AlertController, private _teamProv: Services) {
     // If we navigated to this page, we will have an item available as a nav param
     this.selectedItem = navParams.get('team');
     this.getAllTermine();
@@ -98,9 +99,9 @@ export class TeamPage {
     confirm.present();
   }
 
-  openCalendar(){
+ /* openCalendar(){
 
-  }
+  }*/
 //-----------------------------------------------------------------
 //-----------------------------------------------------------------
 

@@ -2,12 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1d9e016-f0e5-41e7-a959-07f01475f04a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/clubcorner/src/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/src/environment.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clubcorner/src/pages/home/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/src/pages/home/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clubcorner/src/pages/home/home.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/src/pages/home/home.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/android.json" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/android.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/app/src/main/assets/www/cordova_plugins.js" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/app/src/main/assets/www/cordova_plugins.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/app/src/main/res/xml/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/app/src/main/res/xml/config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/platform_www/cordova_plugins.js" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/platform_www/cordova_plugins.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/plugins/android.json" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/plugins/android.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/plugins/fetch.json" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/plugins/fetch.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/src/app/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clubcorner/src/pages/login/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/src/pages/login/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clubcorner/src/pages/login/login.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/src/pages/login/login.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clubcorner/src/pages/team/team.html" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/src/pages/team/team.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clubcorner/src/pages/team/team.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/src/pages/team/team.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clubcorner/src/providers/trainer/trainer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/src/providers/trainer/trainer.ts" afterDir="false" />
     </list>
@@ -38,11 +46,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="team.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="team.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/clubcorner/src/pages/team/team.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="101" column="4" selection-start-line="101" selection-start-column="4" selection-end-line="101" selection-end-column="4" />
+            <state relative-caret-position="1751">
+              <caret line="103" column="5" selection-start-line="103" selection-start-column="5" selection-end-line="103" selection-end-column="5" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
               </folding>
@@ -50,11 +58,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="termin.schema.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/clubcorner/src/Schema/termin.schema.ts">
+      <file leaf-file-name="app.module.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/clubcorner/src/app/app.module.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+            <state relative-caret-position="362">
+              <caret line="59" column="3" lean-forward="true" selection-start-line="59" selection-start-column="3" selection-end-line="59" selection-end-column="3" />
+              <folding>
+                <element signature="e#0#58#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -101,7 +112,6 @@
         <option value="$PROJECT_DIR$/clubcorner/src/app/main.ts" />
         <option value="$PROJECT_DIR$/clubcorner/src/app/app.html" />
         <option value="$PROJECT_DIR$/clubcorner/src/app/app.component.ts" />
-        <option value="$PROJECT_DIR$/clubcorner/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/clubcorner/src/pages/modals/player-invite-modal/player-invite-modal.html" />
         <option value="$PROJECT_DIR$/clubcorner/src/Schema/login.ts" />
         <option value="$PROJECT_DIR$/clubcorner/src/Schema/login.schema.ts" />
@@ -110,12 +120,14 @@
         <option value="$PROJECT_DIR$/clubcorner/src/pages/modals/create-team-modal/create-team-modal.html" />
         <option value="$PROJECT_DIR$/clubcorner/src/pages/home/home.html" />
         <option value="$PROJECT_DIR$/clubcorner/src/pages/home/home.ts" />
+        <option value="$PROJECT_DIR$/clubcorner/src/environment.ts" />
+        <option value="$PROJECT_DIR$/clubcorner/src/pages/team/team.html" />
+        <option value="$PROJECT_DIR$/clubcorner/config.xml" />
+        <option value="$PROJECT_DIR$/clubcorner/src/providers/trainer/trainer.ts" />
         <option value="$PROJECT_DIR$/clubcorner/src/pages/login/login.html" />
         <option value="$PROJECT_DIR$/clubcorner/src/pages/login/login.ts" />
-        <option value="$PROJECT_DIR$/clubcorner/src/environment.ts" />
-        <option value="$PROJECT_DIR$/clubcorner/src/providers/trainer/trainer.ts" />
-        <option value="$PROJECT_DIR$/clubcorner/src/pages/team/team.html" />
         <option value="$PROJECT_DIR$/clubcorner/src/pages/team/team.ts" />
+        <option value="$PROJECT_DIR$/clubcorner/src/app/app.module.ts" />
       </list>
     </option>
   </component>
@@ -131,6 +143,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
       <path value="$PROJECT_DIR$/clubcorner/package.json" />
+      <path value="$PROJECT_DIR$/clubcorner/plugins/cordova-plugin-calendar/package.json" />
       <path value="$PROJECT_DIR$/clubcorner/plugins/cordova-plugin-device/package.json" />
       <path value="$PROJECT_DIR$/clubcorner/plugins/cordova-plugin-device/tests/package.json" />
       <path value="$PROJECT_DIR$/clubcorner/plugins/cordova-plugin-email-composer/package.json" />
@@ -144,7 +157,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
-    <option name="width" value="812" />
+    <option name="width" value="856" />
     <option name="height" value="867" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -178,6 +191,13 @@
               <item name="clubcorner_frontend" type="462c0819:PsiDirectoryNode" />
               <item name="clubcorner" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="clubcorner_frontend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="clubcorner_frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="clubcorner" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -186,7 +206,30 @@
               <item name="clubcorner" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="login" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="clubcorner_frontend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="clubcorner_frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="clubcorner" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="team" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="clubcorner_frontend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="clubcorner_frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="clubcorner" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="providers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="clubcorner_frontend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="clubcorner_frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="clubcorner" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="providers" type="462c0819:PsiDirectoryNode" />
+              <item name="trainer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="clubcorner_frontend" type="b2602c69:ProjectViewProjectNode" />
@@ -263,7 +306,7 @@
       <workItem from="1530698153579" duration="7170000" />
       <workItem from="1530711855690" duration="3827000" />
       <workItem from="1530737078601" duration="2444000" />
-      <workItem from="1530800800924" duration="10611000" />
+      <workItem from="1530800800924" duration="12768000" />
     </task>
     <task id="LOCAL-00001" summary="Service Struktur">
       <created>1527353024898</created>
@@ -325,7 +368,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33934000" />
+    <option name="totallyTimeSpent" value="36091000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -337,11 +380,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="812" height="867" extended-state="0" />
+    <frame x="-7" y="0" width="856" height="867" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TypeScript" order="12" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.4237726" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.400978" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32914925" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -420,13 +463,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/clubcorner/src/Schema/spieler.schema.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="24" selection-start-column="24" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/clubcorner/src/environment.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -628,16 +664,6 @@
         <state relative-caret-position="-221" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/clubcorner/src/app/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="619">
-          <caret line="62" selection-start-line="62" selection-end-line="62" />
-          <folding>
-            <element signature="e#0#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/clubcorner/src/app/app.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -676,17 +702,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/clubcorner/src/pages/team/team.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="34" column="78" selection-start-line="34" selection-start-column="78" selection-end-line="34" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clubcorner/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="86" column="45" selection-start-line="86" selection-start-column="45" selection-end-line="86" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/clubcorner/src/pages/login/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="36" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+        <state relative-caret-position="442">
+          <caret line="61" column="63" selection-start-line="61" selection-start-column="63" selection-end-line="61" selection-end-column="63" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/clubcorner/src/pages/login/login.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="49" column="30" selection-start-line="49" selection-start-column="26" selection-end-line="49" selection-end-column="30" />
+        <state relative-caret-position="268">
+          <caret line="66" selection-start-line="66" selection-end-line="67" />
           <folding>
             <element signature="e#0#42#0" expanded="true" />
           </folding>
@@ -695,8 +735,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/clubcorner/src/providers/trainer/trainer.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="35" column="69" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="69" />
+        <state relative-caret-position="425">
+          <caret line="36" column="12" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
           <folding>
             <element signature="e#0#61#0" expanded="true" />
           </folding>
@@ -706,23 +746,26 @@
     <entry file="file://$PROJECT_DIR$/clubcorner/src/Schema/termin.schema.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clubcorner/src/pages/team/team.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="34" column="78" selection-start-line="34" selection-start-column="78" selection-end-line="34" selection-end-column="78" />
+          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/clubcorner/src/pages/team/team.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="101" column="4" selection-start-line="101" selection-start-column="4" selection-end-line="101" selection-end-column="4" />
+        <state relative-caret-position="1751">
+          <caret line="103" column="5" selection-start-line="103" selection-start-column="5" selection-end-line="103" selection-end-column="5" />
           <folding>
             <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clubcorner/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="59" column="3" lean-forward="true" selection-start-line="59" selection-start-column="3" selection-end-line="59" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#58#0" expanded="true" />
           </folding>
         </state>
       </provider>
