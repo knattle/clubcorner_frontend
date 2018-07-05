@@ -12,6 +12,7 @@ import {Services} from "../../providers/trainer/trainer";
 export class LoginPage {
   homePage = HomePage;
   selectedItem: any;
+  loginForm: any;
   icons: string[];
   items: Array<{title: string}>;
   daten: login;
@@ -19,9 +20,10 @@ export class LoginPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, private _teamProv: Services) {
     // If we navigated to this page, we will have an item available as a nav param
     this.selectedItem = navParams.get('item');
+    this.loginForm = 'login';
   }
 
-  openPage(page) {
+  openHomePage(page) {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     this.navCtrl.setRoot(HomePage);
