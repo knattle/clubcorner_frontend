@@ -16,12 +16,12 @@
     <ion-list *ngSwitchCase="'login'">
       <ion-item>
         <ion-label fixed>Username</ion-label>
-        <ion-input type="text" value=""></ion-input>
+        <ion-input type="text" value="" [(ngModel)]="daten.loginName"></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label fixed>Password</ion-label>
-        <ion-input type="password"></ion-input>
+        <ion-input type="password" [(ngModel)]="daten.loginPw"></ion-input>
       </ion-item>
       <button (click)="openHomePage()" ion-item>
         Login
@@ -31,17 +31,17 @@
     <ion-list *ngSwitchCase="'signup'">
       <ion-item>
         <ion-label color="dark" floating>Vorname</ion-label>
-        <ion-input type="text" clearInput></ion-input>
+        <ion-input type="text" clearInput [(ngModel)]="person.firstname"></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label color="dark" floating>Nachname</ion-label>
-        <ion-input type="text" clearInput></ion-input>
+        <ion-input type="text" clearInput [(ngModel)]="person.lastname"></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label color="dark" floating>Email</ion-label>
-        <ion-input type="email" clearInput></ion-input>
+        <ion-input type="email" clearInput [(ngModel)]="person.loginName"></ion-input>
       </ion-item>
 
       <ion-item>
@@ -51,13 +51,13 @@
 
       <ion-item>
         <ion-label color="dark" floating>Password</ion-label>
-        <ion-input type="password"></ion-input>
+        <ion-input type="password" [(ngModel)]="person.loginpw"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label color="dark" floating>Password (Wiederholen)</ion-label>
         <ion-input type="password"></ion-input>
       </ion-item>
-      
+
     </ion-list>
     <button outline color="secondary" (click)="openHomePage()" ion-button>
         Signup

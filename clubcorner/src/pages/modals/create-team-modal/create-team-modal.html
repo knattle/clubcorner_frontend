@@ -31,8 +31,8 @@
           </ion-segment-button>
         </ion-segment>
       </div>
-      
-      <div [ngSwitch]="pet">
+
+  <div [ngSwitch]="pet"></div>
       <div [ngSwitch]="genderSelect">
         <div *ngSwitchCase="'H'">
             <ion-list>
@@ -50,7 +50,7 @@
                     <ion-option value="S">Senioren</ion-option>
                   </ion-select>
                 </ion-item>
-          
+
                 <ion-item>
                   <ion-label>Spielzeit</ion-label>
                   <ion-select [(ngModel)]="year" interface="popover">
@@ -80,19 +80,19 @@
                     <ion-option>1999</ion-option>
                   </ion-select>
                 </ion-item>
-            
+
               </ion-list>
             <ion-list  radio-group>
                 <ion-item>
                   <ion-label>1. Mannschaft</ion-label>
                   <ion-radio checked="true" value="go"></ion-radio>
                 </ion-item>
-              
+
                 <ion-item>
                   <ion-label>2.Mannschaft</ion-label>
                   <ion-radio value="rust"></ion-radio>
                 </ion-item>
-              
+
                 <ion-item>
                   <ion-label>3. Mannschaft</ion-label>
                   <ion-radio value="python"></ion-radio>
@@ -100,8 +100,8 @@
         </ion-list>
         <button ion-button full padding>Anlegen</button>
         </div>
-        
-      
+
+
         <div *ngSwitchCase="'F'">
             <ion-list>
                 <ion-item>
@@ -118,7 +118,7 @@
                     <ion-option value="S">Seniorinnen</ion-option>
                   </ion-select>
                 </ion-item>
-          
+
                 <ion-item>
                   <ion-label>Spielzeit</ion-label>
                   <ion-select [(ngModel)]="year" interface="popover">
@@ -134,21 +134,21 @@
                     <ion-option>1998</ion-option>
                     <ion-option>1999</ion-option>
                   </ion-select>
-                  
+
                 </ion-item>
-            
+
               </ion-list>
             <ion-list  radio-group>
                 <ion-item>
                   <ion-label>1. Mannschaft</ion-label>
                   <ion-radio checked="true" value="go"></ion-radio>
                 </ion-item>
-              
+
                 <ion-item>
                   <ion-label>2.Mannschaft</ion-label>
                   <ion-radio value="rust"></ion-radio>
                 </ion-item>
-              
+
                 <ion-item>
                   <ion-label>3. Mannschaft</ion-label>
                   <ion-radio value="python"></ion-radio>
@@ -157,5 +157,5 @@
         <button ion-button full padding>Anlegen</button>
         </div>
       </div>
-    
+
 </ion-content>
