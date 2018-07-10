@@ -18,16 +18,16 @@ export class LoginPage {
   items: Array<{title: string}>;
 
   daten: login = {
-    loginName: null,
-    loginPw: null
+    email: null,
+    password: null
   };
 
   person: Person = {
-    id: null,
-    firstname: null,
-    lastname: null,
-    loginName: null,
-    loginpw: null
+  //  id: null,
+    vorname: null,
+    nachname: null,
+    email: null,
+    password: null
   };
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private _teamProv: Services) {
@@ -49,6 +49,7 @@ export class LoginPage {
  console.log(this.daten)
      this._teamProv.logIn(this.daten).subscribe(
     (data) => {
+      this._teamProv.saveData(data);
       this.navCtrl.setRoot(HomePage);
      console.log(data);
     },
@@ -64,11 +65,11 @@ export class LoginPage {
   }
 
   postSignupData() {
-    this.navCtrl.setRoot(HomePage);
     console.log(this.person)
     this._teamProv.createPerson(this.person).subscribe(
       (data) => {
         console.log(data);
+        this.navCtrl.setRoot(HomePage);
       },
       error => console.log(error)
     )

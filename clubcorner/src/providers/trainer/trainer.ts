@@ -6,6 +6,7 @@ import {Team} from "../../Schema/team.schema";
 import {Termin} from "../../Schema/termin.schema";
 import {Person} from "../../Schema/person.schema";
 import {login} from "../../Schema/login.schema";
+import {Storage} from "@ionic/storage";
 
 /*
   Generated class for the TrainerProvider provider.
@@ -23,7 +24,7 @@ export class Services {
     })
   };
 
-  constructor(public http:HttpClient) {
+  constructor(public http:HttpClient, /*private storage: Storage*/) {
     console.log('Hello TrainerProvider Provider');
   }
 
@@ -31,12 +32,27 @@ export class Services {
   //------------------------------------------
   // Login
   //------------------------------------------
+  idToken: string;
   logIn(daten: login): Observable<any> {
     if (daten) {
-      return this.http.post(`http://pachisi456.selfhost.eu:3001/personen/login`, daten, this.options);
+      return this.http.post(`http://pachisi456.selfhost.eu:3001/personen/login`, daten, this.options)
     } else {
       return Observable.throw('No information given');
     }
+  }
+
+ /* private setSession(authResult){
+    localStorage.setItem('id_token', authResult.idToken);
+  }*/
+
+
+  saveData(data: {token: string}) {
+
+   // let rs = data.json();
+    //localStorage.setItem("id_token", data.id);
+    localStorage.setItem("token", data.token);
+    // this.storage.set("user", rs.user);
+    //this.storage.set("id_token", rs.token);
   }
 
 
@@ -45,7 +61,7 @@ export class Services {
   //------------------------------------------
   signUp(person: Person): Observable<any> {
     if (person) {
-      return this.http.post('${env.api}/team', person, this.options);
+      return this.http.post(`http://pachisi456.selfhost.eu:3001/personen/signup`, person, this.options);
     } else {
       return Observable.throw('No information given');
     }
@@ -89,7 +105,7 @@ export class Services {
   }
 
   getTeam(id:number) {
-    return this.http.get(`https://virtserver.swaggerhub.com/schustern/handballverein/1.0/trainer/${id}`, this.options);
+    return this.http.get(`http://pachisi456.selfhost.eu:3001/mannschaft/${id}`, this.options);
   }
 
 
@@ -138,7 +154,7 @@ export class Services {
   }
 
   getTermin(id:number) {
-    return this.http.get(`https://virtserver.swaggerhub.com/schustern/handballverein/1.0/termin/${id}`, this.options);
+    return this.http.get(`http://pachisi456.selfhost.eu:3001/termin/${id}`, this.options);
   }
 
 
@@ -149,27 +165,28 @@ export class Services {
   //------------------------------------------
 
   createPerson(person:Person): Observable<any> {
+    console.log(person);
     if (person) {
-      return this.http.post('${env.api}/person', person, this.options);
+      return this.http.post(`http://pachisi456.selfhost.eu:3001/personen/signup`, person, this.options);
     } else {
       return Observable.throw('No information given');
     }
   }
 
-  updatePerson(id:number, person:Person) {
+  updatePerson(id:number, person:Person): Observable<any> {
     if (person) {
-      return this.http.put('${env.api}/person/${id}', person, this.options);
+      return this.http.put(`http://pachisi456.selfhost.eu:3001/personen/update`, person, this.options);
     } else {
       return Observable.throw('No information given');
     }
   }
 
-  deletePersonFromTeam(id:number, teamid: number) {
-    return this.http.delete('${env.api}/${teamid}/${id}', this.options);
+  deletePersonFromTeam(teamid: number) {
+    return this.http.delete('${env.api}/${teamid}/${}', this.options);
   }
 
   getPerson(id:number) {
-    return this.http.get('${env.api}/person/${id}', this.options);
+    return this.http.get(`http://pachisi456.selfhost.eu:3001/personen/${id}`, this.options);
   }
 
 

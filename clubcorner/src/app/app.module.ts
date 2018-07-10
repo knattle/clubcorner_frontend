@@ -19,6 +19,7 @@ import { EmailComposer} from "@ionic-native/email-composer";
 
 import { LoginProvider } from '../providers/login/login';
 import { Services } from '../providers/trainer/trainer';
+//import { JwtHelper } from 'angular2-jwt';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,7 @@ import { Services } from '../providers/trainer/trainer';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    HttpClientModule
+    HttpClientModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -57,6 +58,7 @@ import { Services } from '../providers/trainer/trainer';
     LoginProvider,
     Services,
     EmailComposer
+    //JwtHelperService
   ]
 })
 export class AppModule {}

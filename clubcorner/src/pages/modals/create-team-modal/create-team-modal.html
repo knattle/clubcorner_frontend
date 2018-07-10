@@ -22,7 +22,7 @@
 
 
     <div padding>
-        <ion-segment [(ngModel)]="genderSelect">
+        <ion-segment [(ngModel)]="uebergabe.male">
           <ion-segment-button value="H">
            Herren
           </ion-segment-button>
@@ -38,7 +38,7 @@
             <ion-list>
                 <ion-item>
                   <ion-label>Altersstufe</ion-label>
-                  <ion-select [(ngModel)]="jugend" interface="popover">
+                  <ion-select [(ngModel)]="uebergabe.jugend" interface="popover">
                     <ion-option value="H">Herren</ion-option>
                     <ion-option value="A">A-Junioren</ion-option>
                     <ion-option value="B">B-Junioren</ion-option>
@@ -53,7 +53,7 @@
 
                 <ion-item>
                   <ion-label>Spielzeit</ion-label>
-                  <ion-select [(ngModel)]="year" interface="popover">
+                  <ion-select [(ngModel)]="uebergabe.jahrgang" interface="popover">
                     <ion-option>1989</ion-option>
                     <ion-option>1990</ion-option>
                     <ion-option>1991</ion-option>
@@ -82,7 +82,7 @@
                 </ion-item>
 
               </ion-list>
-            <ion-list  radio-group>
+            <ion-list  radio-group [(ngModel)]="uebergabe.grad">
                 <ion-item>
                   <ion-label>1. Mannschaft</ion-label>
                   <ion-radio checked="true" value="go"></ion-radio>
@@ -106,7 +106,7 @@
             <ion-list>
                 <ion-item>
                   <ion-label>Altersstufe</ion-label>
-                  <ion-select [(ngModel)]="jugend" interface="popover">
+                  <ion-select [(ngModel)]="uebergabe.jugend" interface="popover">
                     <ion-option value="H">Frauen</ion-option>
                     <ion-option value="A">A-Juniorinnen</ion-option>
                     <ion-option value="B">B-Juniorinnen</ion-option>
@@ -138,7 +138,7 @@
                 </ion-item>
 
               </ion-list>
-            <ion-list  radio-group>
+            <ion-list  radio-group [(ngModel)]="uebergabe.grad">
                 <ion-item>
                   <ion-label>1. Mannschaft</ion-label>
                   <ion-radio checked="true" value="go"></ion-radio>

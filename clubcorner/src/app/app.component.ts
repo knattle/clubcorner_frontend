@@ -7,6 +7,9 @@ import { TeamPage } from '../pages/team/team';
 import { LoginPage } from '../pages/login/login';
 import {Services} from "../providers/trainer/trainer";
 import {Person} from "../Schema/person.schema";
+import jwt_decode from 'jwt-decode';
+
+
 @Component({
   templateUrl: 'app.html'
 })
@@ -32,24 +35,26 @@ export class MyApp {
 
   }
 
-  idNumber: number = 1;
+  selectedItem = localStorage.getItem("token")
+  decoded = jwt_decode(this.selectedItem);
+  idNumber = this.decoded;
   //profile: Person;
   profile: Person = {
-    id: 4,
-    firstname: "vorname",
-    lastname: "nachname",
-    loginName: "testlogin",
-    loginpw: "pw"
+ //   id: 4,
+    vorname: "vorname",
+    nachname: "nachname",
+    email: "testlogin",
+    password: "pw"
   }
 
-/*  saveUpdateProfile(id: number, profile: Person){
-  this._teamProv.updatePerson(id, profile).subscribe(
+  saveUpdateProfile(id: number, profile: Person){
+  this._teamProv.updatePerson(this.idNumber.userId, profile).subscribe(
     (data) => {
      console.log(data);
     },
     error => console.log(error)
     )
-  }*/
+  }
 
 /*  getProfile(id: number){
     this._teamProv.getPerson(id).subscribe(

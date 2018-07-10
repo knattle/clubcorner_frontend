@@ -1,7 +1,7 @@
 export interface Person {
-  id: number;
-  firstname: string;
-  lastname: string;
-  loginName: string;
-  loginpw: string;
+ // id: number;
+  vorname: string;
+  nachname: string;
+  email: string;
+  password: string;
 }

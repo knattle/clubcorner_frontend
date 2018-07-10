@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { ModalController } from 'ionic-angular';
+//import { JwtHelper } from 'angular2-jwt';
+import jwt_decode from 'jwt-decode';
 
 
 import {TeamPage} from '../team/team';
@@ -16,7 +18,7 @@ import { CreateTeamModalPage } from '../modals/create-team-modal/create-team-mod
 
 export class HomePage {
   teamPage = TeamPage;
-  selectedItem: any;
+  selectedItem = localStorage.getItem("token")
   icons: string[];
   items: Array<{title: string}>;
 
@@ -25,9 +27,14 @@ export class HomePage {
   jwtTokenPlatzhalter: number = 1;
   code: string;
 
+ // helper = new JwtHelper();
+  //decoded = this.helper.decodeToken(this.selectedItem);
+  public decoded = jwt_decode(this.selectedItem);
+
   constructor(public navCtrl: NavController, public navParams: NavParams, private _teamProv: Services, public modalCtrl: ModalController) {
     // If we navigated to this page, we will have an item available as a nav param
     this.selectedItem = navParams.get('item');
+    console.log(this.decoded);
     this.getAllTeams();
     this.getProfile();
   }
@@ -46,7 +53,7 @@ export class HomePage {
   getAllTeams(){
     //get posted Teams
     //let tempTeam: Person = {teamManager: this._teamProv.activeUser.userID};
-    this._teamProv.getTeam(/*ActiveUserID*/ 1).subscribe(
+    this._teamProv.getTeam(this.decoded.userId).subscribe(
       (data) => {
         console.log(data);
         this.allteams = data as Team[];
@@ -60,7 +67,7 @@ export class HomePage {
 //Anzeigen des eigenen Profils
 
   getProfile(){
-    this._teamProv.getPerson(this.jwtTokenPlatzhalter).subscribe(
+    this._teamProv.getPerson(this.decoded.userId).subscribe(
       (data:Person) => {
         console.log(data);
         this.person = data;

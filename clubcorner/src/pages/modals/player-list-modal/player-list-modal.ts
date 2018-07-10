@@ -37,7 +37,7 @@ playerList: Person[];
     this.viewCtrl.dismiss();
   }
 
-    getPlayerList(){    
+    getPlayerList(){
     this._teamProv.getPlayerInTeam(this.teamId).subscribe(
       (data:Person[]) => {
         console.log(data);
@@ -48,7 +48,7 @@ playerList: Person[];
   }
 
     deletePlayer(player:Person){
-    this._teamProv.deletePersonFromTeam(/*ID des zu löschenden Teams*/player.id, this.teamId).subscribe(
+    this._teamProv.deletePersonFromTeam(/*ID des zu löschenden Teams*/ this.teamId).subscribe(
       (data) => {
         console.log(data);
       },
@@ -56,5 +56,5 @@ playerList: Person[];
     )
   }
 
-  
+
 }
