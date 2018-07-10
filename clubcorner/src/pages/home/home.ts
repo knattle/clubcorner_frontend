@@ -69,7 +69,7 @@ export class HomePage {
   getProfile(){
     this._teamProv.getPerson(this.decoded.userId).subscribe(
       (data:Person) => {
-        console.log(data);
+        console.log("GetProfile:" + data);
         this.person = data;
       },
       error => console.log(error)

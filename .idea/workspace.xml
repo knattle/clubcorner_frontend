@@ -2,24 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1d9e016-f0e5-41e7-a959-07f01475f04a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/clubcorner/src/providers/authService/authInterceptor.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clubcorner/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clubcorner/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clubcorner/src/Schema/login.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/src/Schema/login.schema.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clubcorner/src/Schema/person.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/src/Schema/person.schema.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clubcorner/src/Schema/team.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/src/Schema/team.schema.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clubcorner/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clubcorner/src/app/app.html" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/src/app/app.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clubcorner/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/src/pages/home/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/src/pages/home/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clubcorner/src/pages/home/home.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/src/pages/home/home.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clubcorner/src/pages/login/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/src/pages/login/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clubcorner/src/pages/login/login.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/src/pages/login/login.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clubcorner/src/pages/modals/create-team-modal/create-team-modal.html" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/src/pages/modals/create-team-modal/create-team-modal.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clubcorner/src/pages/modals/create-team-modal/create-team-modal.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/src/pages/modals/create-team-modal/create-team-modal.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clubcorner/src/pages/modals/player-list-modal/player-list-modal.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/src/pages/modals/player-list-modal/player-list-modal.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clubcorner/src/providers/trainer/trainer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/src/providers/trainer/trainer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <ignored path="clubcorner_frontend.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,7 +25,63 @@
     <favorites_list name="clubcorner_frontend" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="trainer.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/clubcorner/src/providers/trainer/trainer.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-4">
+              <caret line="164" column="9" selection-start-line="164" selection-start-column="9" selection-end-line="164" selection-end-column="9" />
+              <folding>
+                <element signature="e#0#61#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/clubcorner/src/app/app.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="20" column="36" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/clubcorner/src/pages/home/home.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="38" column="22" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#42#0" expanded="true" />
+                <element signature="e#194#230#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/clubcorner/src/pages/home/home.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="183">
+              <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.component.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/clubcorner/src/app/app.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="53" column="6" lean-forward="true" selection-start-line="53" selection-start-column="6" selection-end-line="53" selection-end-column="6" />
+              <folding>
+                <element signature="e#0#53#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -89,7 +132,6 @@
         <option value="$PROJECT_DIR$/clubcorner/src/Schema/login.ts" />
         <option value="$PROJECT_DIR$/clubcorner/src/pages/modals/create-game-modal/create-game-modal.ts" />
         <option value="$PROJECT_DIR$/clubcorner/src/pages/modals/player-invite-modal/player-invite-modal.ts" />
-        <option value="$PROJECT_DIR$/clubcorner/src/pages/home/home.html" />
         <option value="$PROJECT_DIR$/clubcorner/src/environment.ts" />
         <option value="$PROJECT_DIR$/clubcorner/src/pages/team/team.html" />
         <option value="$PROJECT_DIR$/clubcorner/config.xml" />
@@ -108,6 +150,7 @@
         <option value="$PROJECT_DIR$/clubcorner/src/pages/modals/create-team-modal/create-team-modal.ts" />
         <option value="$PROJECT_DIR$/clubcorner/src/pages/home/home.ts" />
         <option value="$PROJECT_DIR$/clubcorner/src/app/app.component.ts" />
+        <option value="$PROJECT_DIR$/clubcorner/src/pages/home/home.html" />
         <option value="$PROJECT_DIR$/clubcorner/src/providers/trainer/trainer.ts" />
       </list>
     </option>
@@ -211,6 +254,13 @@
               <item name="clubcorner_frontend" type="462c0819:PsiDirectoryNode" />
               <item name="clubcorner" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="clubcorner_frontend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="clubcorner_frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="clubcorner" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -219,24 +269,7 @@
               <item name="clubcorner" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="login" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="clubcorner_frontend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="clubcorner_frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="clubcorner" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="modals" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="clubcorner_frontend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="clubcorner_frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="clubcorner" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="modals" type="462c0819:PsiDirectoryNode" />
-              <item name="create-game-modal" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="clubcorner_frontend" type="b2602c69:ProjectViewProjectNode" />
@@ -245,7 +278,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="modals" type="462c0819:PsiDirectoryNode" />
-              <item name="create-team-modal" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="clubcorner_frontend" type="b2602c69:ProjectViewProjectNode" />
@@ -269,6 +301,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="providers" type="462c0819:PsiDirectoryNode" />
               <item name="authService" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="clubcorner_frontend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="clubcorner_frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="clubcorner" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="providers" type="462c0819:PsiDirectoryNode" />
+              <item name="trainer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="clubcorner_frontend" type="b2602c69:ProjectViewProjectNode" />
@@ -347,7 +387,7 @@
       <workItem from="1530800800924" duration="12879000" />
       <workItem from="1530890546941" duration="1256000" />
       <workItem from="1531217018505" duration="14737000" />
-      <workItem from="1531232369954" duration="1835000" />
+      <workItem from="1531232369954" duration="4218000" />
     </task>
     <task id="LOCAL-00001" summary="Service Struktur">
       <created>1527353024898</created>
@@ -409,7 +449,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54030000" />
+    <option name="totallyTimeSpent" value="56413000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -422,6 +462,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1234" height="867" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TypeScript" order="12" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21153846" />
@@ -689,16 +730,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/clubcorner/src/app/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="2" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/clubcorner/src/pages/modals/create-team-modal/create-team-modal.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="155">
@@ -716,45 +747,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/clubcorner/src/app/app.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clubcorner/src/pages/home/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/clubcorner/src/Schema/team.schema.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clubcorner/src/pages/home/home.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="20" column="46" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-            <element signature="e#194#230#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clubcorner/src/app/app.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="47" column="3" selection-start-line="47" selection-start-column="3" selection-end-line="47" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#53#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -784,12 +780,57 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/clubcorner/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-310">
+          <caret line="21" column="2" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clubcorner/src/pages/home/home.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="38" column="22" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+            <element signature="e#194#230#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clubcorner/src/pages/home/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/clubcorner/src/providers/trainer/trainer.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="137" column="28" selection-start-line="137" selection-start-column="28" selection-end-line="137" selection-end-column="28" />
+        <state relative-caret-position="-4">
+          <caret line="164" column="9" selection-start-line="164" selection-start-column="9" selection-end-line="164" selection-end-column="9" />
           <folding>
             <element signature="e#0#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clubcorner/src/app/app.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="20" column="36" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clubcorner/src/app/app.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="53" column="6" lean-forward="true" selection-start-line="53" selection-start-column="6" selection-end-line="53" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#53#0" expanded="true" />
           </folding>
         </state>
       </provider>

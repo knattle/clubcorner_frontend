@@ -41,10 +41,10 @@ export class MyApp {
   //profile: Person;
   profile: Person = {
  //   id: 4,
-    vorname: "vorname",
-    nachname: "nachname",
-    email: "testlogin",
-    password: "pw"
+    vorname: "",
+    nachname: "",
+    email: "",
+    password: ""
   }
 
   saveUpdateProfile(id: number, profile: Person){

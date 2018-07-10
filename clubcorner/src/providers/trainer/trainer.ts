@@ -175,7 +175,7 @@ export class Services {
 
   updatePerson(id:number, person:Person): Observable<any> {
     if (person) {
-      return this.http.put(`http://pachisi456.selfhost.eu:3001/personen/update`, person, this.options);
+      return this.http.put(`http://pachisi456.selfhost.eu:3001/personen/update/${id}`, person, this.options);
     } else {
       return Observable.throw('No information given');
     }
