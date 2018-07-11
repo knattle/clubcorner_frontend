@@ -15,15 +15,15 @@
   <div [ngSwitch]="loginForm" *ngIf="daten">
     <ion-list *ngSwitchCase="'login'">
       <ion-item>
-        <ion-label fixed>Username</ion-label>
+        <ion-label color="dark" floating>Username</ion-label>
         <ion-input type="text" value="" [(ngModel)]="daten.email"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label fixed>Password</ion-label>
+        <ion-label color="dark" floating>Password</ion-label>
         <ion-input type="password" [(ngModel)]="daten.password"></ion-input>
       </ion-item>
-      <button (click)="openHomePage()" ion-item>
+      <button ion-button round outline (click)="openHomePage()">
         Login
       </button>
     </ion-list>
@@ -57,11 +57,11 @@
         <ion-label color="dark" floating>Password (Wiederholen)</ion-label>
         <ion-input type="password" ></ion-input>
       </ion-item>
-
-    </ion-list>
-    <button outline color="secondary" (click)="postSignupData()" ion-button>
+      <button ion-button round outline (click)="postSignupData()">
         Signup
     </button>
+
+    </ion-list>
   </div>
 
 

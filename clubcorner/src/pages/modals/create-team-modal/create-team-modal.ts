@@ -25,23 +25,23 @@ export class CreateTeamModalPage {
       this.uebergabe.male = true;
     this.saisonList=[{
       name: (new Date().getFullYear()-1)+'/'+(new Date().getFullYear()),
-      values:new Date().getFullYear()-1,
+      values:(new Date().getFullYear()-1)+'/'+(new Date().getFullYear()),
       flag:0
     },{
       name: (new Date().getFullYear())+'/'+(new Date().getFullYear()+1),
-      values:new Date().getFullYear(),
+      values:(new Date().getFullYear())+'/'+(new Date().getFullYear()+1),
       flag:0
     },{
       name:(new Date().getFullYear()+1)+'/'+(new Date().getFullYear()+2),
-      values:new Date().getFullYear()+1,
+      values:(new Date().getFullYear()+1)+'/'+(new Date().getFullYear()+2),
       flag:0
     },{
       name: (new Date().getFullYear()+2)+'/'+(new Date().getFullYear()+3),
-      values:new Date().getFullYear()+2,
+      values:(new Date().getFullYear()+2)+'/'+(new Date().getFullYear()+3),
       flag:0
     },{
       name: (new Date().getFullYear()+3)+'/'+(new Date().getFullYear()+4),
-      values:new Date().getFullYear()+3,
+      values:(new Date().getFullYear()+3)+'/'+(new Date().getFullYear()+4),
       flag:0
     }];
   }
@@ -81,7 +81,7 @@ export class CreateTeamModalPage {
 
 
   createOneTeam(){
-    if(this.gender == "H"){
+    if(this.gender == "male"){
       this.uebergabe.male = true;
     }else{
       this.uebergabe.male = false;
