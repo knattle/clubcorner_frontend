@@ -108,6 +108,10 @@ export class Services {
     return this.http.get(`http://pachisi456.selfhost.eu:3001/mannschaft/${id}`, this.options);
   }
 
+  getTeamListe(id:number) {
+    return this.http.get(`http://pachisi456.selfhost.eu:3001/mannschaftszuordnung/team/${id}`, this.options);
+  }
+
 
   getPlayerInTeam(id:number) {
     return this.http.get('${env.api}/person/${id}', this.options);
@@ -122,9 +126,7 @@ export class Services {
   generateCode(id:number, code:number) {
     return this.http.post('${env.api}/team/${id}', code, this.options)
   }
-  getCode(id:number) {
-    return this.http.get(`https://virtserver.swaggerhub.com/TimMaa/Savood/1.0/team${id}/code`, this.options);
-  }
+
 
 
   //------------------------------------------

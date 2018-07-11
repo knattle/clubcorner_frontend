@@ -10,7 +10,7 @@
 <ion-content>
 
     <ion-list *ngIf="allteams">
-        <button [navPush]="teamPage" [navParams]="{team:team}" ion-item *ngFor="let team of allteams">
+        <button [navPush]="teamPage" [navParams]="{team:mannschaftszuordnung}" ion-item *ngFor="let team of allteams">
           {{team.name}}
         </button>
         <ion-item>

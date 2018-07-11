@@ -18,7 +18,9 @@ import {Team} from "../../../Schema/team.schema";
   templateUrl: 'create-team-modal.html',
 })
 export class CreateTeamModalPage {
-  constructor(public viewCtrl: ViewController, private _teamProv: Services) {}
+  constructor(public viewCtrl: ViewController, private _teamProv: Services) {
+    this.uebergabe.male = true;
+  }
 
   closeModal() {
     this.viewCtrl.dismiss();
@@ -28,15 +30,21 @@ export class CreateTeamModalPage {
 
   uebergabe: Team = {
     id: null,
-  teamManager: null,
-  name: null,
-  grad: null,
-  jugend: null,
-  jahrgang: null,
-  male: null
+    name: null,
+    mannschaftsgrad: null,
+    jugend: null,
+    sasion: null,
+    code: null,
+    male: null
   }
+  gender: null;
 
   createOneTeam(){
+    if(this.gender == "H"){
+      this.uebergabe.male = true;
+    }else{
+      this.uebergabe.male = false;
+    }
     this._teamProv.createTeam(/*ID des zu löschenden Teams*/ this.uebergabe).subscribe(
       (data) => {
         console.log(data);

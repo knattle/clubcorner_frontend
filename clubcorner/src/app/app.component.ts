@@ -25,6 +25,7 @@ export class MyApp {
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, private _teamProv: Services) {
     this.initializeApp();
+    localStorage.clear();
     //this.getProfile(this.idNumber);
 
     // used for an example of ngFor and navigation

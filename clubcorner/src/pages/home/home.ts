@@ -8,6 +8,7 @@ import jwt_decode from 'jwt-decode';
 import {TeamPage} from '../team/team';
 import {Services} from '../../providers/trainer/trainer';
 import {Team} from '../../Schema/team.schema';
+import {mannschaftszuordnung} from '../../Schema/mannschaftszuordnung.schema';
 import {Person} from '../../Schema/person.schema';
 import { CreateTeamModalPage } from '../modals/create-team-modal/create-team-modal';
 
@@ -22,7 +23,7 @@ export class HomePage {
   icons: string[];
   items: Array<{title: string}>;
 
-  allteams: Team[];
+  allteams: mannschaftszuordnung[];
   person: Person;
   jwtTokenPlatzhalter: number = 1;
   code: string;
@@ -53,10 +54,10 @@ export class HomePage {
   getAllTeams(){
     //get posted Teams
     //let tempTeam: Person = {teamManager: this._teamProv.activeUser.userID};
-    this._teamProv.getTeam(this.decoded.userId).subscribe(
+    this._teamProv.getTeamListe(this.decoded.userId).subscribe(
       (data) => {
         console.log(data);
-        this.allteams = data as Team[];
+        this.allteams = data as mannschaftszuordnung[];
       },
       error => console.log(error)
     )

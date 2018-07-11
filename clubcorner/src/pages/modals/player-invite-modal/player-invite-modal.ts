@@ -20,15 +20,17 @@ export class PlayerInviteModalPage {
 
   teamId: number;
   code: string;
+  teamCode: string;
   constructor(public viewCtrl: ViewController, private _teamProv: Services, private params: NavParams, private emailComposer: EmailComposer) {
     this.teamId = params.get("id");
+    this.teamCode = params.get("code");
   }
 
   closeModal() {
     this.viewCtrl.dismiss();
   }
 
-  getCode(){
+ /* getCode(){
     this._teamProv.getCode(this.teamId).subscribe(
       (data:string) => {
         console.log(data);
@@ -37,7 +39,7 @@ export class PlayerInviteModalPage {
       error => console.log(error)
     )
   }
-
+*/
   shareCode(){
     this.emailComposer.isAvailable().then((available: boolean) =>{
       if(available){

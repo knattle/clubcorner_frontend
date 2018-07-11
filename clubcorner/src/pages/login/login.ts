@@ -58,7 +58,7 @@ export class LoginPage {
         alert("wrong credentials");
       } else {
         alert("something failure");
-        this.navCtrl.setRoot(HomePage);
+       // this.navCtrl.setRoot(HomePage);
       }
     }
     )
@@ -69,7 +69,7 @@ export class LoginPage {
     this._teamProv.createPerson(this.person).subscribe(
       (data) => {
         console.log(data);
-        this.navCtrl.setRoot(HomePage);
+        this.navCtrl.setRoot(LoginPage);
       },
       error => console.log(error)
     )
