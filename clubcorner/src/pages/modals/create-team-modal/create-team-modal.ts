@@ -17,12 +17,53 @@ import {Team} from "../../../Schema/team.schema";
   selector: 'create-team-modal',
   templateUrl: 'create-team-modal.html',
 })
-export class CreateTeamModalPage {
-  constructor(public viewCtrl: ViewController, private _teamProv: Services) {}
 
+
+export class CreateTeamModalPage {
+  public saisonList:any;
+  constructor(public viewCtrl: ViewController, private _teamProv: Services) {
+
+    this.saisonList=[{
+      name: (new Date().getFullYear()-1)+'/'+(new Date().getFullYear()),
+      values:new Date().getFullYear()-1,
+      flag:0
+    },{
+      name: (new Date().getFullYear())+'/'+(new Date().getFullYear()+1),
+      values:new Date().getFullYear(),
+      flag:0
+    },{
+      name:(new Date().getFullYear()+1)+'/'+(new Date().getFullYear()+2),
+      values:new Date().getFullYear()+1,
+      flag:0
+    },{
+      name: (new Date().getFullYear()+2)+'/'+(new Date().getFullYear()+3),
+      values:new Date().getFullYear()+2,
+      flag:0
+    },{
+      name: (new Date().getFullYear()+3)+'/'+(new Date().getFullYear()+4),
+      values:new Date().getFullYear()+3,
+      flag:0
+    }];
+  }
+
+  valuechange(key){
+  
+    for(let i = 0 ; i < this.saisonList.lengh ; i++){
+      if( this.saisonList[i].values==key){
+        this.saisonList[i].flag=1;
+      }else{
+        this.saisonList[i].flag=0;
+      }
+    }
+  }
+
+  
   closeModal() {
     this.viewCtrl.dismiss();
   }
+
+
+
 
 
 
@@ -36,6 +77,8 @@ export class CreateTeamModalPage {
   male: null
   }
 
+  
+
   createOneTeam(){
     this._teamProv.createTeam(/*ID des zu löschenden Teams*/ this.uebergabe).subscribe(
       (data) => {
@@ -45,3 +88,5 @@ export class CreateTeamModalPage {
     )
   }
 }
+
+
