@@ -1,11 +1,12 @@
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import env from '../../environment';
-import {Observable} from "rxjs/Observable";
+import { Observable } from "rxjs/Observable";
 import {Team} from "../../Schema/team.schema";
 import {Termin} from "../../Schema/termin.schema";
 import {Person} from "../../Schema/person.schema";
 import {login} from "../../Schema/login.schema";
+import 'rxjs/add/observable/throw';
 import {Storage} from "@ionic/storage";
 
 /*
@@ -175,11 +176,11 @@ export class Services {
     }
   }
 
-  updatePerson(id:number, person:Person): Observable<any> {
+  updatePerson(id:string, person:Person): Observable<any> {
     if (person) {
       return this.http.put(`http://pachisi456.selfhost.eu:3001/personen/update/${id}`, person, this.options);
     } else {
-      return Observable.throw('No information given');
+      return Observable.throw(Error);
     }
   }
 

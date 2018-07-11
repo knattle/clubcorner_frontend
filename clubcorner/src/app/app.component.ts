@@ -48,7 +48,7 @@ export class MyApp {
   selectedItem;
   decoded;
   idNumber;
-  saveUpdateProfile(id: number, profile: Person){
+  saveUpdateProfile(profile: Person){
     this.selectedItem = localStorage.getItem("token");
     this.decoded = jwt_decode(this.selectedItem);
     this.idNumber = this.decoded;
