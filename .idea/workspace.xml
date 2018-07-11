@@ -4,9 +4,6 @@
     <list default="true" id="d1d9e016-f0e5-41e7-a959-07f01475f04a" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clubcorner/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clubcorner/src/pages/home/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/src/pages/home/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clubcorner/src/pages/home/home.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/src/pages/home/home.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clubcorner/src/providers/trainer/trainer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/src/providers/trainer/trainer.ts" afterDir="false" />
     </list>
     <ignored path="clubcorner_frontend.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,8 +26,8 @@
       <file leaf-file-name="trainer.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/clubcorner/src/providers/trainer/trainer.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4">
-              <caret line="164" column="9" selection-start-line="164" selection-start-column="9" selection-end-line="164" selection-end-column="9" />
+            <state relative-caret-position="829">
+              <caret line="178" column="12" selection-start-line="178" selection-start-column="12" selection-end-line="178" selection-end-column="12" />
               <folding>
                 <element signature="e#0#61#0" expanded="true" />
               </folding>
@@ -38,42 +35,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/clubcorner/src/app/app.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="20" column="36" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/clubcorner/src/pages/home/home.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="38" column="22" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
-              <folding>
-                <element signature="e#0#42#0" expanded="true" />
-                <element signature="e#194#230#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/clubcorner/src/pages/home/home.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="app.component.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/clubcorner/src/app/app.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="53" column="6" lean-forward="true" selection-start-line="53" selection-start-column="6" selection-end-line="53" selection-end-column="6" />
+            <state relative-caret-position="391">
+              <caret line="52" column="33" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
               <folding>
                 <element signature="e#0#53#0" expanded="true" />
               </folding>
@@ -149,9 +115,9 @@
         <option value="$PROJECT_DIR$/clubcorner/src/pages/team/team.ts" />
         <option value="$PROJECT_DIR$/clubcorner/src/pages/modals/create-team-modal/create-team-modal.ts" />
         <option value="$PROJECT_DIR$/clubcorner/src/pages/home/home.ts" />
-        <option value="$PROJECT_DIR$/clubcorner/src/app/app.component.ts" />
         <option value="$PROJECT_DIR$/clubcorner/src/pages/home/home.html" />
         <option value="$PROJECT_DIR$/clubcorner/src/providers/trainer/trainer.ts" />
+        <option value="$PROJECT_DIR$/clubcorner/src/app/app.component.ts" />
       </list>
     </option>
   </component>
@@ -230,7 +196,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -321,6 +286,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -387,7 +353,8 @@
       <workItem from="1530800800924" duration="12879000" />
       <workItem from="1530890546941" duration="1256000" />
       <workItem from="1531217018505" duration="14737000" />
-      <workItem from="1531232369954" duration="4218000" />
+      <workItem from="1531232369954" duration="4435000" />
+      <workItem from="1531300638553" duration="704000" />
     </task>
     <task id="LOCAL-00001" summary="Service Struktur">
       <created>1527353024898</created>
@@ -449,7 +416,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56413000" />
+    <option name="totallyTimeSpent" value="57334000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -461,7 +428,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1234" height="867" extended-state="0" />
+    <frame x="-7" y="0" width="1234" height="867" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TypeScript" order="12" />
@@ -478,12 +445,12 @@
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info id="Palette&#9;" order="2" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" order="9" />
       <window_info anchor="right" id="Designer" order="3" />
       <window_info id="UI Designer" order="3" />
-      <window_info id="Palette&#9;" order="2" />
+      <window_info anchor="bottom" id="Messages" order="9" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3298292" />
@@ -632,13 +599,6 @@
         <state relative-caret-position="-221" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/clubcorner/src/app/main.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="4" column="52" selection-start-line="4" selection-start-column="52" selection-end-line="4" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/clubcorner/config.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="424">
@@ -734,9 +694,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="155">
           <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -755,13 +712,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/clubcorner/src/pages/modals/create-training-modal/create-training-modal.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/clubcorner/src/pages/modals/create-game-modal/create-game-modal.ts">
       <provider selected="true" editor-type-id="text-editor">
@@ -780,16 +731,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/clubcorner/src/app/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-310">
-          <caret line="21" column="2" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/clubcorner/src/pages/home/home.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -801,23 +742,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/clubcorner/src/pages/home/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clubcorner/src/providers/trainer/trainer.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4">
-          <caret line="164" column="9" selection-start-line="164" selection-start-column="9" selection-end-line="164" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#61#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/clubcorner/src/app/app.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -825,10 +749,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/clubcorner/src/pages/home/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clubcorner/src/app/main.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="4" column="52" selection-start-line="4" selection-start-column="52" selection-end-line="4" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clubcorner/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="21" column="2" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clubcorner/src/providers/trainer/trainer.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="829">
+          <caret line="178" column="12" selection-start-line="178" selection-start-column="12" selection-end-line="178" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/clubcorner/src/app/app.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="53" column="6" lean-forward="true" selection-start-line="53" selection-start-column="6" selection-end-line="53" selection-end-column="6" />
+        <state relative-caret-position="391">
+          <caret line="52" column="33" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
           <folding>
             <element signature="e#0#53#0" expanded="true" />
           </folding>

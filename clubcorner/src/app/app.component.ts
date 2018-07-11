@@ -35,9 +35,7 @@ export class MyApp {
 
   }
 
-  selectedItem = localStorage.getItem("token")
-  decoded = jwt_decode(this.selectedItem);
-  idNumber = this.decoded;
+
   //profile: Person;
   profile: Person = {
  //   id: 4,
@@ -46,8 +44,13 @@ export class MyApp {
     email: "",
     password: ""
   }
-
+  selectedItem;
+  decoded;
+  idNumber;
   saveUpdateProfile(id: number, profile: Person){
+    this.selectedItem = localStorage.getItem("token");
+    this.decoded = jwt_decode(this.selectedItem);
+    this.idNumber = this.decoded;
   this._teamProv.updatePerson(this.idNumber.userId, profile).subscribe(
     (data) => {
      console.log(data);
