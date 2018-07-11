@@ -110,7 +110,7 @@ export class Services {
   }
 
   getTeamListe(id:number) {
-    return this.http.get(`http://pachisi456.selfhost.eu:3001/mannschaftszuordnung/team/${id}`, this.options);
+    return this.http.get(`http://pachisi456.selfhost.eu:3001/mannschaftzuordnung/team/${id}`, this.options);
   }
 
 
