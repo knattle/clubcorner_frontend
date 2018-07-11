@@ -2,10 +2,77 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d1d9e016-f0e5-41e7-a959-07f01475f04a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/clubcorner/src/Schema/person.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/src/Schema/person.schema.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clubcorner/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clubcorner/src/pages/login/login.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/src/pages/login/login.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/.gradle/4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/.gradle/4.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/.gradle/4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/.gradle/4.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/.gradle/4.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/.gradle/4.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/.gradle/4.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/.gradle/4.1/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/.gradle/4.1/javaCompile/taskJars.bin" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/.gradle/4.1/javaCompile/taskJars.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/.gradle/4.1/taskHistory/fileSnapshots.bin" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/.gradle/4.1/taskHistory/fileSnapshots.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/.gradle/4.1/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/.gradle/4.1/taskHistory/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/.gradle/4.1/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/.gradle/4.1/taskHistory/taskHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/CordovaLib/build/intermediates/incremental/debug-mergeJniLibs/merge-state" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/CordovaLib/build/intermediates/incremental/debug-mergeJniLibs/merge-state" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/CordovaLib/build/intermediates/incremental/mergeDebugAssets/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/CordovaLib/build/intermediates/incremental/mergeDebugAssets/merger.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/CordovaLib/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/CordovaLib/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/CordovaLib/build/intermediates/incremental/mergeDebugShaders/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/CordovaLib/build/intermediates/incremental/mergeDebugShaders/merger.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/CordovaLib/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/CordovaLib/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/CordovaLib/build/intermediates/incremental/packageDebugResources/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/CordovaLib/build/intermediates/incremental/packageDebugResources/merger.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/CordovaLib/build/intermediates/transforms/mergeJniLibs/debug/__content__.json" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/CordovaLib/build/intermediates/transforms/mergeJniLibs/debug/__content__.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/generated/source/r/debug/io/ionic/starter/R.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/generated/source/r/debug/org/apache/cordova/R.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/assets/debug/www/build/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/assets/debug/www/build/main.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/assets/debug/www/build/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/assets/debug/www/build/main.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/assets/debug/www/build/vendor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/assets/debug/www/build/vendor.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/assets/debug/www/cordova_plugins.js" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/assets/debug/www/cordova_plugins.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/assets/debug/www/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/assets/debug/www/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/blame/res/debug/multi-v2/debug.json" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/blame/res/debug/multi-v2/debug.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/blame/res/debug/multi-v2/values.json" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/blame/res/debug/multi-v2/values.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/blame/res/debug/single/debug.json" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/blame/res/debug/single/debug.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/incremental/mergeDebugAssets/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/incremental/mergeDebugAssets/merger.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/incremental/mergeDebugResources/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/incremental/mergeDebugResources/merger.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/incremental/mergeDebugShaders/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/incremental/mergeDebugShaders/merger.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/res/debug/resources-debug.ap_" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/res/debug/resources-debug.ap_" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/res/merged/debug/drawable-land-hdpi_screen.png.flat" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/res/merged/debug/drawable-land-hdpi_screen.png.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/res/merged/debug/drawable-land-ldpi_screen.png.flat" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/res/merged/debug/drawable-land-ldpi_screen.png.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/res/merged/debug/drawable-land-mdpi_screen.png.flat" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/res/merged/debug/drawable-land-mdpi_screen.png.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/res/merged/debug/drawable-land-xhdpi_screen.png.flat" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/res/merged/debug/drawable-land-xhdpi_screen.png.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/res/merged/debug/drawable-land-xxhdpi_screen.png.flat" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/res/merged/debug/drawable-land-xxhdpi_screen.png.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/res/merged/debug/drawable-land-xxxhdpi_screen.png.flat" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/res/merged/debug/drawable-land-xxxhdpi_screen.png.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/res/merged/debug/drawable-port-hdpi_screen.png.flat" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/res/merged/debug/drawable-port-hdpi_screen.png.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/res/merged/debug/drawable-port-ldpi_screen.png.flat" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/res/merged/debug/drawable-port-ldpi_screen.png.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/res/merged/debug/drawable-port-mdpi_screen.png.flat" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/res/merged/debug/drawable-port-mdpi_screen.png.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/res/merged/debug/drawable-port-xhdpi_screen.png.flat" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/res/merged/debug/drawable-port-xhdpi_screen.png.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/res/merged/debug/drawable-port-xxhdpi_screen.png.flat" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/res/merged/debug/drawable-port-xxhdpi_screen.png.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/res/merged/debug/drawable-port-xxxhdpi_screen.png.flat" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/res/merged/debug/drawable-port-xxxhdpi_screen.png.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/res/merged/debug/mipmap-hdpi_icon.png.flat" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/res/merged/debug/mipmap-hdpi_icon.png.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/res/merged/debug/mipmap-ldpi_icon.png.flat" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/res/merged/debug/mipmap-ldpi_icon.png.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/res/merged/debug/mipmap-mdpi_icon.png.flat" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/res/merged/debug/mipmap-mdpi_icon.png.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/res/merged/debug/mipmap-xhdpi_icon.png.flat" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/res/merged/debug/mipmap-xhdpi_icon.png.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_icon.png.flat" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_icon.png.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_icon.png.flat" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_icon.png.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/res/merged/debug/values_values.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/res/merged/debug/values_values.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/res/merged/debug/xml_config.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/app/build/intermediates/res/merged/debug/xml_config.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/app/src/main/assets/www/build/0.js" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/app/src/main/assets/www/build/0.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/app/src/main/assets/www/build/1.js" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/app/src/main/assets/www/build/1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/app/src/main/assets/www/build/2.js" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/app/src/main/assets/www/build/2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/app/src/main/assets/www/build/3.js" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/app/src/main/assets/www/build/3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/app/src/main/assets/www/build/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/app/src/main/assets/www/build/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/app/src/main/assets/www/build/main.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/app/src/main/assets/www/build/main.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/app/src/main/assets/www/build/vendor.js" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/app/src/main/assets/www/build/vendor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/app/src/main/assets/www/build/vendor.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/app/src/main/assets/www/build/vendor.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/platforms/android/app/src/main/res/xml/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/platforms/android/app/src/main/res/xml/config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/src/pages/home/home.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/src/pages/home/home.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/src/pages/modals/create-team-modal/create-team-modal.html" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/src/pages/modals/create-team-modal/create-team-modal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clubcorner/src/pages/modals/create-team-modal/create-team-modal.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/src/pages/modals/create-team-modal/create-team-modal.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clubcorner/src/providers/trainer/trainer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clubcorner/src/providers/trainer/trainer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <ignored path="clubcorner_frontend.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -58,11 +125,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="home.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/clubcorner/src/pages/home/home.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="2" lean-forward="true" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
+            <state relative-caret-position="255">
+              <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
                 <element signature="e#194#230#0" expanded="true" />
@@ -110,11 +177,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="create-team-modal.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="create-team-modal.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/clubcorner/src/pages/modals/create-team-modal/create-team-modal.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
-              <caret line="35" column="29" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
+              <caret line="14" column="18" lean-forward="true" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -122,8 +189,8 @@
       <file leaf-file-name="create-team-modal.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/clubcorner/src/pages/modals/create-team-modal/create-team-modal.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="761">
-              <caret line="51" column="33" selection-start-line="51" selection-start-column="33" selection-end-line="51" selection-end-column="33" />
+            <state relative-caret-position="285">
+              <caret line="83" column="26" selection-start-line="83" selection-start-column="25" selection-end-line="83" selection-end-column="26" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
               </folding>
@@ -197,13 +264,13 @@
         <option value="$PROJECT_DIR$/clubcorner/src/Schema/mannschaftszuordnung.schema.ts" />
         <option value="$PROJECT_DIR$/clubcorner/src/pages/home/home.ts" />
         <option value="$PROJECT_DIR$/clubcorner/src/pages/home/home.html" />
-        <option value="$PROJECT_DIR$/clubcorner/src/pages/modals/create-team-modal/create-team-modal.html" />
-        <option value="$PROJECT_DIR$/clubcorner/src/pages/modals/create-team-modal/create-team-modal.ts" />
         <option value="$PROJECT_DIR$/clubcorner/src/pages/login/login.ts" />
         <option value="$PROJECT_DIR$/clubcorner/src/pages/team/team.ts" />
         <option value="$PROJECT_DIR$/clubcorner/src/Schema/person.schema.ts" />
         <option value="$PROJECT_DIR$/clubcorner/src/app/app.component.ts" />
         <option value="$PROJECT_DIR$/clubcorner/src/providers/trainer/trainer.ts" />
+        <option value="$PROJECT_DIR$/clubcorner/src/pages/modals/create-team-modal/create-team-modal.ts" />
+        <option value="$PROJECT_DIR$/clubcorner/src/pages/modals/create-team-modal/create-team-modal.html" />
       </list>
     </option>
   </component>
@@ -320,6 +387,23 @@
               <item name="clubcorner" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="modals" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="clubcorner_frontend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="clubcorner_frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="clubcorner" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="modals" type="462c0819:PsiDirectoryNode" />
+              <item name="create-team-modal" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="clubcorner_frontend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="clubcorner_frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="clubcorner" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="team" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -328,14 +412,6 @@
               <item name="clubcorner" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="providers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="clubcorner_frontend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="clubcorner_frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="clubcorner" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="providers" type="462c0819:PsiDirectoryNode" />
-              <item name="trainer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="clubcorner_frontend" type="b2602c69:ProjectViewProjectNode" />
@@ -416,7 +492,7 @@
       <workItem from="1530890546941" duration="1256000" />
       <workItem from="1531217018505" duration="14737000" />
       <workItem from="1531232369954" duration="4435000" />
-      <workItem from="1531300638553" duration="7751000" />
+      <workItem from="1531300638553" duration="8082000" />
     </task>
     <task id="LOCAL-00001" summary="Service Struktur">
       <created>1527353024898</created>
@@ -478,7 +554,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64381000" />
+    <option name="totallyTimeSpent" value="64712000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -491,6 +567,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1234" height="867" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TypeScript" order="12" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21153846" />
@@ -766,23 +843,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/clubcorner/src/pages/modals/create-team-modal/create-team-modal.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="35" column="29" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clubcorner/src/pages/modals/create-team-modal/create-team-modal.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="761">
-          <caret line="51" column="33" selection-start-line="51" selection-start-column="33" selection-end-line="51" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/clubcorner/src/app/app.module.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -860,12 +920,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/clubcorner/src/pages/home/home.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="2" lean-forward="true" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
+        <state relative-caret-position="255">
+          <caret line="15" column="24" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
           <folding>
             <element signature="e#0#42#0" expanded="true" />
             <element signature="e#194#230#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clubcorner/src/pages/modals/create-team-modal/create-team-modal.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="83" column="26" selection-start-line="83" selection-start-column="25" selection-end-line="83" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clubcorner/src/pages/modals/create-team-modal/create-team-modal.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="18" lean-forward="true" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
         </state>
       </provider>
     </entry>

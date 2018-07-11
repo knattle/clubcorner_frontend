@@ -35,7 +35,7 @@ export class HomePage {
   constructor(public navCtrl: NavController, public navParams: NavParams, private _teamProv: Services, public modalCtrl: ModalController) {
     // If we navigated to this page, we will have an item available as a nav param
     this.selectedItem = navParams.get('item');
-    console.log(this.decoded);
+    //console.log(this.decoded);
     this.getAllTeams();
     this.getProfile();
   }

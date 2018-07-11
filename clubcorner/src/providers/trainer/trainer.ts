@@ -104,7 +104,7 @@ export class Services {
     return this.http.delete('${env.api}/team/${id}', this.options);
   }
 
-  getTeam(id:number) {
+  getTeam(id: number) {
     return this.http.get(`http://pachisi456.selfhost.eu:3001/mannschaft/${id}`, this.options);
   }
 
@@ -187,7 +187,8 @@ export class Services {
     return this.http.delete('${env.api}/${teamid}/${}', this.options);
   }
 
-  getPerson(id:number) {
+  getPerson(id: number) {
+    console.log(id);
     return this.http.get(`http://pachisi456.selfhost.eu:3001/personen/${id}`, this.options);
   }
 
