@@ -9,7 +9,7 @@
 
 
   <ion-content>
-    <ion-list inset> <!--*ngIf="profile"-->
+    <ion-list inset *ngIf="profile">
 
       <ion-item>
         <ion-avatar item-start>
@@ -19,21 +19,21 @@
 
       <ion-item>
         <ion-label>Vorname</ion-label>
-        <ion-input value="text" [(ngModel)]="profile.vorname"></ion-input>
+        <ion-input value="text" [(ngModel)]="profile.person.vorname"></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label>Name</ion-label>
-        <ion-input type="text" [(ngModel)]="profile.nachname"></ion-input>
+        <ion-input type="text" [(ngModel)]="profile.person.nachname"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label>Login Name</ion-label>
-        <ion-input value="roadGame" [(ngModel)]="profile.email"></ion-input>
+        <ion-input value="roadGame" [(ngModel)]="profile.person.email"></ion-input>
       </ion-item>
-      <ion-item>
+      <!--ion-item>
         <ion-label>Login Passwort</ion-label>
         <ion-input type="text" [(ngModel)]="profile.password"></ion-input>
-      </ion-item>
+      </ion-item-->
 
     </ion-list>
     <button ion-button color="dark" (click)="saveUpdateProfile()">Aenderungen speichern</button>

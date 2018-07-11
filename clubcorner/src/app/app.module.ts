@@ -19,6 +19,7 @@ import { EmailComposer} from "@ionic-native/email-composer";
 
 import { LoginProvider } from '../providers/login/login';
 import { Services } from '../providers/trainer/trainer';
+import {DataService} from "../providers/dataService/passData";
 //import { JwtHelper } from 'angular2-jwt';
 
 @NgModule({
@@ -57,7 +58,8 @@ import { Services } from '../providers/trainer/trainer';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     LoginProvider,
     Services,
-    EmailComposer
+    EmailComposer,
+    DataService
     //JwtHelperService
   ]
 })

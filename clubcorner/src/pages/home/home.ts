@@ -11,6 +11,7 @@ import {Team} from '../../Schema/team.schema';
 import {mannschaftszuordnung} from '../../Schema/mannschaftszuordnung.schema';
 import {Person} from '../../Schema/person.schema';
 import { CreateTeamModalPage } from '../modals/create-team-modal/create-team-modal';
+import {DataService} from "../../providers/dataService/passData";
 
 @Component({
   selector: 'page-home',
@@ -19,7 +20,8 @@ import { CreateTeamModalPage } from '../modals/create-team-modal/create-team-mod
 
 export class HomePage {
   teamPage = TeamPage;
-  selectedItem = localStorage.getItem("token")
+  //selectedItem = localStorage.getItem("token")
+  decoded = jwt_decode(localStorage.getItem("token"));
   icons: string[];
   items: Array<{title: string}>;
 
@@ -30,14 +32,17 @@ export class HomePage {
 
  // helper = new JwtHelper();
   //decoded = this.helper.decodeToken(this.selectedItem);
-  public decoded = jwt_decode(this.selectedItem);
-
-  constructor(public navCtrl: NavController, public navParams: NavParams, private _teamProv: Services, public modalCtrl: ModalController) {
+  //decoded;
+  constructor(public dataService: DataService, public navCtrl: NavController, public navParams: NavParams, private _teamProv: Services, public modalCtrl: ModalController) {
     // If we navigated to this page, we will have an item available as a nav param
-    this.selectedItem = navParams.get('item');
+    //this.selectedItem = navParams.get('item');
+    //this.decoded = null;
+
     //console.log(this.decoded);
+    console.log(this.decoded.userID);
+
     this.getAllTeams();
-    this.getProfile();
+   // this.getProfile();
   }
 
   openCreateTeamModal() {
@@ -54,7 +59,7 @@ export class HomePage {
   getAllTeams(){
     //get posted Teams
     //let tempTeam: Person = {teamManager: this._teamProv.activeUser.userID};
-    this._teamProv.getTeamListe(this.decoded.userId).subscribe(
+    this._teamProv.getTeamListe(this.decoded.userID).subscribe(
       (data) => {
         console.log(data);
         this.allteams = data as mannschaftszuordnung[];
@@ -68,10 +73,12 @@ export class HomePage {
 //Anzeigen des eigenen Profils
 
   getProfile(){
-    this._teamProv.getPerson(this.decoded.userId).subscribe(
+    this._teamProv.getPerson(this.decoded.userID).subscribe(
       (data:Person) => {
         console.log("GetProfile:" + data);
         this.person = data;
+        console.log(this.person);
+        this.dataService.changeMessage(this.person);
       },
       error => console.log(error)
     )

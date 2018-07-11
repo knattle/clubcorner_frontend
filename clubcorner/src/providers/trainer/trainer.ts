@@ -87,7 +87,7 @@ export class Services {
 
   createTeam(team:Team): Observable<any> {
     if (team) {
-      return this.http.post('${env.api}/team', team, this.options);
+      return this.http.post(`http://pachisi456.selfhost.eu:3001/mannschaft/create`, team, this.options);
     } else {
       return Observable.throw('No information given');
     }
@@ -176,11 +176,12 @@ export class Services {
     }
   }
 
-  updatePerson(id:string, person:Person): Observable<any> {
-    if (person) {
+  updatePerson(id:string, person: Person): Observable<any> {
+    console.log(person);
+    if (1==1) {
       return this.http.put(`http://pachisi456.selfhost.eu:3001/personen/update/${id}`, person, this.options);
     } else {
-      return Observable.throw(Error);
+      return Observable.throw("Wrong Update Service");
     }
   }
 
