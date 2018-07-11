@@ -39,7 +39,7 @@ export class MyApp {
 
   //profile: Person;
   profile: Person = {
- //   id: 4,
+    id: "4",
     vorname: "",
     nachname: "",
     email: "",

@@ -23,7 +23,7 @@ export class LoginPage {
   };
 
   person: Person = {
-  //  id: null,
+    id: null,
     vorname: null,
     nachname: null,
     email: null,

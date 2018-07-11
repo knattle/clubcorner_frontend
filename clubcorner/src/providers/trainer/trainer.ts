@@ -100,7 +100,7 @@ export class Services {
     }
   }
 
-  deleteTeam(id:number) {
+  deleteTeam(id:string) {
     return this.http.delete('${env.api}/team/${id}', this.options);
   }
 
@@ -155,7 +155,7 @@ export class Services {
     return this.http.delete('${env.api}/game/${id}', this.options);
   }
 
-  getTermin(id:number) {
+  getTermin(id:string) {
     return this.http.get(`http://pachisi456.selfhost.eu:3001/termin/${id}`, this.options);
   }
 
