@@ -102,7 +102,7 @@ export class Services {
   }
 
   deleteTeam(id:string) {
-    return this.http.delete('${env.api}/team/${id}', this.options);
+    return this.http.delete(`http://pachisi456.selfhost.eu:3001/mannschaft/${id}`, this.options);
   }
 
   getTeam(id: number) {
@@ -114,8 +114,8 @@ export class Services {
   }
 
 
-  getPlayerInTeam(id:number) {
-    return this.http.get('${env.api}/person/${id}', this.options);
+  getPlayerInTeam(teamID: string) {
+    return this.http.get(`http://pachisi456.selfhost.eu:3001/mannschaftzuordnung/players/${teamID}`, this.options);
   }
 
   //------------------------------------------
@@ -136,9 +136,9 @@ export class Services {
   //------------------------------------------
   //------------------------------------------
 
-  createTermin(termin:Termin): Observable<any> {
+  createTermin(teamID: string, termin:Termin): Observable<any> {
     if (termin) {
-      return this.http.post('${env.api}/game', termin, this.options);
+      return this.http.post(`http://pachisi456.selfhost.eu:3001/termin/${teamID}`, termin, this.options);
     } else {
       return Observable.throw('No information given');
     }

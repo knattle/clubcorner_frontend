@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Spiel anlegen</ion-title>
+    <ion-title>Termin anlegen</ion-title>
     <ion-buttons start>
       <button ion-button (click)="closeModal()">
         <span ion-text color="primary">Abbrechen</span>
@@ -41,13 +41,13 @@
       <ion-label>Datum</ion-label>
       <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate" [(ngModel)]="uebergabe.datum"></ion-datetime>
     </ion-item>
-  
+
       <ion-item>
         <ion-label>Anpfiff</ion-label>
         <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="myDate" [(ngModel)]="uebergabe.uhrzeit"></ion-datetime>
       </ion-item>
-      
-  
+
+
   </ion-list>
   <button ion-button color="dark" (click)="createOneTermin()">Anlegen</button>
 </ion-content>

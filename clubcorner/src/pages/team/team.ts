@@ -11,6 +11,8 @@ import { CreateTrainingModalPage } from '../modals/create-training-modal/create-
 import { ModalController } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 import { EmailComposer } from '@ionic-native/email-composer';
+import {HomePage} from "../home/home";
+import {mannschaftszuordnung} from "../../Schema/mannschaftszuordnung.schema";
 //import { Calendar } from "@ionic-native/calendar";
 
 @Component({
@@ -18,7 +20,7 @@ import { EmailComposer } from '@ionic-native/email-composer';
   templateUrl: 'team.html'
 })
 export class TeamPage {
-  selectedItem: Team;
+  selectedItem: mannschaftszuordnung;
   icons: string[];
   items: Array<{title: string}>;
 
@@ -38,12 +40,12 @@ export class TeamPage {
 };*/
 
   openPlayerListModal() {
-    let myModal = this.modalCtrl.create(PlayerListModalPage/*, {id: this.selectedItem.id}*/);
+    let myModal = this.modalCtrl.create(PlayerListModalPage, {data: this.selectedItem});
     myModal.present();
   };
 
   openCreateGameModal() {
-    let myModal = this.modalCtrl.create(CreateGameModalPage);
+    let myModal = this.modalCtrl.create(CreateGameModalPage, {data: this.selectedItem});
     myModal.present();
   };
 
@@ -92,6 +94,7 @@ export class TeamPage {
           handler: () => {
             console.log('Agree clicked');
             this.deleteTeam();
+            this.navCtrl.push(HomePage);
           }
         }
       ]
@@ -106,7 +109,7 @@ export class TeamPage {
 //-----------------------------------------------------------------
 
   deleteTeam(){
-    this._teamProv.deleteTeam(/*ID des zu löschenden Teams*/ this.selectedItem.id).subscribe(
+    this._teamProv.deleteTeam(/*ID des zu löschenden Teams*/ this.selectedItem.mannschafts_ID).subscribe(
       (data) => {
         console.log(data);
       },
@@ -115,7 +118,7 @@ export class TeamPage {
   }
 
   getAllTermine() {
-    this._teamProv.getTermin(this.selectedItem.id).subscribe(
+    this._teamProv.getTermin(this.selectedItem.mannschafts_ID).subscribe(
       (data) => {
         console.log(data);
         this.alleTermine = data as Termin[];

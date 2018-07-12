@@ -4,6 +4,7 @@ import { ViewController } from 'ionic-angular';
 import {Termin} from "../../../Schema/termin.schema";
 import {Services} from "../../../providers/trainer/trainer";
 import {Team} from "../../../Schema/team.schema";
+import {HomePage} from "../../home/home";
 
 /**
  * Generated class for the CreateTeamModalPage page.
@@ -21,7 +22,7 @@ import {Team} from "../../../Schema/team.schema";
 
 export class CreateTeamModalPage {
   public saisonList:any;
-  constructor(public viewCtrl: ViewController, private _teamProv: Services) {
+  constructor(public viewCtrl: ViewController, private _teamProv: Services, public navCtrl: NavController) {
       this.uebergabe.male = true;
     this.saisonList=[{
       name: (new Date().getFullYear()-1)+'/'+(new Date().getFullYear()),
@@ -89,6 +90,8 @@ export class CreateTeamModalPage {
     this._teamProv.createTeam(/*ID des zu löschenden Teams*/ this.uebergabe).subscribe(
       (data) => {
         console.log(data);
+        this.closeModal();
+        this.navCtrl.push(HomePage);
       },
       error => console.log(error)
     )

@@ -9,8 +9,8 @@
 
 <ion-content>
 
-    <ion-list *ngIf="allteams">
-      <button [navPush]="teamPage" [navParams]="{team:allteams}"<!--ion-item *ngFor="let team of allteams"--> [(ngModel)]="allteams.mannschafts_ID"></button>
+    <ion-item-group *ngIf="allteams">
+      <button ion-item [navPush]="teamPage" [navParams]="{team:team}" *ngFor="let team of this.allteams.mannschaftzuordnungen">{{team.mannschafts_ID}}</button>
       <ion-item>
         <ion-input type="text" placeholder="Beitrittscode eingeben" [(ngModel)]="code"></ion-input>
         <button ion-button outline item-end icon-left color="dark" (click)="einschreiben()">
@@ -18,7 +18,7 @@
               Beitreten
         </button>
       </ion-item>
-    </ion-list>
+    </ion-item-group>
 
 
 </ion-content>

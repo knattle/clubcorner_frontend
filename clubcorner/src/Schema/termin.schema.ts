@@ -1,9 +1,12 @@
 export interface Termin {
-    id: number;
+    id?: number;
+    mannschfts_ID?: string;
     spiel: boolean;
     ort: string;
     uhrzeit: string;
     datum: string;
-    wiederholend: boolean;
+    enddatum: string;
+    wiederholend?: boolean;
     gegner: string;
+    dauer?: string;
 }
