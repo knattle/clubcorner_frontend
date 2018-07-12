@@ -1,12 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
+import { AuthInterceptor } from '../providers/authService/authInterceptor';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { TeamPage } from '../pages/team/team';
 import { LoginPage } from '../pages/login/login';
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -33,7 +35,6 @@ import {DataService} from "../providers/dataService/passData";
     CreateGameModalPage,
     CreateTeamModalPage,
     CreateTrainingModalPage
-
   ],
   imports: [
     BrowserModule,
@@ -59,7 +60,10 @@ import {DataService} from "../providers/dataService/passData";
     LoginProvider,
     Services,
     EmailComposer,
-    DataService
+    DataService,
+    {provide: HTTP_INTERCEPTORS,
+    useClass: AuthInterceptor,
+    multi: true}
     //JwtHelperService
   ]
 })

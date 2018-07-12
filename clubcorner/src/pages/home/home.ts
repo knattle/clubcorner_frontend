@@ -30,12 +30,13 @@ export class HomePage {
   jwtTokenPlatzhalter: number = 1;
   code: string;
 
+
  // helper = new JwtHelper();
   //decoded = this.helper.decodeToken(this.selectedItem);
   //decoded;
   constructor(public dataService: DataService, public navCtrl: NavController, public navParams: NavParams, private _teamProv: Services, public modalCtrl: ModalController) {
     // If we navigated to this page, we will have an item available as a nav param
-    //this.selectedItem = navParams.get('item');
+    //selectedItem = navParams.get('item');
     //this.decoded = null;
 
     //console.log(this.decoded);

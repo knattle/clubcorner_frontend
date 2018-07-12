@@ -51,7 +51,7 @@ export class LoginPage {
     (data) => {
       this._teamProv.saveData(data);
       this.navCtrl.setRoot(HomePage);
-     console.log(data);
+     console.log("PostLoginData:" + data);
     },
     error => {console.log(error);
       if (error.status == 401) {

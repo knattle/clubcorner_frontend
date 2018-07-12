@@ -1,5 +1,5 @@
 export interface mannschaftszuordnung {
-  id: string;
+  mannschafts_ID: string;
   name: string;
   is_Trainer: boolean;
 }
