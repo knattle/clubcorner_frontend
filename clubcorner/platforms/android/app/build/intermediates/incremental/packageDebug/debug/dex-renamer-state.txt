@@ -1,4 +1,4 @@
-#Wed Jul 04 23:25:18 CEST 2018
+#Thu Jul 12 16:07:49 CEST 2018
 base.0=C\:\\Users\\jueneman\\WebstormProjects\\clubcorner_frontend\\clubcorner\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 renamed.0=classes.dex
 file.0=C\:\\Users\\jueneman\\WebstormProjects\\clubcorner_frontend\\clubcorner\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0\\classes.dex

@@ -22,7 +22,10 @@ coverage
 clubcorner/www
 clubcorner/node_modules
 clubcorner/.sourcemaps
-clubcorner/platforms
+clubcorner/platforms/*
+platforms/
+./clubcorner/platforms
+platforms
 # nyc test coverage
 .nyc_output
 

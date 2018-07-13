@@ -38,7 +38,8 @@ export class CreateGameModalPage {
     uhrzeit: null,
     datum: null,
     wiederholend: null,
-    gegner: null
+    gegner: null,
+    enddatum: null
   }
 
    createOneTermin(){

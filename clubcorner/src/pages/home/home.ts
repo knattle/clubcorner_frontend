@@ -51,9 +51,6 @@ export class HomePage {
     myModal.present();
   };
 
-
-
-
 //-----------------------------------------------------------------
 //-----------------------------------------------------------------
 //Anzeigen der zugehörigen Teams eines Spielers/Trainers
@@ -86,16 +83,11 @@ export class HomePage {
   }
 
   einschreiben(){
-    this._teamProv.einschreiben(this.person, this.code).subscribe(
+    this._teamProv.einschreiben(this.decoded.userID, this.code).subscribe(
       (data) => {
         console.log(data);
       },
       error => console.log(error)
     )
   }
-
-
-
-
 }
-

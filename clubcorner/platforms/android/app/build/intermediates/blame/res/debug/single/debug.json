@@ -1,23 +1,23 @@
 [
     {
-        "merged": "C:\\Users\\jueneman\\WebstormProjects\\clubcorner_frontend\\clubcorner\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-port-mdpi_screen.png.flat",
-        "source": "C:\\Users\\jueneman\\WebstormProjects\\clubcorner_frontend\\clubcorner\\platforms\\android\\app\\src\\main\\res\\drawable-port-mdpi\\screen.png"
-    },
-    {
         "merged": "C:\\Users\\jueneman\\WebstormProjects\\clubcorner_frontend\\clubcorner\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-land-xxhdpi_screen.png.flat",
         "source": "C:\\Users\\jueneman\\WebstormProjects\\clubcorner_frontend\\clubcorner\\platforms\\android\\app\\src\\main\\res\\drawable-land-xxhdpi\\screen.png"
     },
     {
-        "merged": "C:\\Users\\jueneman\\WebstormProjects\\clubcorner_frontend\\clubcorner\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-land-hdpi_screen.png.flat",
-        "source": "C:\\Users\\jueneman\\WebstormProjects\\clubcorner_frontend\\clubcorner\\platforms\\android\\app\\src\\main\\res\\drawable-land-hdpi\\screen.png"
+        "merged": "C:\\Users\\jueneman\\WebstormProjects\\clubcorner_frontend\\clubcorner\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-port-mdpi_screen.png.flat",
+        "source": "C:\\Users\\jueneman\\WebstormProjects\\clubcorner_frontend\\clubcorner\\platforms\\android\\app\\src\\main\\res\\drawable-port-mdpi\\screen.png"
+    },
+    {
+        "merged": "C:\\Users\\Niklas Schuster\\Documents\\GitHub\\clubcorner_frontend\\clubcorner\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-land-ldpi_screen.png.flat",
+        "source": "C:\\Users\\Niklas Schuster\\Documents\\GitHub\\clubcorner_frontend\\clubcorner\\platforms\\android\\app\\src\\main\\res\\drawable-land-ldpi\\screen.png"
     },
     {
         "merged": "C:\\Users\\Niklas Schuster\\Documents\\GitHub\\clubcorner_frontend\\clubcorner\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_icon.png.flat",
         "source": "C:\\Users\\Niklas Schuster\\Documents\\GitHub\\clubcorner_frontend\\clubcorner\\platforms\\android\\app\\src\\main\\res\\mipmap-hdpi\\icon.png"
     },
     {
-        "merged": "C:\\Users\\Niklas Schuster\\Documents\\GitHub\\clubcorner_frontend\\clubcorner\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-land-ldpi_screen.png.flat",
-        "source": "C:\\Users\\Niklas Schuster\\Documents\\GitHub\\clubcorner_frontend\\clubcorner\\platforms\\android\\app\\src\\main\\res\\drawable-land-ldpi\\screen.png"
+        "merged": "C:\\Users\\jueneman\\WebstormProjects\\clubcorner_frontend\\clubcorner\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-land-hdpi_screen.png.flat",
+        "source": "C:\\Users\\jueneman\\WebstormProjects\\clubcorner_frontend\\clubcorner\\platforms\\android\\app\\src\\main\\res\\drawable-land-hdpi\\screen.png"
     },
     {
         "merged": "C:\\Users\\Niklas Schuster\\Documents\\GitHub\\clubcorner_frontend\\clubcorner\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_icon.png.flat",

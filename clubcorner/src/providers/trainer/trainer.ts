@@ -72,7 +72,7 @@ export class Services {
   //------------------------------------------
   einschreiben(person: Person, teamId: string): Observable<any> {
     if (person && teamId) {
-      return this.http.post(`${env.env.api}/${teamId}`, person, this.options);
+      return this.http.post(`http://pachisi456.selfhost.eu:3001/team/einschreiben`, person, this.options);
     } else {
       return Observable.throw('No information given');
     }
