@@ -3,14 +3,14 @@
     <button (click)="getProfile()" ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Handballverein XY</ion-title>
+    <ion-title>SC Bayer 05 Uerdingen</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
 
     <ion-item-group *ngIf="allteams">
-      <button ion-item [navPush]="teamPage" [navParams]="{team:team}" *ngFor="let team of this.allteams.mannschaftzuordnungen">{{team.mannschafts_ID}}</button>
+      <button ion-item [navPush]="teamPage" [navParams]="{team:team}" *ngFor="let team of this.allteams.mannschaftzuordnungen">{{team.mannschafts_name}}</button>
       <ion-item>
         <ion-input type="text" placeholder="Beitrittscode eingeben" [(ngModel)]="code"></ion-input>
         <button ion-button outline item-end icon-left color="dark" (click)="einschreiben()">

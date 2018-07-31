@@ -34,12 +34,6 @@ export class PlayerInviteModalPage implements OnInit {
   }
 
   getCode(){
-    this._teamProv.getTeam(this.teamId).subscribe(
-      (data) => {
-        this.teamCode = data['Mannschaften'][0]['anmeldecode'];
-      },
-      error => console.log(error)
-    )
   }
 
   shareCode(){
@@ -53,7 +47,7 @@ export class PlayerInviteModalPage implements OnInit {
       to: '',
       cc: '',
       subject: 'Clubcorner: Einladung in eine Mannschaft',
-      body: 'Hallo, du wurdest in eine Mannschat eingeladen. Nutze den folgenden Code um dem Team beizutreten: ' + this.code,
+      body: 'Hallo, du wurdest in eine Mannschat eingeladen. Nutze den folgenden Code um dem Team beizutreten: ' + this.teamCode,
       isHtml: true
     };
 

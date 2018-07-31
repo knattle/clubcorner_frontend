@@ -3,7 +3,7 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>{{selectedItem.name}}</ion-title>
+    <ion-title>{{this.selectedItem.mannschafts_name}}</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -31,8 +31,8 @@
                   <ion-icon name="close-circle"></ion-icon>
                   Absagen
             </button>
-            <button ion-button icon-left color="primary" (click)="openCalendar"outline>
-              Absagen
+            <button ion-button icon-left color="primary" (click)="deleteTermin(termin)" outline>
+              Termin Löschen
             </button>
           </div>
         </div>

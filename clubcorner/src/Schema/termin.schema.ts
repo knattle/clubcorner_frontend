@@ -1,6 +1,7 @@
 export interface Termin {
     id?: number;
-    mannschfts_ID?: string;
+    _id: string;
+    mannschafts_ID?: string;
     spiel: boolean;
     ort: string;
     uhrzeit: string;

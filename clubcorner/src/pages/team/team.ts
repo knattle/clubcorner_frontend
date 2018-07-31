@@ -27,16 +27,20 @@ export class TeamPage implements OnInit {
 
   alleSpieler: Person[];
   alleTermine: Termin[];
+  team: Team;
 
   constructor(public navCtrl: NavController, private emailComposer: EmailComposer, public navParams: NavParams,
               public modalCtrl: ModalController, public alertCtrl: AlertController, private _teamProv: Services) {
     // If we navigated to this page, we will have an item available as a nav param
-    this.selectedItem = navParams.get('team');
+    this.selectedItem = this.navParams.get('team');
   }
 
   ngOnInit() {
-    this.getAllTermine();
     this.alleTermine = [];
+    this.selectedItem = this.navParams.get('team');
+    console.log(this.selectedItem);
+    this.getAllTermine();
+    this.getTeamInfo();
   }
 
   /*openPlayerInviteModal() {
@@ -61,8 +65,26 @@ export class TeamPage implements OnInit {
 
 
   openPlayerInviteModal() {
-    let myModal = this.modalCtrl.create(PlayerInviteModalPage, {id: this.selectedItem.mannschafts_ID});
-    myModal.present();
+    const confirm = this.alertCtrl.create({
+      title: 'Spieler Einladen',
+      message: 'sie können spieler einladen mit dem folgenden Code: ' + this.team.anmeldecode,
+      buttons: [
+        {
+          text: 'Schließen',
+          handler: () => {
+            console.log('Disagree clicked');
+          }
+        },
+        {
+          text: 'Teilen',
+          handler: () => {
+            console.log('Agree clicked');
+            this.shareCode(this.team.anmeldecode);
+          }
+        }
+      ]
+    });
+    confirm.present();
   }
 
   openDeleteTeamModal() {
@@ -91,7 +113,17 @@ export class TeamPage implements OnInit {
  /* openCalendar(){
 
   }*/
-//-----------------------------------------------------------------
+
+ deleteTermin(termin: Termin){
+   console.log(termin);
+   this._teamProv.deleteTermin(termin._id).subscribe(data => {
+     this.getAllTermine();
+   }, error => {
+
+   });
+ }
+
+ //-----------------------------------------------------------------
 //-----------------------------------------------------------------
 
   deleteTeam(){
@@ -110,6 +142,15 @@ export class TeamPage implements OnInit {
       (data) => {
         console.log(data);
         this.alleTermine = data['termine'] as Termin[];
+      },
+      error => console.log(error)
+    )
+  }
+
+  getTeamInfo() {
+    this._teamProv.getTeam(this.selectedItem.mannschafts_ID).subscribe(
+      (data) => {
+        this.team = <Team>data['Mannschaften'][0];
       },
       error => console.log(error)
     )
