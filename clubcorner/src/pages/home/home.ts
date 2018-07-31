@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { ModalController } from 'ionic-angular';
 //import { JwtHelper } from 'angular2-jwt';
@@ -18,7 +18,7 @@ import {DataService} from "../../providers/dataService/passData";
   templateUrl: 'home.html'
 })
 
-export class HomePage {
+export class HomePage implements OnInit {
   teamPage = TeamPage;
   //selectedItem = localStorage.getItem("token")
   decoded = jwt_decode(localStorage.getItem("token"));
@@ -42,8 +42,11 @@ export class HomePage {
     //console.log(this.decoded);
     console.log(this.decoded.userID);
 
-    this.getAllTeams();
    // this.getProfile();
+  }
+
+  ngOnInit() {
+    this.getAllTeams();
   }
 
   openCreateTeamModal() {
@@ -83,7 +86,7 @@ export class HomePage {
   }
 
   einschreiben(){
-    this._teamProv.einschreiben(this.decoded.userID, this.code).subscribe(
+    this._teamProv.einschreiben(this.code).subscribe(
       (data) => {
         console.log(data);
       },

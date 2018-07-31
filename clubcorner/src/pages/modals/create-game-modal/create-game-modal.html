@@ -38,14 +38,13 @@
       <ion-input type="text" [(ngModel)]="uebergabe.ort"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>Datum</ion-label>
-      <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate" [(ngModel)]="uebergabe.datum"></ion-datetime>
+      <ion-label>Dauer</ion-label>
+      <ion-input type="text" [(ngModel)]="uebergabe.dauer"></ion-input>
     </ion-item>
-
-      <ion-item>
-        <ion-label>Anpfiff</ion-label>
-        <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="myDate" [(ngModel)]="uebergabe.uhrzeit"></ion-datetime>
-      </ion-item>
+    <ion-item>
+      <ion-label>Datum</ion-label>
+      <ion-datetime displayFormat="MM/DD/YYYY h:mm A" [(ngModel)]="myDate" [(ngModel)]="uebergabe.datum"></ion-datetime>
+    </ion-item>
 
 
   </ion-list>

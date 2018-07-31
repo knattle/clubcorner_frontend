@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
 import {HomePage} from '../home/home';
@@ -10,7 +10,7 @@ import {Person} from "../../Schema/person.schema";
   selector: 'page-login',
   templateUrl: 'login.html'
 })
-export class LoginPage {
+export class LoginPage implements OnInit {
   homePage = HomePage;
   selectedItem: any;
   loginForm: any;
@@ -23,7 +23,7 @@ export class LoginPage {
   };
 
   person: Person = {
-    id: null,
+    _id: null,
     vorname: null,
     nachname: null,
     email: null,
@@ -35,6 +35,12 @@ export class LoginPage {
     console.log("Hello" + this.daten);
     this.selectedItem = navParams.get('item');
     this.loginForm = 'login';
+  }
+
+  ngOnInit() {
+    if (localStorage.getItem("token")) {
+      this.navCtrl.setRoot(HomePage);
+    }
   }
 
   openHomePage(page) {

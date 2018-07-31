@@ -6,7 +6,7 @@ page-team {
           position: relative;
           text-align: center;
         }
-      
+
         .card-title {
           position: absolute;
           top: 30%;
@@ -16,7 +16,7 @@ page-team {
           font-weight: bold;
           color: #fff;
         }
-      
+
         .card-subtitle {
           font-size: 1.0em;
           position: absolute;
@@ -24,6 +24,10 @@ page-team {
           width: 100%;
           color: #fff;
         }
+
+      .card-subtitle > p {
+        color: #fff;
+      }
 
         .card-button {
             position: absolute;
@@ -37,9 +41,9 @@ page-team {
             position: absolute;
             z-index: 99;
             bottom: 0px;
-            background-color:rgba(0, 0, 0, 0.5);       
+            background-color:rgba(0, 0, 0, 0.5);
         }
-      
+
       }
 }
 

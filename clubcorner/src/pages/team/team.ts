@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import {Services} from '../../providers/trainer/trainer';
 import {Team} from '../../Schema/team.schema';
@@ -19,19 +19,24 @@ import {mannschaftszuordnung} from "../../Schema/mannschaftszuordnung.schema";
   selector: 'page-team',
   templateUrl: 'team.html'
 })
-export class TeamPage {
+export class TeamPage implements OnInit {
   selectedItem: mannschaftszuordnung;
   icons: string[];
   items: Array<{title: string}>;
 
-  alleTermine: Termin[];
+
   alleSpieler: Person[];
+  alleTermine: Termin[];
 
   constructor(public navCtrl: NavController, private emailComposer: EmailComposer, public navParams: NavParams,
               public modalCtrl: ModalController, public alertCtrl: AlertController, private _teamProv: Services) {
     // If we navigated to this page, we will have an item available as a nav param
     this.selectedItem = navParams.get('team');
+  }
+
+  ngOnInit() {
     this.getAllTermine();
+    this.alleTermine = [];
   }
 
   /*openPlayerInviteModal() {
@@ -56,26 +61,8 @@ export class TeamPage {
 
 
   openPlayerInviteModal() {
-    const confirm = this.alertCtrl.create({
-      title: 'Spieler Einladen',
-      message: 'sie können spieler einladen mit dem folgenden Code: 39620472',
-      buttons: [
-        {
-          text: 'Schließen',
-          handler: () => {
-            console.log('Disagree clicked');
-          }
-        },
-        {
-          text: 'Teilen',
-          handler: () => {
-            console.log('Agree clicked');
-            this.shareCode("123456");
-          }
-        }
-      ]
-    });
-    confirm.present();
+    let myModal = this.modalCtrl.create(PlayerInviteModalPage, {id: this.selectedItem.mannschafts_ID});
+    myModal.present();
   }
 
   openDeleteTeamModal() {
@@ -94,7 +81,6 @@ export class TeamPage {
           handler: () => {
             console.log('Agree clicked');
             this.deleteTeam();
-            this.navCtrl.push(HomePage);
           }
         }
       ]
@@ -111,6 +97,8 @@ export class TeamPage {
   deleteTeam(){
     this._teamProv.deleteTeam(/*ID des zu löschenden Teams*/ this.selectedItem.mannschafts_ID).subscribe(
       (data) => {
+        this.navCtrl.pop();
+        this.navCtrl.push(HomePage);
         console.log(data);
       },
       error => console.log(error)
@@ -121,7 +109,7 @@ export class TeamPage {
     this._teamProv.getTermin(this.selectedItem.mannschafts_ID).subscribe(
       (data) => {
         console.log(data);
-        this.alleTermine = data as Termin[];
+        this.alleTermine = data['termine'] as Termin[];
       },
       error => console.log(error)
     )

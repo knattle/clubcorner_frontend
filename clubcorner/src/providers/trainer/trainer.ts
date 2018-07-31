@@ -7,6 +7,7 @@ import {Termin} from "../../Schema/termin.schema";
 import {Person} from "../../Schema/person.schema";
 import {login} from "../../Schema/login.schema";
 import 'rxjs/add/observable/throw';
+import jwt_decode from 'jwt-decode';
 import {Storage} from "@ionic/storage";
 
 /*
@@ -70,9 +71,12 @@ export class Services {
   //------------------------------------------
   // In Team einschreiben
   //------------------------------------------
-  einschreiben(person: Person, teamId: string): Observable<any> {
-    if (person && teamId) {
-      return this.http.post(`http://pachisi456.selfhost.eu:3001/team/einschreiben`, person, this.options);
+  einschreiben(code: string): Observable<any> {
+    if (code) {
+      let decoded = jwt_decode(localStorage.getItem("token"));
+      return this.http.post(`http://pachisi456.selfhost.eu:3001/mannschaftzuordnung/${decoded.userID}`, {
+        anmeldecode: code
+      }, this.options);
     } else {
       return Observable.throw('No information given');
     }
@@ -87,7 +91,8 @@ export class Services {
 
   createTeam(team:Team): Observable<any> {
     if (team) {
-      return this.http.post(`http://pachisi456.selfhost.eu:3001/mannschaft/create`, team, this.options);
+      let decoded = jwt_decode(localStorage.getItem("token"));
+      return this.http.post(`http://pachisi456.selfhost.eu:3001/mannschaft/create/${decoded.userID}`, team, this.options);
     } else {
       return Observable.throw('No information given');
     }
@@ -95,7 +100,7 @@ export class Services {
 
   updateTeam(id:number, team:Team) {
     if (team) {
-      return this.http.put('${env.api}/team/${id}', team, this.options);
+      return this.http.put('http://pachisi456.selfhost.eu:3001/team/${id}', team, this.options);
     } else {
       return Observable.throw('No information given');
     }
@@ -125,7 +130,7 @@ export class Services {
   //------------------------------------------
 
   generateCode(id:number, code:number) {
-    return this.http.post('${env.api}/team/${id}', code, this.options)
+    return this.http.post('http://pachisi456.selfhost.eu:3001/team/${id}', code, this.options)
   }
 
 
@@ -146,14 +151,14 @@ export class Services {
 
   updateTermin(id:number, termin:Termin) {
     if (termin) {
-      return this.http.put('${env.api}/game/${id}', termin, this.options);
+      return this.http.put('http://pachisi456.selfhost.eu:3001/game/${id}', termin, this.options);
     } else {
       return Observable.throw('No information given');
     }
   }
 
   deleteTermin(id:number) {
-    return this.http.delete('${env.api}/game/${id}', this.options);
+    return this.http.delete('http://pachisi456.selfhost.eu:3001/game/${id}', this.options);
   }
 
   getTermin(id:string) {
@@ -185,11 +190,11 @@ export class Services {
     }
   }
 
-  deletePersonFromTeam(teamid: number) {
-    return this.http.delete('${env.api}/${teamid}/${}', this.options);
+  deletePersonFromTeam(teamid: string, userid: string) {
+    return this.http.delete(`http://pachisi456.selfhost.eu:3001/mannschaftzuordnung/${teamid}/${userid}`, this.options);
   }
 
-  getPerson(id: number) {
+  getPerson(id: string) {
     console.log(id);
     return this.http.get(`http://pachisi456.selfhost.eu:3001/personen/${id}`, this.options);
   }

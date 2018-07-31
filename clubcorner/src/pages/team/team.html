@@ -12,14 +12,13 @@
     <ion-list>
 
 
-        <ion-card *ngFor="let termin of alleTermine">
+        <ion-card *ngFor="let termin of this.alleTermine">
           <img src="../../assets/imgs/training.jpg"/>
           <div class="myOverlay">
           <div class="card-title">{{termin.spiel}}</div>
-          <div class="card-subtitle">{{termin.datum}}</div>
-          <div class="card-subtitle">{{termin.uhrzeit}}</div>
-          <div class="card-subtitle">{{termin.ort}}</div>
-          <div class="card-subtitle">{{termin.gegner}}</div>
+          <div class="card-subtitle"><p>{{termin.datum}}</p>
+            <p>{{termin.ort}}</p>
+          <p>{{termin.gegner}}</p></div>
 
 
 
