@@ -25749,6 +25749,10 @@ page-team .card-background-page .card-subtitle {
   color: #fff;
 }
 
+page-team .card-background-page .card-subtitle > p {
+  color: #fff;
+}
+
 page-team .card-background-page .card-button {
   position: absolute;
   top: 70%;

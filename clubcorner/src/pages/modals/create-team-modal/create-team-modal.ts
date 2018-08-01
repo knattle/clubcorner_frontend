@@ -71,10 +71,11 @@ export class CreateTeamModalPage {
   uebergabe: Team = {
     id: null,
     name: null,
+    mannschafts_name: null,
     mannschaftsgrad: null,
     jugend: null,
     sasion: null,
-    code: null,
+    anmeldecode: null,
     male: null
   }
   gender: null;

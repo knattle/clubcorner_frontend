@@ -34,12 +34,6 @@ export class PlayerInviteModalPage implements OnInit {
   }
 
   getCode(){
-    this._teamProv.getTeam(this.teamId).subscribe(
-      (data) => {
-        this.teamCode = data['Mannschaften'][0]['anmeldecode'];
-      },
-      error => console.log(error)
-    )
   }
 
   shareCode(){

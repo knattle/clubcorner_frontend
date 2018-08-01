@@ -110,7 +110,7 @@ export class Services {
     return this.http.delete(`http://pachisi456.selfhost.eu:3001/mannschaft/${id}`, this.options);
   }
 
-  getTeam(id: number) {
+  getTeam(id: string) {
     return this.http.get(`http://pachisi456.selfhost.eu:3001/mannschaft/${id}`, this.options);
   }
 
@@ -157,8 +157,8 @@ export class Services {
     }
   }
 
-  deleteTermin(id:number) {
-    return this.http.delete('http://pachisi456.selfhost.eu:3001/game/${id}', this.options);
+  deleteTermin(id:String) {
+    return this.http.delete(`http://pachisi456.selfhost.eu:3001/termin/${id}`, this.options);
   }
 
   getTermin(id:string) {

@@ -1,6 +1,6 @@
 webpackJsonp([4],{
 
-/***/ 122:
+/***/ 123:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -38,7 +38,7 @@ var DataService = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 155:
+/***/ 156:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -78,7 +78,8 @@ var CreateGameModalPage = /** @class */ (function () {
             datum: null,
             wiederholend: null,
             gegner: null,
-            enddatum: null
+            enddatum: null,
+            dauer: null
         };
         this.aktuellesTeam = this.navParams.get("data");
     }
@@ -93,7 +94,7 @@ var CreateGameModalPage = /** @class */ (function () {
     };
     CreateGameModalPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'create-game-modal',template:/*ion-inline-start:"C:\Users\jueneman\WebstormProjects\clubcorner_frontend\clubcorner\src\pages\modals\create-game-modal\create-game-modal.html"*/'<!--\n  Generated template for the CreateGameModalPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Termin anlegen</ion-title>\n    <ion-buttons start>\n      <button ion-button (click)="closeModal()">\n        <span ion-text color="primary">Abbrechen</span>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n  <ion-list inset>\n    <ion-item>\n      <ion-label>Spiel</ion-label>\n      <ion-toggle value="roadGame" checked="false" [(ngModel)]="uebergabe.spiel"></ion-toggle>\n    </ion-item>\n\n    <ion-item>\n      <ion-label>Gegener</ion-label>\n      <ion-input type="text" [(ngModel)]="uebergabe.gegner"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label>Auswärtsspiel</ion-label>\n      <ion-toggle value="roadGame" checked="false" [(ngModel)]="uebergabe.wiederholend"></ion-toggle>\n    </ion-item>\n    <ion-item>\n      <ion-label>Ort</ion-label>\n      <ion-input type="text" [(ngModel)]="uebergabe.ort"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label>Datum</ion-label>\n      <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate" [(ngModel)]="uebergabe.datum"></ion-datetime>\n    </ion-item>\n\n      <ion-item>\n        <ion-label>Anpfiff</ion-label>\n        <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="myDate" [(ngModel)]="uebergabe.uhrzeit"></ion-datetime>\n      </ion-item>\n\n\n  </ion-list>\n  <button ion-button color="dark" (click)="createOneTermin()">Anlegen</button>\n</ion-content>\n'/*ion-inline-end:"C:\Users\jueneman\WebstormProjects\clubcorner_frontend\clubcorner\src\pages\modals\create-game-modal\create-game-modal.html"*/,
+            selector: 'create-game-modal',template:/*ion-inline-start:"C:\Users\jueneman\WebstormProjects\clubcorner_frontend\clubcorner\src\pages\modals\create-game-modal\create-game-modal.html"*/'<!--\n  Generated template for the CreateGameModalPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Termin anlegen</ion-title>\n    <ion-buttons start>\n      <button ion-button (click)="closeModal()">\n        <span ion-text color="primary">Abbrechen</span>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n  <ion-list inset>\n    <ion-item>\n      <ion-label>Spiel</ion-label>\n      <ion-toggle value="roadGame" checked="false" [(ngModel)]="uebergabe.spiel"></ion-toggle>\n    </ion-item>\n\n    <ion-item>\n      <ion-label>Gegener</ion-label>\n      <ion-input type="text" [(ngModel)]="uebergabe.gegner"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label>Auswärtsspiel</ion-label>\n      <ion-toggle value="roadGame" checked="false" [(ngModel)]="uebergabe.wiederholend"></ion-toggle>\n    </ion-item>\n    <ion-item>\n      <ion-label>Ort</ion-label>\n      <ion-input type="text" [(ngModel)]="uebergabe.ort"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label>Dauer</ion-label>\n      <ion-input type="text" [(ngModel)]="uebergabe.dauer"></ion-input>\n    </ion-item>\n    <ion-item>\n      <ion-label>Datum</ion-label>\n      <ion-datetime displayFormat="MM/DD/YYYY h:mm A" [(ngModel)]="myDate" [(ngModel)]="uebergabe.datum"></ion-datetime>\n    </ion-item>\n\n\n  </ion-list>\n  <button ion-button color="dark" (click)="createOneTermin()">Anlegen</button>\n</ion-content>\n'/*ion-inline-end:"C:\Users\jueneman\WebstormProjects\clubcorner_frontend\clubcorner\src\pages\modals\create-game-modal\create-game-modal.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ViewController */], __WEBPACK_IMPORTED_MODULE_2__providers_trainer_trainer__["a" /* Services */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
     ], CreateGameModalPage);
@@ -104,7 +105,7 @@ var CreateGameModalPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 156:
+/***/ 157:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -210,7 +211,7 @@ var CreateTeamModalPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 157:
+/***/ 158:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -238,7 +239,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Ionic pages and navigation.
  */
 var PlayerListModalPage = /** @class */ (function () {
-    function PlayerListModalPage(viewCtrl, _teamProv, navParams) {
+    function PlayerListModalPage(navCtrl, viewCtrl, _teamProv, navParams) {
+        this.navCtrl = navCtrl;
         this.viewCtrl = viewCtrl;
         this._teamProv = _teamProv;
         this.navParams = navParams;
@@ -246,28 +248,42 @@ var PlayerListModalPage = /** @class */ (function () {
         this.aktuellesTeam = this.navParams.get("data");
         /*this.playerID = params.get("playerId");*/
         //console.log(this.teamId);
-        this.getPlayerList();
     }
+    PlayerListModalPage.prototype.ngOnInit = function () {
+        this.getPlayerList();
+    };
     PlayerListModalPage.prototype.closeModal = function () {
         this.viewCtrl.dismiss();
     };
     PlayerListModalPage.prototype.getPlayerList = function () {
         var _this = this;
         this._teamProv.getPlayerInTeam(this.aktuellesTeam.mannschafts_ID).subscribe(function (data) {
+            _this.playerList = [];
             console.log(data);
-            _this.playerList = data;
+            for (var _i = 0, _a = data['mannschaftzuordnungen']; _i < _a.length; _i++) {
+                var entry = _a[_i];
+                _this._teamProv.getPerson(entry['personen_ID']).subscribe(function (data) {
+                    _this.playerList.push((data['person']));
+                }, function (error) {
+                    console.log(error);
+                });
+            }
         }, function (error) { return console.log(error); });
     };
     PlayerListModalPage.prototype.deletePlayer = function (player) {
-        this._teamProv.deletePersonFromTeam(/*ID des zu löschenden Teams*/ this.teamId).subscribe(function (data) {
+        var _this = this;
+        console.log(this.aktuellesTeam.mannschafts_ID);
+        console.log(player._id);
+        this._teamProv.deletePersonFromTeam(/*ID des zu löschenden Teams*/ this.aktuellesTeam.mannschafts_ID, player._id).subscribe(function (data) {
             console.log(data);
+            _this.viewCtrl.dismiss();
         }, function (error) { return console.log(error); });
     };
     PlayerListModalPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'player-list-modal',template:/*ion-inline-start:"C:\Users\jueneman\WebstormProjects\clubcorner_frontend\clubcorner\src\pages\modals\player-list-modal\player-list-modal.html"*/'<!--\n\n  Generated template for the PlayerListModalPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>Spielerliste</ion-title>\n\n    <ion-buttons start>\n\n      <button ion-button (click)="closeModal()">\n\n        <span ion-text color="primary">Abbrechen</span>\n\n      </button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content>\n\n  <ion-list *ngIf="playerList">\n\n    <ion-item *ngFor="let player of playerList">\n\n      <ion-avatar item-start>\n\n        <img src=\'../../../assets/imgs/avatar.jpg\'>\n\n      </ion-avatar>\n\n      <h2>{{this.name}}</h2>\n\n      <p><ion-icon name="ma-checkmark-circle"></ion-icon> Verfügbar</p>\n\n      <button ion-button small clear item-end icon-left color="dark" (click)="deletePlayer(player)">\n\n        <ion-icon name="md-close-circle"></ion-icon>\n\n        Entfernen\n\n      </button>\n\n    </ion-item>\n\n  </ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\jueneman\WebstormProjects\clubcorner_frontend\clubcorner\src\pages\modals\player-list-modal\player-list-modal.html"*/,
+            selector: 'player-list-modal',template:/*ion-inline-start:"C:\Users\jueneman\WebstormProjects\clubcorner_frontend\clubcorner\src\pages\modals\player-list-modal\player-list-modal.html"*/'<!--\n  Generated template for the PlayerListModalPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Spielerliste</ion-title>\n    <ion-buttons start>\n      <button ion-button (click)="closeModal()">\n        <span ion-text color="primary">Abbrechen</span>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n  <ion-list *ngIf="playerList">\n    <ion-item *ngFor="let player of playerList">\n      <ion-avatar item-start>\n        <img src=\'../../../assets/imgs/avatar.jpg\'>\n      </ion-avatar>\n      <h2>{{player.vorname}} {{player.nachname}}</h2>\n      <p><ion-icon name="ma-checkmark-circle"></ion-icon> Verfügbar</p>\n      <button ion-button small clear item-end icon-left color="dark" (click)="deletePlayer(player)">\n        <ion-icon name="md-close-circle"></ion-icon>\n        Entfernen\n      </button>\n    </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"C:\Users\jueneman\WebstormProjects\clubcorner_frontend\clubcorner\src\pages\modals\player-list-modal\player-list-modal.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ViewController */], __WEBPACK_IMPORTED_MODULE_2__providers_trainer_trainer__["a" /* Services */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ViewController */], __WEBPACK_IMPORTED_MODULE_2__providers_trainer_trainer__["a" /* Services */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
     ], PlayerListModalPage);
     return PlayerListModalPage;
 }());
@@ -276,7 +292,7 @@ var PlayerListModalPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 158:
+/***/ 159:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -320,7 +336,7 @@ var CreateTrainingModalPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 169:
+/***/ 170:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -333,28 +349,28 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 169;
+webpackEmptyAsyncContext.id = 170;
 
 /***/ }),
 
-/***/ 213:
+/***/ 214:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
 	"../pages/modals/create-game-modal/create-game-modal.module": [
-		688,
+		687,
 		3
 	],
 	"../pages/modals/create-team-modal/create-team-modal.module": [
-		689,
+		688,
 		2
 	],
 	"../pages/modals/create-training-modal/create-training-modal.module": [
-		690,
+		689,
 		1
 	],
 	"../pages/modals/player-list-modal/player-list-modal.module": [
-		691,
+		690,
 		0
 	]
 };
@@ -369,7 +385,7 @@ function webpackAsyncContext(req) {
 webpackAsyncContext.keys = function webpackAsyncContextKeys() {
 	return Object.keys(map);
 };
-webpackAsyncContext.id = 213;
+webpackAsyncContext.id = 214;
 module.exports = webpackAsyncContext;
 
 /***/ }),
@@ -382,11 +398,12 @@ module.exports = webpackAsyncContext;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_trainer_trainer__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__modals_player_list_modal_player_list_modal__ = __webpack_require__(157);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__modals_create_game_modal_create_game_modal__ = __webpack_require__(155);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__modals_create_training_modal_create_training_modal__ = __webpack_require__(158);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_email_composer__ = __webpack_require__(119);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__home_home__ = __webpack_require__(56);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__modals_player_invite_modal_player_invite_modal__ = __webpack_require__(220);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__modals_player_list_modal_player_list_modal__ = __webpack_require__(158);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__modals_create_game_modal_create_game_modal__ = __webpack_require__(156);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__modals_create_training_modal_create_training_modal__ = __webpack_require__(159);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_email_composer__ = __webpack_require__(120);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__home_home__ = __webpack_require__(56);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -396,6 +413,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -417,49 +435,33 @@ var TeamPage = /** @class */ (function () {
         this._teamProv = _teamProv;
         // If we navigated to this page, we will have an item available as a nav param
         this.selectedItem = navParams.get('team');
-        this.getAllTermine();
     }
+    TeamPage.prototype.ngOnInit = function () {
+        this.getAllTermine();
+        this.alleTermine = [];
+    };
     /*openPlayerInviteModal() {
       let myModal = this.modalCtrl.create(PlayerInviteModalPage, {id: this.selectedItem.id});
       myModal.present();
   };*/
     TeamPage.prototype.openPlayerListModal = function () {
-        var myModal = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_3__modals_player_list_modal_player_list_modal__["a" /* PlayerListModalPage */], { data: this.selectedItem });
+        var myModal = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_4__modals_player_list_modal_player_list_modal__["a" /* PlayerListModalPage */], { data: this.selectedItem });
         myModal.present();
     };
     ;
     TeamPage.prototype.openCreateGameModal = function () {
-        var myModal = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_4__modals_create_game_modal_create_game_modal__["a" /* CreateGameModalPage */], { data: this.selectedItem });
+        var myModal = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_5__modals_create_game_modal_create_game_modal__["a" /* CreateGameModalPage */], { data: this.selectedItem });
         myModal.present();
     };
     ;
     TeamPage.prototype.openCreateTrainingModal = function () {
-        var myModal = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_5__modals_create_training_modal_create_training_modal__["a" /* CreateTrainingModalPage */]);
+        var myModal = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_6__modals_create_training_modal_create_training_modal__["a" /* CreateTrainingModalPage */]);
         myModal.present();
     };
     ;
     TeamPage.prototype.openPlayerInviteModal = function () {
-        var _this = this;
-        var confirm = this.alertCtrl.create({
-            title: 'Spieler Einladen',
-            message: 'sie können spieler einladen mit dem folgenden Code: 39620472',
-            buttons: [
-                {
-                    text: 'Schließen',
-                    handler: function () {
-                        console.log('Disagree clicked');
-                    }
-                },
-                {
-                    text: 'Teilen',
-                    handler: function () {
-                        console.log('Agree clicked');
-                        _this.shareCode("123456");
-                    }
-                }
-            ]
-        });
-        confirm.present();
+        var myModal = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_3__modals_player_invite_modal_player_invite_modal__["a" /* PlayerInviteModalPage */], { id: this.selectedItem.mannschafts_ID });
+        myModal.present();
     };
     TeamPage.prototype.openDeleteTeamModal = function () {
         var _this = this;
@@ -478,7 +480,6 @@ var TeamPage = /** @class */ (function () {
                     handler: function () {
                         console.log('Agree clicked');
                         _this.deleteTeam();
-                        _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_7__home_home__["a" /* HomePage */]);
                     }
                 }
             ]
@@ -491,7 +492,10 @@ var TeamPage = /** @class */ (function () {
     //-----------------------------------------------------------------
     //-----------------------------------------------------------------
     TeamPage.prototype.deleteTeam = function () {
+        var _this = this;
         this._teamProv.deleteTeam(/*ID des zu löschenden Teams*/ this.selectedItem.mannschafts_ID).subscribe(function (data) {
+            _this.navCtrl.pop();
+            _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_8__home_home__["a" /* HomePage */]);
             console.log(data);
         }, function (error) { return console.log(error); });
     };
@@ -499,7 +503,7 @@ var TeamPage = /** @class */ (function () {
         var _this = this;
         this._teamProv.getTermin(this.selectedItem.mannschafts_ID).subscribe(function (data) {
             console.log(data);
-            _this.alleTermine = data;
+            _this.alleTermine = data['termine'];
         }, function (error) { return console.log(error); });
     };
     TeamPage.prototype.shareCode = function (code) {
@@ -518,15 +522,92 @@ var TeamPage = /** @class */ (function () {
     };
     TeamPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-team',template:/*ion-inline-start:"C:\Users\jueneman\WebstormProjects\clubcorner_frontend\clubcorner\src\pages\team\team.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>{{selectedItem.name}}</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content  class="card-background-page">\n\n    <ion-list>\n\n\n        <ion-card *ngFor="let termin of alleTermine">\n          <img src="../../assets/imgs/training.jpg"/>\n          <div class="myOverlay">\n          <div class="card-title">{{termin.spiel}}</div>\n          <div class="card-subtitle">{{termin.datum}}</div>\n          <div class="card-subtitle">{{termin.uhrzeit}}</div>\n          <div class="card-subtitle">{{termin.ort}}</div>\n          <div class="card-subtitle">{{termin.gegner}}</div>\n\n\n\n          <div class="card-button">\n            <button ion-button icon-left color="secondary" outline>\n                <ion-icon name="checkmark-circle"></ion-icon>\n                Zusagen\n            </button>\n            <button ion-button icon-left color="danger" outline>\n                  <ion-icon name="close-circle"></ion-icon>\n                  Absagen\n            </button>\n            <button ion-button icon-left color="primary" (click)="openCalendar"outline>\n              Absagen\n            </button>\n          </div>\n        </div>\n        </ion-card>\n      </ion-list>\n\n\n\n\n<ion-fab left bottom>\n      <button ion-fab color="dark"><ion-icon name="arrow-dropup"></ion-icon></button>\n      <ion-fab-list side="top">\n        <button ion-button round small color="dark" style="float:left;" (click)="openPlayerInviteModal()">Spieler einladen</button>\n        <button ion-button round small color="dark" style="float:left;" (click)="openPlayerListModal()">Spielerliste</button>\n\n        <button ion-button round small color="dark" style="float:left;" (click)="openCreateGameModal()">Termin anlegen</button>\n        <button ion-button round small color="dark" style="float:left;" (click)="openDeleteTeamModal()">Mannschaft auflösen</button>\n      </ion-fab-list>\n    </ion-fab>\n\n\n</ion-content>\n'/*ion-inline-end:"C:\Users\jueneman\WebstormProjects\clubcorner_frontend\clubcorner\src\pages\team\team.html"*/
+            selector: 'page-team',template:/*ion-inline-start:"C:\Users\jueneman\WebstormProjects\clubcorner_frontend\clubcorner\src\pages\team\team.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>{{selectedItem.name}}</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content  class="card-background-page">\n\n    <ion-list>\n\n\n        <ion-card *ngFor="let termin of this.alleTermine">\n          <img src="../../assets/imgs/training.jpg"/>\n          <div class="myOverlay">\n          <div class="card-title">{{termin.spiel}}</div>\n          <div class="card-subtitle"><p>{{termin.datum}}</p>\n            <p>{{termin.ort}}</p>\n          <p>{{termin.gegner}}</p></div>\n\n\n\n          <div class="card-button">\n            <button ion-button icon-left color="secondary" outline>\n                <ion-icon name="checkmark-circle"></ion-icon>\n                Zusagen\n            </button>\n            <button ion-button icon-left color="danger" outline>\n                  <ion-icon name="close-circle"></ion-icon>\n                  Absagen\n            </button>\n            <button ion-button icon-left color="primary" (click)="openCalendar"outline>\n              Absagen\n            </button>\n          </div>\n        </div>\n        </ion-card>\n      </ion-list>\n\n\n\n\n<ion-fab left bottom>\n      <button ion-fab color="dark"><ion-icon name="arrow-dropup"></ion-icon></button>\n      <ion-fab-list side="top">\n        <button ion-button round small color="dark" style="float:left;" (click)="openPlayerInviteModal()">Spieler einladen</button>\n        <button ion-button round small color="dark" style="float:left;" (click)="openPlayerListModal()">Spielerliste</button>\n\n        <button ion-button round small color="dark" style="float:left;" (click)="openCreateGameModal()">Termin anlegen</button>\n        <button ion-button round small color="dark" style="float:left;" (click)="openDeleteTeamModal()">Mannschaft auflösen</button>\n      </ion-fab-list>\n    </ion-fab>\n\n\n</ion-content>\n'/*ion-inline-end:"C:\Users\jueneman\WebstormProjects\clubcorner_frontend\clubcorner\src\pages\team\team.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_6__ionic_native_email_composer__["a" /* EmailComposer */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_7__ionic_native_email_composer__["a" /* EmailComposer */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* ModalController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */], __WEBPACK_IMPORTED_MODULE_2__providers_trainer_trainer__["a" /* Services */]])
     ], TeamPage);
     return TeamPage;
 }());
 
 //# sourceMappingURL=team.js.map
+
+/***/ }),
+
+/***/ 220:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PlayerInviteModalPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_trainer_trainer__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_email_composer__ = __webpack_require__(120);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+/**
+ * Generated class for the SampleModalPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var PlayerInviteModalPage = /** @class */ (function () {
+    function PlayerInviteModalPage(viewCtrl, _teamProv, params, emailComposer) {
+        this.viewCtrl = viewCtrl;
+        this._teamProv = _teamProv;
+        this.params = params;
+        this.emailComposer = emailComposer;
+        console.log(params);
+        this.teamId = params.get("id");
+    }
+    PlayerInviteModalPage.prototype.closeModal = function () {
+        this.viewCtrl.dismiss();
+    };
+    PlayerInviteModalPage.prototype.ngOnInit = function () {
+        this.getCode();
+    };
+    PlayerInviteModalPage.prototype.getCode = function () {
+        var _this = this;
+        this._teamProv.getTeam(this.teamId).subscribe(function (data) {
+            _this.teamCode = data['Mannschaften'][0]['anmeldecode'];
+        }, function (error) { return console.log(error); });
+    };
+    PlayerInviteModalPage.prototype.shareCode = function () {
+        this.emailComposer.isAvailable().then(function (available) {
+            if (available) {
+            }
+        });
+        var email = {
+            to: '',
+            cc: '',
+            subject: 'Clubcorner: Einladung in eine Mannschaft',
+            body: 'Hallo, du wurdest in eine Mannschat eingeladen. Nutze den folgenden Code um dem Team beizutreten: ' + this.teamCode,
+            isHtml: true
+        };
+        this.emailComposer.open(email);
+    };
+    PlayerInviteModalPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'player-invite-modal',template:/*ion-inline-start:"C:\Users\jueneman\WebstormProjects\clubcorner_frontend\clubcorner\src\pages\modals\player-invite-modal\player-invite-modal.html"*/'<ion-header>\n    <ion-toolbar>\n      <ion-title>\n        {{this.teamCode}}\n      </ion-title>\n      <ion-buttons start>\n        <button ion-button (click)="closeModal()">\n          <span ion-text color="primary">Abbrechen</span>\n        </button>\n      </ion-buttons>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <button ion-button (click)="shareCode()">\n      <span ion-text color="primary">Code teilen</span>\n    </button>\n  </ion-content>\n'/*ion-inline-end:"C:\Users\jueneman\WebstormProjects\clubcorner_frontend\clubcorner\src\pages\modals\player-invite-modal\player-invite-modal.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ViewController */], __WEBPACK_IMPORTED_MODULE_2__providers_trainer_trainer__["a" /* Services */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_email_composer__["a" /* EmailComposer */]])
+    ], PlayerInviteModalPage);
+    return PlayerInviteModalPage;
+}());
+
+//# sourceMappingURL=player-invite-modal.js.map
 
 /***/ }),
 
@@ -537,11 +618,12 @@ var TeamPage = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Services; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(115);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environment__ = __webpack_require__(379);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Observable__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_Observable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_observable_throw__ = __webpack_require__(216);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_observable_throw___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_observable_throw__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_observable_throw__ = __webpack_require__(217);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_observable_throw___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_observable_throw__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_jwt_decode__ = __webpack_require__(119);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_jwt_decode___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_jwt_decode__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -578,7 +660,7 @@ var Services = /** @class */ (function () {
             return this.http.post("http://pachisi456.selfhost.eu:3001/personen/login", daten, this.options);
         }
         else {
-            return __WEBPACK_IMPORTED_MODULE_3_rxjs_Observable__["Observable"].throw('No information given');
+            return __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"].throw('No information given');
         }
     };
     /* private setSession(authResult){
@@ -599,18 +681,21 @@ var Services = /** @class */ (function () {
             return this.http.post("http://pachisi456.selfhost.eu:3001/personen/signup", person, this.options);
         }
         else {
-            return __WEBPACK_IMPORTED_MODULE_3_rxjs_Observable__["Observable"].throw('No information given');
+            return __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"].throw('No information given');
         }
     };
     //------------------------------------------
     // In Team einschreiben
     //------------------------------------------
-    Services.prototype.einschreiben = function (person, teamId) {
-        if (person && teamId) {
-            return this.http.post(__WEBPACK_IMPORTED_MODULE_2__environment__["default"].env.api + "/" + teamId, person, this.options);
+    Services.prototype.einschreiben = function (code) {
+        if (code) {
+            var decoded = __WEBPACK_IMPORTED_MODULE_4_jwt_decode___default()(localStorage.getItem("token"));
+            return this.http.post("http://pachisi456.selfhost.eu:3001/mannschaftzuordnung/" + decoded.userID, {
+                anmeldecode: code
+            }, this.options);
         }
         else {
-            return __WEBPACK_IMPORTED_MODULE_3_rxjs_Observable__["Observable"].throw('No information given');
+            return __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"].throw('No information given');
         }
     };
     //------------------------------------------
@@ -620,18 +705,19 @@ var Services = /** @class */ (function () {
     //------------------------------------------
     Services.prototype.createTeam = function (team) {
         if (team) {
-            return this.http.post("http://pachisi456.selfhost.eu:3001/mannschaft/create", team, this.options);
+            var decoded = __WEBPACK_IMPORTED_MODULE_4_jwt_decode___default()(localStorage.getItem("token"));
+            return this.http.post("http://pachisi456.selfhost.eu:3001/mannschaft/create/" + decoded.userID, team, this.options);
         }
         else {
-            return __WEBPACK_IMPORTED_MODULE_3_rxjs_Observable__["Observable"].throw('No information given');
+            return __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"].throw('No information given');
         }
     };
     Services.prototype.updateTeam = function (id, team) {
         if (team) {
-            return this.http.put('${env.api}/team/${id}', team, this.options);
+            return this.http.put('http://pachisi456.selfhost.eu:3001/team/${id}', team, this.options);
         }
         else {
-            return __WEBPACK_IMPORTED_MODULE_3_rxjs_Observable__["Observable"].throw('No information given');
+            return __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"].throw('No information given');
         }
     };
     Services.prototype.deleteTeam = function (id) {
@@ -652,7 +738,7 @@ var Services = /** @class */ (function () {
     //------------------------------------------
     //------------------------------------------
     Services.prototype.generateCode = function (id, code) {
-        return this.http.post('${env.api}/team/${id}', code, this.options);
+        return this.http.post('http://pachisi456.selfhost.eu:3001/team/${id}', code, this.options);
     };
     //------------------------------------------
     //------------------------------------------
@@ -664,19 +750,19 @@ var Services = /** @class */ (function () {
             return this.http.post("http://pachisi456.selfhost.eu:3001/termin/" + teamID, termin, this.options);
         }
         else {
-            return __WEBPACK_IMPORTED_MODULE_3_rxjs_Observable__["Observable"].throw('No information given');
+            return __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"].throw('No information given');
         }
     };
     Services.prototype.updateTermin = function (id, termin) {
         if (termin) {
-            return this.http.put('${env.api}/game/${id}', termin, this.options);
+            return this.http.put('http://pachisi456.selfhost.eu:3001/game/${id}', termin, this.options);
         }
         else {
-            return __WEBPACK_IMPORTED_MODULE_3_rxjs_Observable__["Observable"].throw('No information given');
+            return __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"].throw('No information given');
         }
     };
     Services.prototype.deleteTermin = function (id) {
-        return this.http.delete('${env.api}/game/${id}', this.options);
+        return this.http.delete('http://pachisi456.selfhost.eu:3001/game/${id}', this.options);
     };
     Services.prototype.getTermin = function (id) {
         return this.http.get("http://pachisi456.selfhost.eu:3001/termin/" + id, this.options);
@@ -692,7 +778,7 @@ var Services = /** @class */ (function () {
             return this.http.post("http://pachisi456.selfhost.eu:3001/personen/signup", person, this.options);
         }
         else {
-            return __WEBPACK_IMPORTED_MODULE_3_rxjs_Observable__["Observable"].throw('No information given');
+            return __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__["Observable"].throw('No information given');
         }
     };
     Services.prototype.updatePerson = function (id, person) {
@@ -704,8 +790,8 @@ var Services = /** @class */ (function () {
             return Observable.throw("Wrong Update Service");
         }
     };
-    Services.prototype.deletePersonFromTeam = function (teamid) {
-        return this.http.delete('${env.api}/${teamid}/${}', this.options);
+    Services.prototype.deletePersonFromTeam = function (teamid, userid) {
+        return this.http.delete("http://pachisi456.selfhost.eu:3001/mannschaftzuordnung/" + teamid + "/" + userid, this.options);
     };
     Services.prototype.getPerson = function (id) {
         console.log(id);
@@ -722,7 +808,7 @@ var Services = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 353:
+/***/ 354:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -755,7 +841,7 @@ var LoginPage = /** @class */ (function () {
             password: null
         };
         this.person = {
-            id: null,
+            _id: null,
             vorname: null,
             nachname: null,
             email: null,
@@ -767,6 +853,11 @@ var LoginPage = /** @class */ (function () {
         this.loginForm = 'login';
     }
     LoginPage_1 = LoginPage;
+    LoginPage.prototype.ngOnInit = function () {
+        if (localStorage.getItem("token")) {
+            this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__home_home__["a" /* HomePage */]);
+        }
+    };
     LoginPage.prototype.openHomePage = function (page) {
         // Reset the content nav to have just this page
         // we wouldn't want the back button to show in this scenario
@@ -813,13 +904,13 @@ var LoginPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 354:
+/***/ 355:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(355);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(359);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(356);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(360);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -827,7 +918,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 359:
+/***/ 360:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -840,18 +931,18 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(685);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_home_home__ = __webpack_require__(56);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_team_team__ = __webpack_require__(219);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_login_login__ = __webpack_require__(353);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_status_bar__ = __webpack_require__(351);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ionic_native_splash_screen__ = __webpack_require__(352);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_modals_player_invite_modal_player_invite_modal__ = __webpack_require__(686);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_modals_player_list_modal_player_list_modal__ = __webpack_require__(157);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_modals_create_game_modal_create_game_modal__ = __webpack_require__(155);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_modals_create_team_modal_create_team_modal__ = __webpack_require__(156);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_modals_create_training_modal_create_training_modal__ = __webpack_require__(158);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__ionic_native_email_composer__ = __webpack_require__(119);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__providers_login_login__ = __webpack_require__(687);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_login_login__ = __webpack_require__(354);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_status_bar__ = __webpack_require__(352);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ionic_native_splash_screen__ = __webpack_require__(353);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_modals_player_invite_modal_player_invite_modal__ = __webpack_require__(220);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_modals_player_list_modal_player_list_modal__ = __webpack_require__(158);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_modals_create_game_modal_create_game_modal__ = __webpack_require__(156);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_modals_create_team_modal_create_team_modal__ = __webpack_require__(157);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_modals_create_training_modal_create_training_modal__ = __webpack_require__(159);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__ionic_native_email_composer__ = __webpack_require__(120);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__providers_login_login__ = __webpack_require__(686);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__providers_trainer_trainer__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__providers_dataService_passData__ = __webpack_require__(122);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__providers_dataService_passData__ = __webpack_require__(123);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -941,18 +1032,6 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 379:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* unused harmony export env */
-var env = {
-    api: "http://pachisi456.selfhost.eu:3001/"
-};
-//# sourceMappingURL=environment.js.map
-
-/***/ }),
-
 /***/ 56:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -960,12 +1039,12 @@ var env = {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jwt_decode__ = __webpack_require__(218);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jwt_decode__ = __webpack_require__(119);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jwt_decode___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_jwt_decode__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__team_team__ = __webpack_require__(219);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_trainer_trainer__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__modals_create_team_modal_create_team_modal__ = __webpack_require__(156);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_dataService_passData__ = __webpack_require__(122);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__modals_create_team_modal_create_team_modal__ = __webpack_require__(157);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_dataService_passData__ = __webpack_require__(123);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1003,9 +1082,11 @@ var HomePage = /** @class */ (function () {
         this.jwtTokenPlatzhalter = 1;
         //console.log(this.decoded);
         console.log(this.decoded.userID);
-        this.getAllTeams();
         // this.getProfile();
     }
+    HomePage.prototype.ngOnInit = function () {
+        this.getAllTeams();
+    };
     HomePage.prototype.openCreateTeamModal = function () {
         var myModal = this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_5__modals_create_team_modal_create_team_modal__["a" /* CreateTeamModalPage */]);
         myModal.present();
@@ -1036,7 +1117,7 @@ var HomePage = /** @class */ (function () {
         }, function (error) { return console.log(error); });
     };
     HomePage.prototype.einschreiben = function () {
-        this._teamProv.einschreiben(this.person, this.code).subscribe(function (data) {
+        this._teamProv.einschreiben(this.code).subscribe(function (data) {
             console.log(data);
         }, function (error) { return console.log(error); });
     };
@@ -1099,14 +1180,14 @@ var AuthInterceptor = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(351);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(352);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(352);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(353);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_login_login__ = __webpack_require__(353);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_login_login__ = __webpack_require__(354);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__providers_trainer_trainer__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_jwt_decode__ = __webpack_require__(218);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_jwt_decode__ = __webpack_require__(119);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_jwt_decode___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_jwt_decode__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_dataService_passData__ = __webpack_require__(122);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__providers_dataService_passData__ = __webpack_require__(123);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1188,84 +1269,6 @@ var MyApp = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PlayerInviteModalPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_trainer_trainer__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_email_composer__ = __webpack_require__(119);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-/**
- * Generated class for the SampleModalPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var PlayerInviteModalPage = /** @class */ (function () {
-    function PlayerInviteModalPage(viewCtrl, _teamProv, params, emailComposer) {
-        this.viewCtrl = viewCtrl;
-        this._teamProv = _teamProv;
-        this.params = params;
-        this.emailComposer = emailComposer;
-        this.teamId = params.get("id");
-        this.teamCode = params.get("code");
-    }
-    PlayerInviteModalPage.prototype.closeModal = function () {
-        this.viewCtrl.dismiss();
-    };
-    /* getCode(){
-       this._teamProv.getCode(this.teamId).subscribe(
-         (data:string) => {
-           console.log(data);
-           this.code = data;
-         },
-         error => console.log(error)
-       )
-     }
-   */
-    PlayerInviteModalPage.prototype.shareCode = function () {
-        this.emailComposer.isAvailable().then(function (available) {
-            if (available) {
-            }
-        });
-        var email = {
-            to: '',
-            cc: '',
-            subject: 'Clubcorner: Einladung in eine Mannschaft',
-            body: 'Hallo, du wurdest in eine Mannschat eingeladen. Nutze den folgenden Code um dem Team beizutreten: ' + this.code,
-            isHtml: true
-        };
-        this.emailComposer.open(email);
-    };
-    PlayerInviteModalPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'player-invite-modal',template:/*ion-inline-start:"C:\Users\jueneman\WebstormProjects\clubcorner_frontend\clubcorner\src\pages\modals\player-invite-modal\player-invite-modal.html"*/'<ion-header>\n    <ion-toolbar>\n      <ion-title>\n        {{this.teamCode}}\n      </ion-title>\n      <ion-buttons start>\n        <button ion-button (click)="closeModal()">\n          <span ion-text color="primary">Abbrechen</span>\n        </button>\n      </ion-buttons>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <button ion-button (click)="shareCode()">\n      <span ion-text color="primary">Code teilen</span>\n    </button>\n  </ion-content>\n'/*ion-inline-end:"C:\Users\jueneman\WebstormProjects\clubcorner_frontend\clubcorner\src\pages\modals\player-invite-modal\player-invite-modal.html"*/
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ViewController */], __WEBPACK_IMPORTED_MODULE_2__providers_trainer_trainer__["a" /* Services */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_email_composer__["a" /* EmailComposer */]])
-    ], PlayerInviteModalPage);
-    return PlayerInviteModalPage;
-}());
-
-//# sourceMappingURL=player-invite-modal.js.map
-
-/***/ }),
-
-/***/ 687:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginProvider; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(115);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
@@ -1302,5 +1305,5 @@ var LoginProvider = /** @class */ (function () {
 
 /***/ })
 
-},[354]);
+},[355]);
 //# sourceMappingURL=main.js.map

@@ -89,6 +89,7 @@ export class HomePage implements OnInit {
     this._teamProv.einschreiben(this.code).subscribe(
       (data) => {
         console.log(data);
+        this.getAllTeams();
       },
       error => console.log(error)
     )
