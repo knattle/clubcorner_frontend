@@ -38,9 +38,9 @@ export class LoginPage implements OnInit {
   }
 
   ngOnInit() {
-    if (localStorage.getItem("token")) {
-      this.navCtrl.setRoot(HomePage);
-    }
+    //if (localStorage.getItem("token")) {
+    //  this.navCtrl.setRoot(HomePage);
+    //}
   }
 
   openHomePage(page) {
