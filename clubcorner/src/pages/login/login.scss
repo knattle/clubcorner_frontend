@@ -6,3 +6,16 @@ page-home {
         align-items: flex-start !important;
     }
 }
+body > ion-app > ng-component > ion-nav > page-login > ion-content > div.scroll-content > div:nth-child(2) > ion-list{
+    padding-right: 16px;
+}
+
+body > ion-app > ng-component > ion-nav > page-login > ion-content > div.scroll-content > div:nth-child(2) > ion-list > button{
+    margin-top: 30px !important;
+}
+
+.button-wrapper{
+    margin-top: 30px;
+    
+}
+

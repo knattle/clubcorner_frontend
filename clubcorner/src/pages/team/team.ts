@@ -13,7 +13,9 @@ import { AlertController } from 'ionic-angular';
 import { EmailComposer } from '@ionic-native/email-composer';
 import {HomePage} from "../home/home";
 import {mannschaftszuordnung} from "../../Schema/mannschaftszuordnung.schema";
+import { terminStatus } from '../../Schema/terminstatus.schema';
 //import { Calendar } from "@ionic-native/calendar";
+import jwt_decode from 'jwt-decode';
 
 @Component({
   selector: 'page-team',
@@ -23,11 +25,15 @@ export class TeamPage implements OnInit {
   selectedItem: mannschaftszuordnung;
   icons: string[];
   items: Array<{title: string}>;
+  statusObjekt: terminStatus;
+  decoded = jwt_decode(localStorage.getItem("token"));
 
 
   alleSpieler: Person[];
   alleTermine: Termin[];
   team: Team;
+  terminstatus: terminStatus;
+  status: 1;
 
   constructor(public navCtrl: NavController, private emailComposer: EmailComposer, public navParams: NavParams,
               public modalCtrl: ModalController, public alertCtrl: AlertController, private _teamProv: Services) {
@@ -174,6 +180,33 @@ export class TeamPage implements OnInit {
     this.emailComposer.open(email);
   }
 
+  acceptStatus(termin: Termin){
+    
+    this.getStatus(termin);
+    console.log(termin);
+    this.statusObjekt.Termin_ID = termin._id;
+    this.statusObjekt.personen_ID = this.decoded.id;
+    this.statusObjekt._id = this.terminstatus._id;
+    this.statusObjekt.status = 0;
+    this._teamProv.acceptTermin(this.statusObjekt, termin._id).subscribe(data => {
+      this.getAllTermine();
+    }, error => {
+ 
+    });
+  }
+
+  getStatus(termin: Termin) {
+    this._teamProv.getStatus(termin._id).subscribe(
+      (data) => {
+        this.terminstatus = data as terminStatus;
+      },
+      error => console.log(error)
+    )
+  }
+
+}
+
+  //Anzeigen des eigenen Profils
 
 
 //-------------------------------------------------------------------
@@ -189,4 +222,4 @@ export class TeamPage implements OnInit {
     )
   }*/
 
-}
+
