@@ -34,7 +34,7 @@ export class HomePage implements OnInit {
  // helper = new JwtHelper();
   //decoded = this.helper.decodeToken(this.selectedItem);
   //decoded;
-  constructor(public dataService: DataService, public navCtrl: NavController, public navParams: NavParams, private _teamProv: Services, public modalCtrl: ModalController) {
+  constructor(public dataService: DataService, public navCtrl: NavController, public navParams: NavParams, private _teamProv: Services, public modalCtrl: ModalController,) {
     // If we navigated to this page, we will have an item available as a nav param
     //selectedItem = navParams.get('item');
     //this.decoded = null;

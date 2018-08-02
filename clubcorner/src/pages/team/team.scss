@@ -2,9 +2,8 @@ page-team {
     .card-background-page {
 
         ion-card {
-          //height: 100%;
           position: relative;
-          text-align: center;
+          text-align: left;
         }
       }
 }
@@ -17,15 +16,17 @@ page-team {
         align-items: flex-start !important;
     }
 }
-body > ion-app > ng-component > ion-nav > page-team > ion-content > div.scroll-content > ion-list{
-    margin-left: 16px;
-    margin-right: 16px;
-}
+
 body > ion-app > ng-component > ion-nav > page-team > ion-content > div.scroll-content > ion-list > ion-item > div.item-inner > div > ion-input > input{
     margin: 0px;
   }
   body > ion-app > ng-component > ion-nav > page-team > ion-content > div.scroll-content > ion-list > button:nth-child(1){
       padding-left: 0px;
   }
+
+  body > ion-app > ion-modal > div > create-game-modal > ion-content > div.scroll-content > ion-list > ion-item.item.item-block.item-md.item-toggle{
+    margin-left: 0px !important
+}
+
 
 

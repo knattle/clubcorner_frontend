@@ -22,7 +22,7 @@
 
 
     <div padding>
-        <ion-segment [(ngModel)]="gender">
+        <ion-segment [(ngModel)]="genderForm">
           <ion-segment-button value="male">
            Herren
           </ion-segment-button>
@@ -32,8 +32,7 @@
         </ion-segment>
       </div>
 
-  <div [ngSwitch]="pet"></div>
-      <div [ngSwitch]="gender">
+      <div [ngSwitch]="genderForm">
         <div *ngSwitchCase="'male'">
           <ion-list>
               <ion-item>

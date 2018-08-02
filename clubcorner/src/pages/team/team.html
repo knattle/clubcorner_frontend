@@ -8,45 +8,46 @@
 </ion-header>
 
 <ion-content  class="card-background-page">
-  <ion-card *ngFor="let termin of this.alleTermine">
 
-    <ion-item>
-      <h2>{{termin.spiel}}</h2>
-      <p>{{termin.datum}}</p>
-      <p>{{termin.ort}}</p>
-      <p>{{termin.gegner}}</p>
-    </ion-item>
+  <ion-list>
+      <ion-card *ngFor="let termin of this.alleTermine">
+          <ion-item>
+            <h1>{{termin.gegner}}</h1>
+            
+          </ion-item>
+          <ion-card-content>
+              <p>{{termin.datum}}</p>
+              <p>{{termin.ort}}</p>
+          </ion-card-content>
+        
+        
+          <ion-row>
+            <ion-col>
+              <button ion-button icon-left outline small color="secondary" (click)="acceptStatus(termin)">
+                <ion-icon name="checkmark-circle"></ion-icon>
+                <div>Zusagen</div>
+              </button>
+            </ion-col>
+            <ion-col>
+              <button ion-button icon-left outline small color="danger">
+                <ion-icon name="close-circle"></ion-icon>
+                <div>Absagen</div>
+              </button>
+            </ion-col>
+            <ion-col>
+              <button ion-button icon-left outline small color="light" (click)="deleteTermin(termin)">
+                <ion-icon name="close-circle"></ion-icon>
+                <div>Löschen</div>
+              </button>
+            </ion-col>
+          </ion-row>
+        
+        </ion-card>
+
+  </ion-list>
   
-    <ion-card-content>
-      <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
-    </ion-card-content>
-  
-    <ion-row>
-      <ion-col>
-        <button ion-button icon-left outline small color="secondary" (click)="acceptStatus(termin)">
-          <ion-icon name="checkmark-circle"></ion-icon>
-          <div>Zusagen</div>
-        </button>
-      </ion-col>
-      <ion-col>
-        <button ion-button icon-left outline small color="danger">
-          <ion-icon name="close-circle"></ion-icon>
-          <div>Absagen</div>
-        </button>
-      </ion-col>
-      <ion-col>
-        <button ion-button icon-left outline small color="danger">
-          <ion-icon name="close-circle"></ion-icon>
-          <div>Löschen</div>
-        </button>
-      </ion-col>
-    </ion-row>
-  
-  </ion-card>
 
-
-
-
+ 
 <ion-fab left bottom>
       <button ion-fab color="dark"><ion-icon name="arrow-dropup"></ion-icon></button>
       <ion-fab-list side="top">
