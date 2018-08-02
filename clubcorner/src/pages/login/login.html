@@ -23,9 +23,12 @@
         <ion-label color="dark" floating>Password</ion-label>
         <ion-input type="password" [(ngModel)]="daten.password"></ion-input>
       </ion-item>
-      <button ion-button round outline (click)="openHomePage()">
-        Login
-      </button>
+      <div class="button-wrapper" text-center>
+          <button ion-button (click)="openHomePage()">
+              Login
+            </button>
+      </div>
+      
     </ion-list>
 
     <ion-list *ngSwitchCase="'signup'">
@@ -57,10 +60,11 @@
         <ion-label color="dark" floating>Password (Wiederholen)</ion-label>
         <ion-input type="password" ></ion-input>
       </ion-item>
-      <button ion-button round outline (click)="postSignupData()">
-        Signup
-    </button>
-
+      <div class="button-wrapper" text-center>
+          <button ion-button round outline (click)="postSignupData()">
+              Signup
+            </button>
+      </div>
     </ion-list>
   </div>
 

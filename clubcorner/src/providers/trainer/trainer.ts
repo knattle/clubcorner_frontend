@@ -9,6 +9,7 @@ import {login} from "../../Schema/login.schema";
 import 'rxjs/add/observable/throw';
 import jwt_decode from 'jwt-decode';
 import {Storage} from "@ionic/storage";
+import { terminStatus } from '../../Schema/terminstatus.schema';
 
 /*
   Generated class for the TrainerProvider provider.
@@ -165,6 +166,17 @@ export class Services {
     return this.http.get(`http://pachisi456.selfhost.eu:3001/termin/${id}`, this.options);
   }
 
+  acceptTermin(status: terminStatus, terminID: string): Observable<any> {
+    if (status) {
+      return this.http.put(`http://pachisi456.selfhost.eu:3001/terminstatus/${terminID}`, status, this.options);
+    } else {
+      return Observable.throw('No information given');
+    }
+  }
+
+  getStatus(terminID: string) {
+    return this.http.get(`http://pachisi456.selfhost.eu:3001/terminstatus/${terminID}`, this.options);
+  }
 
   //------------------------------------------
   //------------------------------------------
