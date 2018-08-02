@@ -35,7 +35,7 @@
     </ion-item>
     <ion-item>
       <ion-label>Datum/Uhrzeit</ion-label>
-      <ion-datetime displayFormat="MM/DD/YYYY h:mm A" [(ngModel)]="myDate" [(ngModel)]="uebergabe.datum"></ion-datetime>
+      <ion-datetime displayFormat="MM/DD/YYYY h:mm A" min="2015" max="2030" [(ngModel)]="myDate" [(ngModel)]="uebergabe.datum"></ion-datetime>
     </ion-item>
     <ion-item>
         <ion-label>Dauer</ion-label>
