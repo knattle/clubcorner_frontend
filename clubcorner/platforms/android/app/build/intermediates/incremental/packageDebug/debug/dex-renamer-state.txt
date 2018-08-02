@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #Thu Jul 05 16:56:56 CEST 2018
+=======
+#Thu Aug 02 00:55:39 EDT 2018
+>>>>>>> lastfix
 base.0=C\:\\Users\\Niklas Schuster\\Documents\\GitHub\\clubcorner_frontend\\clubcorner\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 renamed.0=classes.dex
 file.0=C\:\\Users\\Niklas Schuster\\Documents\\GitHub\\clubcorner_frontend\\clubcorner\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0\\classes.dex

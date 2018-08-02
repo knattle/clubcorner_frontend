@@ -1,32 +1,30 @@
 <ion-header>
   <ion-navbar>
-    <button ion-button menuToggle>
+    <button (click)="getProfile()" ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Handballverein XY</ion-title>
+    <ion-title>SC Bayer 05 Uerdingen</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
 
-    <ion-list *ngIf="allteams">  
-        <button [navPush]="teamPage" [navParams]="{team:team}" ion-item *ngFor="let team of allteams">
-          {{team.name}}
-        </button> 
-        <ion-item>
-            <ion-input type="text" placeholder="Beitrittscode eingeben"></ion-input>
-            <button ion-button outline item-end icon-left color="dark">
+    <ion-item-group *ngIf="allteams">
+      <button ion-item [navPush]="teamPage" [navParams]="{team:team}" *ngFor="let team of this.allteams.mannschaftzuordnungen">{{team.mannschafts_name}}</button>
+      <ion-item>
+        <ion-input type="text" placeholder="Beitrittscode eingeben" [(ngModel)]="code"></ion-input>
+        <button ion-button outline item-end icon-left color="dark" (click)="einschreiben()">
               <ion-icon name="md-add-circle"></ion-icon>
               Beitreten
-            </button>
-          </ion-item>
-      </ion-list>
+        </button>
+      </ion-item>
+    </ion-item-group>
 
 
 </ion-content>
 <ion-footer>
   <ion-toolbar>
-      <button ion-button item-end icon-left block round small color="secondary"  (click)="openCreateTeamModal()">
+      <button ion-button icon-left round block outline color="secondary"  (click)="openCreateTeamModal()">
           <ion-icon name="md-add-circle"></ion-icon>
           Mannschaft anlegen
         </button>

@@ -3,50 +3,60 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>{{selectedItem.name}}</ion-title>
+    <ion-title>{{this.selectedItem.mannschafts_name}}</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content  class="card-background-page">
 
-    <ion-list>
-
-
-        <ion-card *ngFor="let termin of alleTermine">
-          <img src="../../assets/imgs/training.jpg"/>
-          <div class="myOverlay">
-          <div class="card-title">Training</div>
-          <div class="card-subtitle">Dienstag 25.05.2018 16:00 Uhr</div>
-          
-             
-          
-          <div class="card-button">
-            <button ion-button icon-left color="secondary" outline>
+  <ion-list>
+      <ion-card *ngFor="let termin of this.alleTermine">
+          <ion-item>
+            <h1>{{termin.gegner}}</h1>
+            
+          </ion-item>
+          <ion-card-content>
+              <p>{{termin.datum}}</p>
+              <p>{{termin.ort}}</p>
+          </ion-card-content>
+        
+        
+          <ion-row>
+            <ion-col>
+              <button ion-button icon-left outline small color="secondary" (click)="acceptStatus(termin)">
                 <ion-icon name="checkmark-circle"></ion-icon>
-                Zusagen
+                <div>Zusagen</div>
               </button>
-              <button ion-button icon-left color="danger" outline>
-                  <ion-icon name="close-circle"></ion-icon>
-                  Absagen
-                </button>
-          </div>
-        </div>
+            </ion-col>
+            <ion-col>
+              <button ion-button icon-left outline small color="danger">
+                <ion-icon name="close-circle"></ion-icon>
+                <div>Absagen</div>
+              </button>
+            </ion-col>
+            <ion-col>
+              <button ion-button icon-left outline small color="light" (click)="deleteTermin(termin)">
+                <ion-icon name="close-circle"></ion-icon>
+                <div>Löschen</div>
+              </button>
+            </ion-col>
+          </ion-row>
+        
         </ion-card>
-      </ion-list>
 
-      
+  </ion-list>
+  
 
-
+ 
 <ion-fab left bottom>
       <button ion-fab color="dark"><ion-icon name="arrow-dropup"></ion-icon></button>
       <ion-fab-list side="top">
         <button ion-button round small color="dark" style="float:left;" (click)="openPlayerInviteModal()">Spieler einladen</button>
         <button ion-button round small color="dark" style="float:left;" (click)="openPlayerListModal()">Spielerliste</button>
-        
         <button ion-button round small color="dark" style="float:left;" (click)="openCreateGameModal()">Termin anlegen</button>
         <button ion-button round small color="dark" style="float:left;" (click)="openDeleteTeamModal()">Mannschaft auflösen</button>
       </ion-fab-list>
-    </ion-fab> 
+    </ion-fab>
 
 
 </ion-content>

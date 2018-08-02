@@ -5040,7 +5040,7 @@ ion-input :focus {
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
 }
@@ -18861,23 +18861,23 @@ button.swiper-pagination-bullet {
 }
 
 .swiper-container-3d .swiper-slide-shadow-left {
-  background-image: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0.5)), to(transparent));
-  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), transparent);
+  background-image: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
 .swiper-container-3d .swiper-slide-shadow-right {
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(transparent));
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), transparent);
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
 .swiper-container-3d .swiper-slide-shadow-top {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(transparent));
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
 .swiper-container-3d .swiper-slide-shadow-bottom {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(transparent));
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
 .swiper-container-coverflow .swiper-wrapper,
@@ -25689,6 +25689,7 @@ page-home ion-fab-list {
   align-items: flex-start !important;
 }
 
+<<<<<<< HEAD
 body > ion-app > ng-component > ion-nav > page-home > ion-content > div.scroll-content > ion-list {
   margin-left: 16px;
   margin-right: 16px;
@@ -25700,6 +25701,18 @@ body > ion-app > ng-component > ion-nav > page-home > ion-content > div.scroll-c
 
 body > ion-app > ng-component > ion-nav > page-home > ion-content > div.scroll-content > ion-list > button:nth-child(1) {
   padding-left: 0px;
+=======
+body > ion-app > ng-component > ion-nav > page-home > ion-content > div.scroll-content > ion-item-group > button {
+  padding-right: 16px;
+}
+
+body > ion-app > ng-component > ion-nav > page-home > ion-content > div.scroll-content > div:nth-child(2) > ion-list {
+  padding-right: 16px;
+}
+
+body > ion-app > ng-component > ion-nav > page-home > ion-content > div.scroll-content > ion-item-group > ion-item > div.item-inner > div > ion-input > input {
+  margin: 0px;
+>>>>>>> lastfix
 }
 
 page-home ion-fab-list {
@@ -25709,6 +25722,21 @@ page-home ion-fab-list {
   align-items: flex-start !important;
 }
 
+<<<<<<< HEAD
+=======
+body > ion-app > ng-component > ion-nav > page-login > ion-content > div.scroll-content > div:nth-child(2) > ion-list {
+  padding-right: 16px;
+}
+
+body > ion-app > ng-component > ion-nav > page-login > ion-content > div.scroll-content > div:nth-child(2) > ion-list > button {
+  margin-top: 30px !important;
+}
+
+.button-wrapper {
+  margin-top: 30px;
+}
+
+>>>>>>> lastfix
 create-game-modal {
   padding: 0px;
 }
@@ -25726,42 +25754,27 @@ body > ion-app > ion-modal > div > create-game-modal > ion-content > div.scroll-
 }
 
 page-team .card-background-page ion-card {
-  height: 100%;
   position: relative;
-  text-align: center;
+  text-align: left;
 }
 
-page-team .card-background-page .card-title {
-  position: absolute;
-  top: 30%;
-  font-size: 3.0em;
-  text-transform: uppercase;
-  width: 100%;
-  font-weight: bold;
-  color: #fff;
+page-team ion-fab-list {
+  -webkit-box-align: left !important;
+  -webkit-align-items: left !important;
+  -ms-flex-align: left !important;
+  align-items: flex-start !important;
 }
 
-page-team .card-background-page .card-subtitle {
-  font-size: 1.0em;
-  position: absolute;
-  top: 52%;
-  width: 100%;
-  color: #fff;
+body > ion-app > ng-component > ion-nav > page-team > ion-content > div.scroll-content > ion-list > ion-item > div.item-inner > div > ion-input > input {
+  margin: 0px;
 }
 
-page-team .card-background-page .card-button {
-  position: absolute;
-  top: 70%;
-  width: 100%;
+body > ion-app > ng-component > ion-nav > page-team > ion-content > div.scroll-content > ion-list > button:nth-child(1) {
+  padding-left: 0px;
 }
 
-page-team .card-background-page .myOverlay {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 99;
-  bottom: 0px;
-  background-color: rgba(0, 0, 0, 0.5);
+body > ion-app > ion-modal > div > create-game-modal > ion-content > div.scroll-content > ion-list > ion-item.item.item-block.item-md.item-toggle {
+  margin-left: 0px !important;
 }
 
 page-team ion-fab-list {

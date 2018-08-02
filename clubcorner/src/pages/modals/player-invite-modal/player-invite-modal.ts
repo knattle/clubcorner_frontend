@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ViewController } from 'ionic-angular';
 import {Services} from '../../../providers/trainer/trainer';
@@ -16,11 +16,12 @@ import { EmailComposer } from '@ionic-native/email-composer';
   selector: 'player-invite-modal',
   templateUrl: 'player-invite-modal.html'
 })
-export class PlayerInviteModalPage {
+export class PlayerInviteModalPage implements OnInit {
 
   teamId: number;
-  code: string;
+  teamCode: string;
   constructor(public viewCtrl: ViewController, private _teamProv: Services, private params: NavParams, private emailComposer: EmailComposer) {
+    console.log(params);
     this.teamId = params.get("id");
   }
 
@@ -28,14 +29,29 @@ export class PlayerInviteModalPage {
     this.viewCtrl.dismiss();
   }
 
+  ngOnInit() {
+    this.getCode();
+  }
+
   getCode(){
-    this._teamProv.getCode(this.teamId).subscribe(
-      (data:string) => {
-        console.log(data);
-        this.code = data;
-      },
-      error => console.log(error)
-    )
+  }
+
+  shareCode(){
+    this.emailComposer.isAvailable().then((available: boolean) =>{
+      if(available){
+
+      }
+    });
+
+    let email = {
+      to: '',
+      cc: '',
+      subject: 'Clubcorner: Einladung in eine Mannschaft',
+      body: 'Hallo, du wurdest in eine Mannschat eingeladen. Nutze den folgenden Code um dem Team beizutreten: ' + this.teamCode,
+      isHtml: true
+    };
+
+    this.emailComposer.open(email);
   }
 
 }

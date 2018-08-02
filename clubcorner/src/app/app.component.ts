@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import {ChangeDetectorRef, Component, ViewChild} from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -7,6 +7,10 @@ import { TeamPage } from '../pages/team/team';
 import { LoginPage } from '../pages/login/login';
 import {Services} from "../providers/trainer/trainer";
 import {Person} from "../Schema/person.schema";
+import jwt_decode from 'jwt-decode';
+import {DataService} from "../providers/dataService/passData";
+
+
 @Component({
   templateUrl: 'app.html'
 })
@@ -16,52 +20,40 @@ export class MyApp {
   rootPage: any = LoginPage;
 
   pages: Array<{title: string, component: any}>;
+  profile: Person;
 
 
 
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, private _teamProv: Services) {
+
+  constructor(public dataService: DataService, public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, private _teamProv: Services, private cdRef: ChangeDetectorRef) {
     this.initializeApp();
+    //localStorage.clear();
     //this.getProfile(this.idNumber);
 
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage },
     ];
-
+    this.dataService.currentMessage.subscribe(
+      (data)=>this.profile=data
+    );
 
   }
 
-  idNumber: number = 1;
-  //profile: Person;
-  profile: Person = {
-    id: 4,
-    firstname: "vorname",
-    lastname: "nachname",
-    loginName: "testlogin",
-    loginpw: "pw"
+  ngAfterViewChecked(){
+    this.cdRef.detectChanges();
   }
 
-/*  saveUpdateProfile(id: number, profile: Person){
-  this._teamProv.updatePerson(id, profile).subscribe(
+  saveUpdateProfile(){
+    let decoded = jwt_decode(localStorage.getItem("token"));
+  this._teamProv.updatePerson(decoded.userID, this.profile).subscribe( //oder this.profile.person
     (data) => {
      console.log(data);
     },
     error => console.log(error)
     )
-  }*/
-
-/*  getProfile(id: number){
-    this._teamProv.getPerson(id).subscribe(
-      (data:Person) => {
-        console.log(data);
-        this.profile = data;
-      },
-      error => console.log(error)
-    )
-  }*/
-
-
+  }
 
 
   initializeApp() {

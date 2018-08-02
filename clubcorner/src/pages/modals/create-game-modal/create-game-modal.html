@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Spiel anlegen</ion-title>
+    <ion-title>Termin anlegen</ion-title>
     <ion-buttons start>
       <button ion-button (click)="closeModal()">
         <span ion-text color="primary">Abbrechen</span>
@@ -30,24 +30,22 @@
       <ion-input type="text" [(ngModel)]="uebergabe.gegner"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>Auswärtsspiel</ion-label>
-      <ion-toggle value="roadGame" checked="false" [(ngModel)]="uebergabe.wiederholend"></ion-toggle>
-    </ion-item>
-    <ion-item>
       <ion-label>Ort</ion-label>
       <ion-input type="text" [(ngModel)]="uebergabe.ort"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>Datum</ion-label>
-      <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate" [(ngModel)]="uebergabe.datum"></ion-datetime>
+      <ion-label>Datum/Uhrzeit</ion-label>
+      <ion-datetime displayFormat="MM/DD/YYYY h:mm A" [(ngModel)]="myDate" [(ngModel)]="uebergabe.datum"></ion-datetime>
     </ion-item>
-  
-      <ion-item>
-        <ion-label>Anpfiff</ion-label>
-        <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="myDate" [(ngModel)]="uebergabe.uhrzeit"></ion-datetime>
+    <ion-item>
+        <ion-label>Dauer</ion-label>
+        <ion-input type="text" [(ngModel)]="uebergabe.dauer"></ion-input>
       </ion-item>
-      
-  
+
+
   </ion-list>
-  <button ion-button color="dark" (click)="createOneTermin()">Anlegen</button>
+  <div class="button-wrapper" text-center>
+      <button ion-button round outline center color="dark" (click)="createOneTermin()">Anlegen</button>
+  </div>
+  
 </ion-content>

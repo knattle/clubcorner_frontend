@@ -6,13 +6,16 @@ page-home {
         align-items: flex-start !important;
     }
 }
-body > ion-app > ng-component > ion-nav > page-home > ion-content > div.scroll-content > ion-list{
-    margin-left: 16px;
-    margin-right: 16px;
-}
-body > ion-app > ng-component > ion-nav > page-home > ion-content > div.scroll-content > ion-list > ion-item > div.item-inner > div > ion-input > input{
+
+
+  body > ion-app > ng-component > ion-nav > page-home > ion-content > div.scroll-content > ion-item-group > button{
+      padding-right: 16px;
+  };
+
+  body > ion-app > ng-component > ion-nav > page-home > ion-content > div.scroll-content > div:nth-child(2) > ion-list{
+    padding-right: 16px;
+};
+
+body > ion-app > ng-component > ion-nav > page-home > ion-content > div.scroll-content > ion-item-group > ion-item > div.item-inner > div > ion-input > input{
     margin: 0px;
-  }
-  body > ion-app > ng-component > ion-nav > page-home > ion-content > div.scroll-content > ion-list > button:nth-child(1){
-      padding-left: 0px;
-  }
+};
