@@ -52,7 +52,7 @@ export class CreateGameModalPage {
       (data) => {
         console.log(data);
         this.viewCtrl.dismiss();
-        this.navCtrl.push(HomePage);
+        this.navCtrl.setRoot(HomePage);
       },
       error => console.log(error)
     )

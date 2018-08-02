@@ -92,7 +92,7 @@ export class CreateTeamModalPage {
       (data) => {
         console.log(data);
         this.closeModal();
-        this.navCtrl.push(HomePage);
+        this.navCtrl.setRoot(HomePage);
       },
       error => console.log(error)
     )
